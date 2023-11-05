@@ -30,7 +30,7 @@ export default function RootLayout({
         {/* <meta name="viewport" content="initial-scale=1, viewport-fit=cover" /> */}
       </head>
 
-      <body className={roboto.className}><ScoreContextProvider>{children}</ScoreContextProvider>{children}</body>
+      <body className={roboto.className}><ScoreContextProvider>{children}</ScoreContextProvider></body>
     </html>
   );
 }
