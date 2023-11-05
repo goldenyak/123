@@ -1,0 +1,12 @@
+import { useState } from "react";
+import { ScoreContext } from "./scoreContext";
+
+export function useProviderScoreContext():ScoreContext {
+    const [totalScore,setTotalScore] = useState(0);
+    const addScore = (score:number) => {setTotalScore((oldState) => oldState+score)}
+
+    return {
+        totalScore,
+        addScore
+    }
+}
