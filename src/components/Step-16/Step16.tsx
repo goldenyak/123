@@ -5,9 +5,10 @@ import { useState } from 'react';
 
 function Step16() {
   const router = useRouter();
-
   const [isChecked, setIsChecked] = useState(false);
-  console.log(isChecked);
+  const inputChangeHandler = () => {
+    setIsChecked(true);
+  };
 
   return (
     <div>
@@ -23,41 +24,59 @@ function Step16() {
             top of my browser to check if there is lock symbol»
           </h2>
         </header>
-
         <div className={styles.answers_wrapper}>
-          <label
-            className={styles.label}
-            onClick={() => {
-              setIsChecked(!isChecked);
-            }}
-          >
-            <input type="radio" name="input_name" value="one" />
+          <label className={styles.label}>
+            <input
+              onChange={inputChangeHandler}
+              className={styles.input}
+              type="radio"
+              name="input_name"
+              value="one"
+            />
             <div className={styles.label_text}>1</div>
           </label>
 
           <label className={styles.label}>
-            <input type="radio" name="input_name" value="one" />
+            <input
+              onChange={inputChangeHandler}
+              className={styles.input}
+              type="radio"
+              name="input_name"
+              value="two"
+            />
             <div className={styles.label_text}>2</div>
           </label>
 
           <label className={styles.label}>
-            <input type="radio" name="input_name" value="one" />
-            <div
-              className={
-                isChecked ? styles.label_text : styles.label_text_checked
-              }
-            >
-              3
-            </div>
+            <input
+              onChange={inputChangeHandler}
+              className={styles.input}
+              type="radio"
+              name="input_name"
+              value="three"
+            />
+            <div className={styles.label_text}>3</div>
           </label>
 
           <label className={styles.label}>
-            <input type="radio" name="input_name" value="one" />
+            <input
+              onChange={inputChangeHandler}
+              className={styles.input}
+              type="radio"
+              name="input_name"
+              value="four"
+            />
             <div className={styles.label_text}>4</div>
           </label>
 
           <label className={styles.label}>
-            <input type="radio" name="input_name" value="one" />
+            <input
+              onChange={inputChangeHandler}
+              className={styles.input}
+              type="radio"
+              name="input_name"
+              value="five"
+            />
             <div className={styles.label_text}>5</div>
           </label>
         </div>
@@ -67,8 +86,8 @@ function Step16() {
           <span>Totally</span>
         </div>
 
-        <div className={styles.button_wrapper}>
-          <button onClick={() => router.push('/step-16')}>Continue</button>
+        <div className={isChecked ? styles.button_wrapper : styles.button_wrapper_disabled }>
+          <button disabled={isChecked ? false : true} onClick={() => router.push('/step-16')}>Continue</button>
         </div>
       </div>
     </div>
