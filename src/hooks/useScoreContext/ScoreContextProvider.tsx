@@ -1,4 +1,5 @@
-import { ScoreContext } from "./scoreContext"
+'use client'
+import { ScoreContext } from "./ScoreContext"
 import { useProviderScoreContext } from "./useProviderScoreContext"
 
 interface ScoreContextProvider{

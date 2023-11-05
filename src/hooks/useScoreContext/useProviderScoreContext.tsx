@@ -1,5 +1,6 @@
+'use client'
 import { useState } from "react";
-import { ScoreContext } from "./scoreContext";
+import { ScoreContext } from "./ScoreContext";
 
 export function useProviderScoreContext():ScoreContext {
     const [totalScore,setTotalScore] = useState(0);

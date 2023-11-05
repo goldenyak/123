@@ -1,4 +1,4 @@
 import { useContext } from "react";
-import { ScoreContext } from "./scoreContext";
+import { ScoreContext } from "./ScoreContext";
 
-export const useDocumentEditor = (): ScoreContext => useContext(ScoreContext);
+export const useScoreStore = (): ScoreContext => useContext(ScoreContext);
