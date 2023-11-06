@@ -52,18 +52,33 @@
 
 //diagram
 
-.diagram_wrapper{
-  background-color: #f8f8f8;
+.diagram_wrapper {
   width: 100%;
   height: 200px;
-  position: relative;
+  margin: 20px 0;
+  gap: 20px;
+  position: relative
+}
+
+.levels_wrapper {
+  background-color: #f8f8f8;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.diagram_dashed_line{
+.lvl_name {
+  color: #73778C;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.diagram_dashed_line {
   flex-basis: 100%;
-  border-top: 1px dashed;
+  opacity: 0.5;
+  border-top: 1px dashed #5072F1;
   height: 1px;
 }
