@@ -42,7 +42,12 @@ function Step18() {
             <div >
               low
             </div>
-            <div className={styles.diagram_dashed_line} />
+            <div style={{
+              flexBasis: '100%',
+              borderTop: '1px solid',
+              height: '1px',
+              transform: 'translateY(50%)'
+            }} />
           </div>
         </div>
 
