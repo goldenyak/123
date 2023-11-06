@@ -30,9 +30,10 @@ export const Accordion = () => {
 
     const handleClick = (index: number) => {
         if (selectedIndex === index) {
-            return setSelectedIndex(0);
+            setSelectedIndex(0);
+        } else {
+            setSelectedIndex(index);
         }
-        setSelectedIndex(index);
     };
 
     return (<div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
