@@ -1,4 +1,5 @@
 'use client';
+import { useRouter } from 'next/navigation';
 import styles from './Step.module.scss';
 import { DiagramHigh } from './DiagramHigh';
 import icon_warning from '../../assets/icons/icon_warning.svg'
@@ -6,6 +7,7 @@ import Image from 'next/image';
 import { Accordion } from './Accordion/Accordion';
 
 function Step18() {
+  const router = useRouter();
 
   return (
     <div>
@@ -46,6 +48,10 @@ function Step18() {
           To reduce your risk, follow the safety guidelines below:
         </div>
         <Accordion />
+
+        <div className={styles.button_wrapper}>
+          <button onClick={() => router.push('/step-19')}>{`Let's begin!`}</button>
+        </div>
 
       </div>
     </div>
