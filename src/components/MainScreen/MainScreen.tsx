@@ -22,14 +22,14 @@ function MainScreen() {
     <MainScreenWrapper>
       <ContentWrapper>
         <LogoWrapper>
-          <Image alt="logotype" src={logo} />
+          <Image alt='logotype' src={logo} />
           <LogoTitle>VPN Lumos</LogoTitle>
         </LogoWrapper>
 
         <TextWrapper>
           <Description>Do you know what is VPN?</Description>
           <ButtonsWrapper>
-            <Button onClick={() => router.push('/step-2')}>Yes</Button>
+            <Button onClick={() => router.push('/quiz?q=2')}>Yes</Button>
             <Button onClick={() => router.push('/about-vpn')}>
               Not really
             </Button>
@@ -37,7 +37,7 @@ function MainScreen() {
         </TextWrapper>
 
         <Image
-          alt="MainImage"
+          alt='MainImage'
           src={main_image}
           width={375}
           height={322}

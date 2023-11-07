@@ -7,6 +7,9 @@ import icon_no from '../../assets/icons/icon_no.png';
 
 function Step5() {
   const router = useRouter();
+  const newUrl = new URL(window.location.href);
+  newUrl.searchParams.set('q', '6');
+
   return (
     <div>
       <div className={styles.main_wrapper}>
@@ -17,12 +20,12 @@ function Step5() {
         </header>
 
         <label onClick={() => router.push('/step-6')} className={styles.label}>
-          <input type="radio" name="input_name" value="input_value" />
+          <input type='radio' name='input_name' value='input_value' />
           <div className={styles.label_wrapper}>
             <div className={styles.label_content}>
               <Image
                 src={icon_yes}
-                alt=""
+                alt=''
                 className={styles.label_icon}
                 width={40}
                 height={40}
@@ -32,18 +35,21 @@ function Step5() {
           </div>
         </label>
 
-        <label onClick={() => router.push('/step-7')} className={styles.label}>
+        <label
+          onClick={() => router.push(newUrl.toString())}
+          className={styles.label}
+        >
           <input
-            type="radio"
-            name="input_name"
-            value="input_value"
+            type='radio'
+            name='input_name'
+            value='input_value'
             style={{ display: 'none' }}
           />
           <div className={styles.label_wrapper}>
             <div className={styles.label_content}>
               <Image
                 src={icon_no}
-                alt=""
+                alt=''
                 className={styles.label_icon}
                 width={40}
                 height={40}
