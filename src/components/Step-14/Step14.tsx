@@ -18,13 +18,16 @@ function Step14() {
           How quickly do you update your devices and apps?
         </header>
 
-        <label onClick={() => router.push('/step-15')} className={styles.label}>
-          <input type="radio" name="input_name" value="input_value" />
+        <label
+          onClick={() => router.push('/quiz?q=15')}
+          className={styles.label}
+        >
+          <input type='radio' name='input_name' value='input_value' />
           <div className={styles.label_wrapper}>
             <div className={styles.label_content}>
               <Image
                 src={icon_smile_glasses}
-                alt="icon_smile_glasses"
+                alt='icon_smile_glasses'
                 className={styles.label_icon}
                 width={40}
                 height={40}
@@ -36,13 +39,16 @@ function Step14() {
           </div>
         </label>
 
-        <label onClick={() => router.push('/step-15')} className={styles.label}>
-          <input type="radio" name="input_name" value="input_value" />
+        <label
+          onClick={() => router.push('/quiz?q=15')}
+          className={styles.label}
+        >
+          <input type='radio' name='input_name' value='input_value' />
           <div className={styles.label_wrapper}>
             <div className={styles.label_content}>
               <Image
                 src={icon_smile}
-                alt="icon_smile"
+                alt='icon_smile'
                 className={styles.label_icon}
                 width={40}
                 height={40}
@@ -54,18 +60,21 @@ function Step14() {
           </div>
         </label>
 
-        <label onClick={() => router.push('/step-15')} className={styles.label}>
+        <label
+          onClick={() => router.push('/quiz?q=15')}
+          className={styles.label}
+        >
           <input
-            type="radio"
-            name="input_name"
-            value="input_value"
+            type='radio'
+            name='input_name'
+            value='input_value'
             style={{ display: 'none' }}
           />
           <div className={styles.label_wrapper}>
             <div className={styles.label_content}>
               <Image
                 src={icon_thinking}
-                alt="icon_thinking"
+                alt='icon_thinking'
                 className={styles.label_icon}
                 width={40}
                 height={40}
@@ -77,18 +86,21 @@ function Step14() {
           </div>
         </label>
 
-        <label onClick={() => router.push('/step-15')} className={styles.label}>
+        <label
+          onClick={() => router.push('/quiz?q=15')}
+          className={styles.label}
+        >
           <input
-            type="radio"
-            name="input_name"
-            value="input_value"
+            type='radio'
+            name='input_name'
+            value='input_value'
             style={{ display: 'none' }}
           />
           <div className={styles.label_wrapper}>
             <div className={styles.label_content}>
               <Image
                 src={icon_grimacing}
-                alt="icon_grimacing"
+                alt='icon_grimacing'
                 className={styles.label_icon}
                 width={40}
                 height={40}

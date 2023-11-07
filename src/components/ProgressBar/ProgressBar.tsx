@@ -1,24 +1,20 @@
 'use client';
 import styles from './ProgressBar.module.scss';
 import { useEffect, useState } from 'react';
-import { usePathname } from 'next/navigation';
-
-function extractStepNumber(str: string) {
-  const match = str.match(/\/step-(\d+)/);
-  return match ? parseInt(match[1], 10) : null;
-}
+import { useSearchParams } from 'next/navigation';
 
 const TOTAL_STEPS = 20;
 
 export const ProgressBar = () => {
   const [progress, setProgress] = useState(0);
-  const pathName = usePathname();
+  const params = useSearchParams();
+  const stepNumber = params.get('q');
 
   useEffect(() => {
-    setProgress(
-      (100 / TOTAL_STEPS) * (extractStepNumber(pathName) || TOTAL_STEPS),
-    );
-  }, [pathName]);
+    if (stepNumber) {
+      setProgress((100 / TOTAL_STEPS) * parseInt(stepNumber) || TOTAL_STEPS);
+    }
+  }, [stepNumber]);
 
   return (
     <div style={{ width: '100%', margin: '50px 0', position: 'relative' }}>

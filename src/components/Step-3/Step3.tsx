@@ -12,8 +12,6 @@ import icon_other from '../../assets/icons/icon_other.png';
 
 function Step3() {
   const router = useRouter();
-  const newUrl = new URL(window.location.href);
-  newUrl.searchParams.set('q', '4');
 
   return (
     <div>
@@ -119,7 +117,7 @@ function Step3() {
       </label>
 
       <div className={styles.button_wrapper}>
-        <button onClick={() => router.push(newUrl.toString())}>Continue</button>
+        <button onClick={() => router.push('/quiz?q=4')}>Continue</button>
       </div>
     </div>
   );

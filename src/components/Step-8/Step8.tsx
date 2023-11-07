@@ -6,7 +6,6 @@ import icon_whatsapp from '../../assets/icons/icon_whatsapp.png';
 import icon_facebook from '../../assets/icons/icon_facebook.png';
 import icon_telegram from '../../assets/icons/icon_telegram.png';
 import icon_viber from '../../assets/icons/icon_viber.png';
-import { ProgressBar } from '../ProgressBar/ProgressBar';
 
 function Step8() {
   const router = useRouter();
@@ -92,7 +91,7 @@ function Step8() {
         </label>
 
         <div className={styles.button_wrapper}>
-          <button onClick={() => router.push('/step-9')}>Continue</button>
+          <button onClick={() => router.push('/quiz?q=9')}>Continue</button>
         </div>
       </div>
     </div>

@@ -16,13 +16,16 @@ function Step7() {
           Do you need to use Messengers which are not available in your country?
         </header>
 
-        <label onClick={() => router.push('/step-8')} className={styles.label}>
-          <input type="radio" name="input_name" value="input_value" />
+        <label
+          onClick={() => router.push('/quiz?q=8')}
+          className={styles.label}
+        >
+          <input type='radio' name='input_name' value='input_value' />
           <div className={styles.label_wrapper}>
             <div className={styles.label_content}>
               <Image
                 src={icon_yes}
-                alt=""
+                alt=''
                 className={styles.label_icon}
                 width={40}
                 height={40}
@@ -32,18 +35,21 @@ function Step7() {
           </div>
         </label>
 
-        <label onClick={() => router.push('/step-9')} className={styles.label}>
+        <label
+          onClick={() => router.push('/quiz?q=9')}
+          className={styles.label}
+        >
           <input
-            type="radio"
-            name="input_name"
-            value="input_value"
+            type='radio'
+            name='input_name'
+            value='input_value'
             style={{ display: 'none' }}
           />
           <div className={styles.label_wrapper}>
             <div className={styles.label_content}>
               <Image
                 src={icon_no}
-                alt=""
+                alt=''
                 className={styles.label_icon}
                 width={40}
                 height={40}

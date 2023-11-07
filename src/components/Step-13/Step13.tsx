@@ -16,13 +16,16 @@ function Step13() {
           Do you save passwords to your browser?
         </header>
 
-        <label onClick={() => router.push('/step-14')} className={styles.label}>
-          <input type="radio" name="input_name" value="input_value" />
+        <label
+          onClick={() => router.push('/quiz?q=14')}
+          className={styles.label}
+        >
+          <input type='radio' name='input_name' value='input_value' />
           <div className={styles.label_wrapper}>
             <div className={styles.label_content}>
               <Image
                 src={icon_yes}
-                alt="icon_yes"
+                alt='icon_yes'
                 className={styles.label_icon}
                 width={40}
                 height={40}
@@ -32,18 +35,21 @@ function Step13() {
           </div>
         </label>
 
-        <label onClick={() => router.push('/step-14')} className={styles.label}>
+        <label
+          onClick={() => router.push('/quiz?q=14')}
+          className={styles.label}
+        >
           <input
-            type="radio"
-            name="input_name"
-            value="input_value"
+            type='radio'
+            name='input_name'
+            value='input_value'
             style={{ display: 'none' }}
           />
           <div className={styles.label_wrapper}>
             <div className={styles.label_content}>
               <Image
                 src={icon_no}
-                alt="icon_no"
+                alt='icon_no'
                 className={styles.label_icon}
                 width={40}
                 height={40}

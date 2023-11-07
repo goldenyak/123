@@ -29,9 +29,9 @@ function Step16() {
             <input
               onChange={inputChangeHandler}
               className={styles.input}
-              type="radio"
-              name="input_name"
-              value="one"
+              type='radio'
+              name='input_name'
+              value='one'
             />
             <div className={styles.label_text}>1</div>
           </label>
@@ -40,9 +40,9 @@ function Step16() {
             <input
               onChange={inputChangeHandler}
               className={styles.input}
-              type="radio"
-              name="input_name"
-              value="two"
+              type='radio'
+              name='input_name'
+              value='two'
             />
             <div className={styles.label_text}>2</div>
           </label>
@@ -51,9 +51,9 @@ function Step16() {
             <input
               onChange={inputChangeHandler}
               className={styles.input}
-              type="radio"
-              name="input_name"
-              value="three"
+              type='radio'
+              name='input_name'
+              value='three'
             />
             <div className={styles.label_text}>3</div>
           </label>
@@ -62,9 +62,9 @@ function Step16() {
             <input
               onChange={inputChangeHandler}
               className={styles.input}
-              type="radio"
-              name="input_name"
-              value="four"
+              type='radio'
+              name='input_name'
+              value='four'
             />
             <div className={styles.label_text}>4</div>
           </label>
@@ -73,9 +73,9 @@ function Step16() {
             <input
               onChange={inputChangeHandler}
               className={styles.input}
-              type="radio"
-              name="input_name"
-              value="five"
+              type='radio'
+              name='input_name'
+              value='five'
             />
             <div className={styles.label_text}>5</div>
           </label>
@@ -86,8 +86,17 @@ function Step16() {
           <span>Totally</span>
         </div>
 
-        <div className={isChecked ? styles.button_wrapper : styles.button_wrapper_disabled }>
-          <button disabled={isChecked ? false : true} onClick={() => router.push('/step-16')}>Continue</button>
+        <div
+          className={
+            isChecked ? styles.button_wrapper : styles.button_wrapper_disabled
+          }
+        >
+          <button
+            disabled={isChecked ? false : true}
+            onClick={() => router.push('/quiz?q=17')}
+          >
+            Continue
+          </button>
         </div>
       </div>
     </div>

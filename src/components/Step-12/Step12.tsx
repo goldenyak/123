@@ -16,34 +16,38 @@ function Step12() {
         <div className={styles.multi_step_bar}></div>
 
         <header className={styles.header}>
-        How often do you use Public Wi-Fi?
+          How often do you use Public Wi-Fi?
         </header>
 
-        <label onClick={() => router.push('/step-13')}  className={styles.label}>
-          <input type="radio" name="input_name" value="input_value" />
+        <label
+          onClick={() => router.push('/quiz?q=13')}
+          className={styles.label}
+        >
+          <input type='radio' name='input_name' value='input_value' />
           <div className={styles.label_wrapper}>
             <div className={styles.label_content}>
               <Image
                 src={icon_almost_never}
-                alt="icon_almost_never"
+                alt='icon_almost_never'
                 className={styles.label_icon}
                 width={40}
                 height={40}
               />
-              <div className={styles.label_text}>
-              Almost never
-              </div>
+              <div className={styles.label_text}>Almost never</div>
             </div>
           </div>
         </label>
 
-        <label onClick={() => router.push('/step-13')}  className={styles.label}>
-          <input type="radio" name="input_name" value="input_value" />
+        <label
+          onClick={() => router.push('/quiz?q=13')}
+          className={styles.label}
+        >
+          <input type='radio' name='input_name' value='input_value' />
           <div className={styles.label_wrapper}>
             <div className={styles.label_content}>
               <Image
                 src={icon_rarely}
-                alt="icon_rarely"
+                alt='icon_rarely'
                 className={styles.label_icon}
                 width={40}
                 height={40}
@@ -53,18 +57,21 @@ function Step12() {
           </div>
         </label>
 
-        <label onClick={() => router.push('/step-13')}  className={styles.label}>
+        <label
+          onClick={() => router.push('/quiz?q=13')}
+          className={styles.label}
+        >
           <input
-            type="radio"
-            name="input_name"
-            value="input_value"
+            type='radio'
+            name='input_name'
+            value='input_value'
             style={{ display: 'none' }}
           />
           <div className={styles.label_wrapper}>
             <div className={styles.label_content}>
               <Image
                 src={icon_every_week}
-                alt="icon_every_week"
+                alt='icon_every_week'
                 className={styles.label_icon}
                 width={40}
                 height={40}
@@ -74,18 +81,21 @@ function Step12() {
           </div>
         </label>
 
-        <label onClick={() => router.push('/step-13')}  className={styles.label}>
+        <label
+          onClick={() => router.push('/quiz?q=13')}
+          className={styles.label}
+        >
           <input
-            type="radio"
-            name="input_name"
-            value="input_value"
+            type='radio'
+            name='input_name'
+            value='input_value'
             style={{ display: 'none' }}
           />
           <div className={styles.label_wrapper}>
             <div className={styles.label_content}>
               <Image
                 src={icon_often}
-                alt="icon_often"
+                alt='icon_often'
                 className={styles.label_icon}
                 width={40}
                 height={40}
@@ -95,18 +105,21 @@ function Step12() {
           </div>
         </label>
 
-        <label onClick={() => router.push('/step-13')}  className={styles.label}>
+        <label
+          onClick={() => router.push('/quiz?q=13')}
+          className={styles.label}
+        >
           <input
-            type="radio"
-            name="input_name"
-            value="input_value"
+            type='radio'
+            name='input_name'
+            value='input_value'
             style={{ display: 'none' }}
           />
           <div className={styles.label_wrapper}>
             <div className={styles.label_content}>
               <Image
                 src={icon_several_times}
-                alt="icon_several_times"
+                alt='icon_several_times'
                 className={styles.label_icon}
                 width={40}
                 height={40}

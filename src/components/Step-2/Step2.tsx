@@ -8,8 +8,6 @@ import icon_no from '../../assets/icons/icon_no.png';
 function Step2() {
   const router = useRouter();
 
-  const newUrl = new URL(window.location.href);
-
   return (
     <div>
       <div className={styles.main_wrapper}>
@@ -20,10 +18,7 @@ function Step2() {
         </header>
 
         <label
-          onClick={() => {
-            newUrl.searchParams.set('q', '3');
-            router.push(newUrl.toString());
-          }}
+          onClick={() => router.push('/quiz?q=3')}
           className={styles.label}
         >
           <input type='radio' name='input_name_yes' value='input_value' />
@@ -42,10 +37,7 @@ function Step2() {
         </label>
 
         <label
-          onClick={() => {
-            newUrl.searchParams.set('q', '4');
-            router.push(newUrl.toString());
-          }}
+          onClick={() => router.push('/quiz?q=4')}
           className={styles.label}
         >
           <input

@@ -7,8 +7,6 @@ import icon_no from '../../assets/icons/icon_no.png';
 
 function Step5() {
   const router = useRouter();
-  const newUrl = new URL(window.location.href);
-  newUrl.searchParams.set('q', '6');
 
   return (
     <div>
@@ -19,7 +17,10 @@ function Step5() {
           Do you need to fix «Video is not available in your country» issue?
         </header>
 
-        <label onClick={() => router.push('/step-6')} className={styles.label}>
+        <label
+          onClick={() => router.push('/quiz?q=6')}
+          className={styles.label}
+        >
           <input type='radio' name='input_name' value='input_value' />
           <div className={styles.label_wrapper}>
             <div className={styles.label_content}>
@@ -36,7 +37,7 @@ function Step5() {
         </label>
 
         <label
-          onClick={() => router.push(newUrl.toString())}
+          onClick={() => router.push('/quiz?q=7')}
           className={styles.label}
         >
           <input
