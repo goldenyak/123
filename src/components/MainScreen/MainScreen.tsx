@@ -1,6 +1,6 @@
 'use client';
 import { useRouter } from 'next/navigation';
-import logo from '../../assets/images/logo.png';
+import logo from '../../assets/logo.svg';
 import main_image from '../../assets/images/main_image.png';
 import {
   Button,
@@ -22,7 +22,7 @@ function MainScreen() {
     <MainScreenWrapper>
       <ContentWrapper>
         <LogoWrapper>
-          <Image alt='logotype' src={logo} />
+          <Image alt='VPN Lumos' src={logo} />
           <LogoTitle>VPN Lumos</LogoTitle>
         </LogoWrapper>
 
@@ -45,7 +45,23 @@ function MainScreen() {
         />
 
         <PrivacyPolicyDescription>
-          By continuing you agree to our Terms of Service and Privacy Policy
+          By continuing you agree{'\n'}to our{' '}
+          <span
+            style={{
+              fontWeight: '700',
+            }}
+          >
+            Terms of Service
+          </span>{' '}
+          and
+          <span
+            style={{
+              fontWeight: '700',
+            }}
+          >
+            {' '}
+            Privacy Policy
+          </span>
         </PrivacyPolicyDescription>
       </ContentWrapper>
     </MainScreenWrapper>

@@ -4,25 +4,24 @@ export const MainScreenWrapper = styled.div({
   background: '-webkit-linear-gradient(290deg, #50AEF1 0%, #506EF1 100%)',
   height: '100vh',
   width: '100%',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
 });
 
 export const ContentWrapper = styled.div({
   display: 'flex',
   flexDirection: 'column',
-  height: '100%',
-  minHeight: '100%',
-  padding: '0px 20px',
-  margin: '0 auto',
   alignItems: 'center',
-  justifyContent: 'flex-end',
+  gap: '5px',
 });
 
 export const LogoWrapper = styled.div({
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
-  gap: '6px',
-  marginBottom: '38px',
+  gap: '5px',
+  marginBottom: '35px',
 });
 
 export const LogoTitle = styled.h1({
@@ -80,46 +79,12 @@ export const Button = styled.button({
 });
 
 export const PrivacyPolicyDescription = styled.p({
-  // maxWidth: '318px',
   textAlign: 'center',
-  margin: '0px auto 16px',
   color: 'white',
   fontSize: '13px',
   fontStyle: 'normal',
   fontWeight: '400',
   lineHeight: '18px',
   letterSpacing: '-0.078px',
+  whiteSpace: 'pre-line',
 });
-
-// export const ButtonsWrapper = styled.div({
-//   display: 'flex',
-//   marginBottom: '20px',
-//   gap: '12px',
-// });
-
-// export const Button = styled.label({
-//   borderRadius: '12px',
-//   backgroundColor: 'white',
-// });
-
-// export const InnerButton = styled.div({
-//   width: '100%',
-//   transition: 'all 0.2s ease-out 0s',
-//   backgroundColor: 'inherit',
-//   borderRadius: '16px',
-//   padding: '16px',
-//   fontWeight: '700',
-//   fontSize: '17px',
-//   lineHeight: '20px',
-//   webkitBoxAlign: 'center',
-//   alignItems: 'center',
-//   textAlign: 'center',
-//   color: '#5072F1',
-//   border: '0px',
-//   cursor: 'pointer',
-//   height: '100%',
-//   display: 'flex',
-
-// });
-
-
