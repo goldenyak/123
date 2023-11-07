@@ -22,14 +22,6 @@ export const ProgressBar = () => {
 
   return (
     <div style={{ width: '100%', margin: '50px 0', position: 'relative' }}>
-      {/* <Image
-        src={icon_check}
-        alt=''
-        style={{
-          position: 'absolute',
-          zIndex: '100',
-        }}
-      /> */}
       <div
         style={{
           transition: 'all 0.5s ease-in-out',
