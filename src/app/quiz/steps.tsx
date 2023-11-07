@@ -7,6 +7,12 @@ import Step7 from '@/components/Step-7/Step7';
 import Step8 from '@/components/Step-8/Step8';
 import Step9 from '@/components/Step-9/Step9';
 import Step10 from '@/components/Step-10/Step10';
+import Step11 from '@/components/Step-11/Step11';
+import Step12 from '@/components/Step-12/Step12';
+import Step13 from '@/components/Step-13/Step13';
+import Step14 from '@/components/Step-14/Step14';
+import Step15 from '@/components/Step-15/Step15';
+import Step16 from '@/components/Step-16/Step16';
 
 const steps: React.FC[] = [
   () => {
@@ -24,6 +30,12 @@ const steps: React.FC[] = [
   Step8,
   Step9,
   Step10,
+  Step11,
+  Step12,
+  Step13,
+  Step14,
+  Step15,
+  Step16,
 ];
 
 export default steps;
