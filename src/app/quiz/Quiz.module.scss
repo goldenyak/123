@@ -1,5 +1,10 @@
 .main_wrapper {
-    max-width: 360px;
-    margin: 0px auto;
-    padding: 0px 15px;
-  }
+  max-width: 360px;
+  margin: 0px auto;
+  padding: 0px 15px;
+}
+
+.gradient {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 35%, #deeeff 65%);
+  padding: 0;
+}
