@@ -1,26 +1,29 @@
-'use client';
-import { useRouter } from 'next/navigation';
-import styles from './Step.module.scss';
-import { useState } from 'react';
+"use client";
+import { useRouter } from "next/navigation";
+import styles from "./Step.module.scss";
+import { useState } from "react";
 
 function Step16() {
   const router = useRouter();
   const [isChecked, setIsChecked] = useState(false);
   const inputChangeHandler = () => {
     setIsChecked(true);
+    setTimeout(() => router.push("/quiz?q=17"), 200);
   };
 
   return (
     <div>
-        <header className={styles.header}>
-          <h1 className={styles.header_title}>
-            Does the statement below characterize you?
-          </h1>
-          <h2 className={styles.header_description}>
-            «Before entering personal information into a website, I look at the
-            top of my browser to check if there is lock symbol»
-          </h2>
-        </header>
+      <header className={styles.header}>
+        <h1 className={styles.header_title}>
+          Does the statement below characterize you?
+        </h1>
+        <h2 className={styles.header_description}>
+          «Before entering personal information into a website, I look at the
+          top of my browser to check if there is lock symbol»
+        </h2>
+      </header>
+
+      <div className={styles.wrapper_for_answers}>
         <div className={styles.answers_wrapper}>
           <label className={styles.label}>
             <input
@@ -82,20 +85,8 @@ function Step16() {
           <span>Not at all</span>
           <span>Totally</span>
         </div>
-
-        <div
-          className={
-            isChecked ? styles.button_wrapper : styles.button_wrapper_disabled
-          }
-        >
-          <button
-            disabled={isChecked ? false : true}
-            onClick={() => router.push('/quiz?q=17')}
-          >
-            Continue
-          </button>
-        </div>
       </div>
+    </div>
   );
 }
 
