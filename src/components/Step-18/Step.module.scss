@@ -6,7 +6,7 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  gap: 20px
+  gap: 20px;
 }
 
 .multi_step_bar {
@@ -28,7 +28,6 @@
   line-height: 32px;
   text-align: center;
   color: rgb(45, 50, 64);
-  margin-bottom: 15px;
 }
 
 .header_description {
@@ -53,7 +52,7 @@
   height: 200px;
   margin: 20px 0;
   gap: 20px;
-  position: relative
+  position: relative;
 }
 
 .levels_wrapper {
@@ -67,7 +66,7 @@
 }
 
 .lvl_name {
-  color: #73778C;
+  color: #73778c;
   font-size: 10px;
   font-style: normal;
   font-weight: 500;
@@ -76,7 +75,7 @@
 .diagram_dashed_line {
   flex-basis: 100%;
   opacity: 0.5;
-  border-top: 1px dashed #5072F1;
+  border-top: 1px dashed #5072f1;
   height: 1px;
 }
 
@@ -87,11 +86,10 @@
   font-weight: 700;
   position: absolute;
   top: -20px;
-  white-space: nowrap
+  white-space: nowrap;
 }
 
 .button_wrapper {
-
   padding: 25px 0px;
 
   button {
@@ -102,7 +100,7 @@
     cursor: pointer;
     border: none;
     outline: none;
-    background: #50AEF1;
+    background: #50aef1;
     border-radius: 100px;
     font-size: 22px;
     font-weight: 700;
@@ -114,6 +112,6 @@
   }
 
   :hover {
-    background: linear-gradient(91deg, #50AEF1 0%, #506EF1 100%);
+    background: linear-gradient(91deg, #50aef1 0%, #506ef1 100%);
   }
 }
