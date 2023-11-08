@@ -5,12 +5,12 @@ import Image from 'next/image';
 import icon_hide_ip from '../../assets/icons/icon_hide_ip.png';
 import icon_helps_watch from '../../assets/icons/icon_helps_watch.png';
 import icon_helps_access from '../../assets/icons/icon_helps_access.png';
+import { Button } from '../Button/Button';
 
 function Step4() {
   const router = useRouter();
   return (
     <div>
-      <div className={styles.main_wrapper}>
         <header className={styles.header}>
           With VPN Lumos you get a <span>75% faster</span> online connection
         </header>
@@ -70,11 +70,12 @@ function Step4() {
           </div>
         </label>
 
-        <div className={styles.button_wrapper}>
-          <button onClick={() => router.push('/step-5')}>Got it</button>
-        </div>
+        <Button
+        title="Continue"
+        onClick={() => router.push('/quiz?q=5')}
+        disabled={false}
+      />
       </div>
-    </div>
   );
 }
 

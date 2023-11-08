@@ -11,10 +11,7 @@ function Step15() {
   };
 
   return (
-    <div>
-      <div className={styles.main_wrapper}>
-        <div className={styles.multi_step_bar}></div>
-
+    <div style={{background: 'linear-gradient(180deg, rgba(255, 255, 255, 0.00) 42.79%, #DEEEFF 99.93%)'}}>
         <header className={styles.header}>
           <h1 className={styles.header_title}>
             Does the statement below characterize you?
@@ -24,6 +21,8 @@ function Step15() {
           </h2>
         </header>
 
+        <div className={styles.wrapper_for_answers}>
+          
         <div className={styles.answers_wrapper}>
           <label className={styles.label}>
             <input
@@ -86,11 +85,10 @@ function Step15() {
           <span>Totally</span>
         </div>
 
-        <div className={isChecked ? styles.button_wrapper : styles.button_wrapper_disabled }>
-          <button disabled={isChecked ? false : true} onClick={() => router.push('/step-16')}>Continue</button>
         </div>
+
+
       </div>
-    </div>
   );
 }
 

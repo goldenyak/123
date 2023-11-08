@@ -10,15 +10,11 @@ function Step2() {
 
   return (
     <div>
-      <div className={styles.main_wrapper}>
-
-        <div className={styles.multi_step_bar}></div>
-
         <header className={styles.header}>
           Have you ever used any VPN before?
         </header>
 
-        <label onClick={() => router.push('/step-3')} className={styles.label}>
+        <label onClick={() => router.push('/quiz?q=3')} className={styles.label}>
           <input
             type="radio"
             name="input_name_yes"
@@ -40,7 +36,7 @@ function Step2() {
           </div>
         </label>
 
-        <label onClick={() => router.push('/step-4')} className={styles.label}>
+        <label onClick={() => router.push('/quiz?q=4')} className={styles.label}>
           <input
             type="radio"
             name="input_name_no"
@@ -63,7 +59,6 @@ function Step2() {
           </div>
         </label>
       </div>
-    </div>
   );
 }
 

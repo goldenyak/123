@@ -67,7 +67,7 @@ function Step15() {
         </div>
 
         <div className={styles.button_wrapper}>
-          <button onClick={() => router.push('/step-16')}>Continue</button>
+          <button onClick={() => router.push('/quiz?q=16')}>Continue</button>{' '}
         </div>
       </div>
     </div>

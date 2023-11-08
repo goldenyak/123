@@ -11,14 +11,11 @@ function Step14() {
   const router = useRouter();
   return (
     <div>
-      <div className={styles.main_wrapper}>
-        <div className={styles.multi_step_bar}></div>
-
         <header className={styles.header}>
           How quickly do you update your devices and apps?
         </header>
 
-        <label onClick={() => router.push('/step-15')} className={styles.label}>
+        <label onClick={() => router.push('/quiz?q=15')} className={styles.label}>
           <input type="radio" name="input_name" value="input_value" />
           <div className={styles.label_wrapper}>
             <div className={styles.label_content}>
@@ -36,7 +33,7 @@ function Step14() {
           </div>
         </label>
 
-        <label onClick={() => router.push('/step-15')} className={styles.label}>
+        <label onClick={() => router.push('/quiz?q=15')} className={styles.label}>
           <input type="radio" name="input_name" value="input_value" />
           <div className={styles.label_wrapper}>
             <div className={styles.label_content}>
@@ -54,7 +51,7 @@ function Step14() {
           </div>
         </label>
 
-        <label onClick={() => router.push('/step-15')} className={styles.label}>
+        <label onClick={() => router.push('/quiz?q=15')} className={styles.label}>
           <input
             type="radio"
             name="input_name"
@@ -77,7 +74,7 @@ function Step14() {
           </div>
         </label>
 
-        <label onClick={() => router.push('/step-15')} className={styles.label}>
+        <label onClick={() => router.push('/quiz?q=15')} className={styles.label}>
           <input
             type="radio"
             name="input_name"
@@ -98,7 +95,6 @@ function Step14() {
           </div>
         </label>
       </div>
-    </div>
   );
 }
 

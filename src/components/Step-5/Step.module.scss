@@ -1,28 +1,10 @@
-.main_wrapper {
-  max-width: 360px;
-  margin: 0px auto;
-  padding: 0px 15px;
-}
-
-.multi_step_bar {
-  background: linear-gradient(91deg, #50AEF1 0%, #506EF1 100%);
-  opacity: 0.3;
-  height: 56px;
-  border-radius: 20px;
-
-  margin: 10px 0px 15px;
-  display: flex;
-  -webkit-box-pack: center;
-  justify-content: center;
-  box-sizing: border-box;
-}
-
 .header {
   margin-bottom: 24px;
   font-size: 26px;
   line-height: 32px;
   letter-spacing: 0.41px;
   text-align: left;
+  font-weight: 700;
 }
 
 .answers_wrapper {
@@ -37,20 +19,26 @@
   margin-bottom: 16px;
   pointer-events: auto;
 
-  input {
+  input[type='radio'] {
     display: none;
-  }
-
-  :hover {
-    background: linear-gradient(91deg, #50AEF1 0%, #506EF1 100%);
-    color: white;
+    &:checked + .label_wrapper {
+      width: 100%;
+      max-width: 320px;
+      border-radius: 16px;
+      cursor: pointer;
+      transition: color 0.2s ease-out 0s;
+      color: #1a1a1a;
+      padding: 0px 15px;
+      position: relative;
+      color: white;
+      background: linear-gradient(91deg, #50aef1 0%, #506ef1 100%);
+    }
   }
 }
 
 .label_wrapper {
   width: 100%;
   max-width: 320px;
-  box-shadow: rgb(223, 227, 243) 0px 6px 10px;
   border-radius: 16px;
   cursor: pointer;
   transition: color 0.2s ease-out 0s;

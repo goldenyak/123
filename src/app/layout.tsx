@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
 import { Roboto } from 'next/font/google';
 import './globals.css';
+import { ScoreContextProvider } from '@/hooks/useScoreContext/ScoreContextProvider';
 
 const roboto = Roboto({
-  weight: ['400'],
+  weight: ['400', '700'],
   style: ['normal', 'italic'],
   subsets: ['latin'],
   display: 'swap',
@@ -29,7 +30,7 @@ export default function RootLayout({
         {/* <meta name="viewport" content="initial-scale=1, viewport-fit=cover" /> */}
       </head>
 
-      <body className={roboto.className}>{children}</body>
+      <body className={roboto.className}><ScoreContextProvider>{children}</ScoreContextProvider></body>
     </html>
   );
 }

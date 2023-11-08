@@ -12,9 +12,6 @@ function Step16() {
 
   return (
     <div>
-      <div className={styles.main_wrapper}>
-        <div className={styles.multi_step_bar}></div>
-
         <header className={styles.header}>
           <h1 className={styles.header_title}>
             Does the statement below characterize you?
@@ -86,11 +83,19 @@ function Step16() {
           <span>Totally</span>
         </div>
 
-        <div className={isChecked ? styles.button_wrapper : styles.button_wrapper_disabled }>
-          <button disabled={isChecked ? false : true} onClick={() => router.push('/step-16')}>Continue</button>
+        <div
+          className={
+            isChecked ? styles.button_wrapper : styles.button_wrapper_disabled
+          }
+        >
+          <button
+            disabled={isChecked ? false : true}
+            onClick={() => router.push('/quiz?q=17')}
+          >
+            Continue
+          </button>
         </div>
       </div>
-    </div>
   );
 }
 
