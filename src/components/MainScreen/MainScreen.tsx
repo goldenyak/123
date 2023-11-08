@@ -1,70 +1,61 @@
-'use client';
-import { useRouter } from 'next/navigation';
-import logo from '../../assets/icons/logo.svg';
-import main_image from '../../assets/images/main_image.png';
-import {
-  Button,
-  ButtonsWrapper,
-  ContentWrapper,
-  Description,
-  LogoTitle,
-  LogoWrapper,
-  MainScreenWrapper,
-  PrivacyPolicyDescription,
-  // PrivacyPolicyWrapper,
-  TextWrapper,
-} from './style';
-import Image from 'next/image';
+"use client";
+import styles from "./MainScreen.module.scss";
+import { useRouter } from "next/navigation";
+import logo from "../../assets/icons/logo.svg";
+import main_image from "../../assets/images/main_image.png";
+import Image from "next/image";
 
 function MainScreen() {
   const router = useRouter();
   return (
-    <MainScreenWrapper>
-      <ContentWrapper>
-        <LogoWrapper>
+    <main className={styles.main}>
+      <div className={styles.content_wrapper}>
+        <div className={styles.logo_wrapper}>
           <Image alt="VPN Lumos" src={logo} />
-          <LogoTitle>VPN Lumos</LogoTitle>
-        </LogoWrapper>
+          <div className={styles.logo_title}>VPN Lumos</div>
+        </div>
 
-        <TextWrapper>
-          <Description>Do you know what is VPN?</Description>
-          <ButtonsWrapper>
-            <Button onClick={() => router.push('/quiz?q=2')}>Yes</Button>
-            <Button onClick={() => router.push('/about-vpn')}>
+        <div className={styles.text_wrapper}>
+          <div className={styles.description}></div>
+          <div className={styles.buttons_wrapper}>
+            <button
+              onClick={() => router.push("/quiz?q=2")}
+              className={styles.btn}
+            >
+              Yes
+            </button>
+            <button
+              onClick={() => router.push("/about-vpn")}
+              className={styles.btn}
+            >
               Not really
-            </Button>
-          </ButtonsWrapper>
-        </TextWrapper>
+            </button>
+          </div>
+        </div>
 
-        <Image
-          alt="MainImage"
-          src={main_image}
-          width={375}
-          height={322}
-          style={{ marginBottom: '16px' }}
-        />
+        <Image alt="MainImage" src={main_image} className={styles.main_image} />
 
-        <PrivacyPolicyDescription>
-          By continuing you agree{'\n'}to our{' '}
+        <div className={styles.privacy}>
+          By continuing you agree{"\n"}to our{" "}
           <span
             style={{
-              fontWeight: '700',
+              fontWeight: "700",
             }}
           >
             Terms of Service
-          </span>{' '}
+          </span>{" "}
           and
           <span
             style={{
-              fontWeight: '700',
+              fontWeight: "700",
             }}
           >
-            {' '}
+            {" "}
             Privacy Policy
           </span>
-        </PrivacyPolicyDescription>
-      </ContentWrapper>
-    </MainScreenWrapper>
+        </div>
+      </div>
+    </main>
   );
 }
 
