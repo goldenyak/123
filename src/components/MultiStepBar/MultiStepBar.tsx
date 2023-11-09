@@ -31,11 +31,24 @@ export const MultiStepBar = () => {
   }, []);
 
   return (
-    <div className={styles.multi_step_bar_wrapper}>
+    <div
+      style={{
+        width: '100vw',
+        position: 'fixed',
+        left: '0',
+        borderBottom: '0.5px solid #cacacc',
+        backgroundColor: '#FFF',
+        zIndex: '10000',
+        display: 'flex',
+        justifyContent: 'center',
+      }}
+    >
       <div
         style={{
           display: 'flex',
           alignItems: 'center',
+          maxWidth: '428px',
+          flexGrow: '1',
         }}
       >
         <Image
@@ -44,7 +57,9 @@ export const MultiStepBar = () => {
           alt=''
           onClick={() => goBack(stepNumber)}
         />
-        <div style={{ width: '100%', margin: '50px 0', position: 'relative' }}>
+        <div
+          style={{ width: '100%', margin: '30px 10px', position: 'relative' }}
+        >
           <div
             style={{
               transition: 'all 0.5s ease-in-out',

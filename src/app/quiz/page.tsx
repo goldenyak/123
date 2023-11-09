@@ -22,7 +22,13 @@ export default function QuizPage() {
       }
     >
       <MultiStepBar />
-      <StepComponent />
+      <div
+        style={{
+          paddingTop: '100px',
+        }}
+      >
+        <StepComponent />
+      </div>
     </div>
   );
 }
