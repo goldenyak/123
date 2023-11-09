@@ -5,9 +5,7 @@ import { useState } from 'react';
 
 function Step15() {
   const router = useRouter();
-  const [isChecked, setIsChecked] = useState(false);
   const inputChangeHandler = () => {
-    setIsChecked(true);
     setTimeout(() => router.push('/quiz?q=16'), 200);
   };
 
