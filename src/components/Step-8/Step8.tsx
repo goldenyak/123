@@ -8,6 +8,7 @@ import icon_telegram from '../../assets/icons/icon_telegram.png';
 import icon_viber from '../../assets/icons/icon_viber.png';
 import { Button } from '../Button/Button';
 import { ChangeEvent, useState } from 'react';
+import icon_check_blue from '../../assets/icons/icon_check_blue.svg';
 
 function Step8() {
   const [isChecked, setIsChecked] = useState(0);
@@ -45,6 +46,13 @@ function Step8() {
             />
             <div className={styles.label_text}>WhatsApp</div>
           </div>
+          <div className={styles.label_circle}>
+            <Image
+              src={icon_check_blue}
+              alt=''
+              className={styles.label_check}
+            />
+          </div>
         </div>
       </label>
 
@@ -65,6 +73,13 @@ function Step8() {
               height={40}
             />
             <div className={styles.label_text}>Facebook messenger</div>
+          </div>
+          <div className={styles.label_circle}>
+            <Image
+              src={icon_check_blue}
+              alt=''
+              className={styles.label_check}
+            />
           </div>
         </div>
       </label>
@@ -88,6 +103,13 @@ function Step8() {
             />
             <div className={styles.label_text}>Telegram</div>
           </div>
+          <div className={styles.label_circle}>
+            <Image
+              src={icon_check_blue}
+              alt=''
+              className={styles.label_check}
+            />
+          </div>
         </div>
       </label>
 
@@ -109,6 +131,13 @@ function Step8() {
               height={40}
             />
             <div className={styles.label_text}>Viber</div>
+          </div>
+          <div className={styles.label_circle}>
+            <Image
+              src={icon_check_blue}
+              alt=''
+              className={styles.label_check}
+            />
           </div>
         </div>
       </label>

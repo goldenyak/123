@@ -8,6 +8,7 @@ import icon_world_map from '../../assets/icons/icon_world_map.png';
 import icon_ninja from '../../assets/icons/icon_ninja.png';
 import { Button } from '../Button/Button';
 import { ChangeEvent, useState } from 'react';
+import icon_check_blue from '../../assets/icons/icon_check_blue.svg';
 
 function Step9() {
   const [isChecked, setIsChecked] = useState(0);
@@ -45,6 +46,13 @@ function Step9() {
             />
             <div className={styles.label_text}>Internet speed boost</div>
           </div>
+          <div className={styles.label_circle}>
+            <Image
+              src={icon_check_blue}
+              alt=''
+              className={styles.label_check}
+            />
+          </div>
         </div>
       </label>
 
@@ -65,6 +73,13 @@ function Step9() {
               height={40}
             />
             <div className={styles.label_text}>Secure Online browsing</div>
+          </div>
+          <div className={styles.label_circle}>
+            <Image
+              src={icon_check_blue}
+              alt=''
+              className={styles.label_check}
+            />
           </div>
         </div>
       </label>
@@ -88,6 +103,13 @@ function Step9() {
             />
             <div className={styles.label_text}>Hide real location</div>
           </div>
+          <div className={styles.label_circle}>
+            <Image
+              src={icon_check_blue}
+              alt=''
+              className={styles.label_check}
+            />
+          </div>
         </div>
       </label>
 
@@ -109,6 +131,13 @@ function Step9() {
               height={40}
             />
             <div className={styles.label_text}>Hide browser history</div>
+          </div>
+          <div className={styles.label_circle}>
+            <Image
+              src={icon_check_blue}
+              alt=''
+              className={styles.label_check}
+            />
           </div>
         </div>
       </label>

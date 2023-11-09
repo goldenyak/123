@@ -9,6 +9,7 @@ import icon_sport_sites from '../../assets/icons/icon_sport_sites.png';
 import icon_other from '../../assets/icons/icon_other.png';
 import { ChangeEvent, useState } from 'react';
 import { Button } from '../Button/Button';
+import icon_check_blue from '../../assets/icons/icon_check_blue.svg';
 
 function Step6() {
   const [isChecked, setIsChecked] = useState(0);
@@ -46,6 +47,13 @@ function Step6() {
             />
             <div className={styles.label_text}>Netflix or other streaming</div>
           </div>
+          <div className={styles.label_circle}>
+            <Image
+              src={icon_check_blue}
+              alt=''
+              className={styles.label_check}
+            />
+          </div>
         </div>
       </label>
 
@@ -66,6 +74,13 @@ function Step6() {
               height={40}
             />
             <div className={styles.label_text}>Adult sites</div>
+          </div>
+          <div className={styles.label_circle}>
+            <Image
+              src={icon_check_blue}
+              alt=''
+              className={styles.label_check}
+            />
           </div>
         </div>
       </label>
@@ -89,6 +104,13 @@ function Step6() {
             />
             <div className={styles.label_text}>Social Networks</div>
           </div>
+          <div className={styles.label_circle}>
+            <Image
+              src={icon_check_blue}
+              alt=''
+              className={styles.label_check}
+            />
+          </div>
         </div>
       </label>
 
@@ -111,6 +133,13 @@ function Step6() {
             />
             <div className={styles.label_text}>Sport sites</div>
           </div>
+          <div className={styles.label_circle}>
+            <Image
+              src={icon_check_blue}
+              alt=''
+              className={styles.label_check}
+            />
+          </div>
         </div>
       </label>
 
@@ -132,6 +161,13 @@ function Step6() {
               height={40}
             />
             <div className={styles.label_text}>Other</div>
+          </div>
+          <div className={styles.label_circle}>
+            <Image
+              src={icon_check_blue}
+              alt=''
+              className={styles.label_check}
+            />
           </div>
         </div>
       </label>
