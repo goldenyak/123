@@ -38,8 +38,23 @@
   margin-bottom: 16px;
   pointer-events: auto;
 
+  .label_circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid rgb(202, 202, 202);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .label_check {
+    opacity: 0;
+  }
+
   input[type='checkbox'] {
     display: none;
+
     + .label_text {
       display: inline-flex;
       -webkit-box-pack: center;
@@ -57,6 +72,15 @@
       color: white;
       background: linear-gradient(91deg, #50aef1 0%, #506ef1 100%);
       transition: background 0.25s ease 0s;
+
+      .label_circle {
+        background-color: #fff;
+        border-color: transparent;
+        flex-shrink: 0;
+        .label_check {
+          opacity: 1;
+        }
+      }
     }
   }
 }
@@ -70,6 +94,9 @@
   color: #1a1a1a;
   padding: 0px 15px;
   position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .label_content {

@@ -7,6 +7,7 @@ import icon_expensive from '../../assets/icons/icon_expensive.png';
 import icon_low_connection from '../../assets/icons/icon_low_connection.png';
 import icon_was_not_safe from '../../assets/icons/icon_was_not_safe.png';
 import icon_other from '../../assets/icons/icon_other.png';
+import icon_check_blue from '../../assets/icons/icon_check_blue.svg';
 import { ChangeEvent, useState } from 'react';
 import { Button } from '../Button/Button';
 import { MultiChooseInput } from '../MultiChooseInput/MultiChooseInput';
@@ -47,6 +48,13 @@ function Step3() {
             />
             <div className={styles.label_text}>Was not working</div>
           </div>
+          <div className={styles.label_circle}>
+            <Image
+              src={icon_check_blue}
+              alt=''
+              className={styles.label_check}
+            />
+          </div>
         </div>
       </label>
 
@@ -67,6 +75,13 @@ function Step3() {
               height={40}
             />
             <div className={styles.label_text}>Too expensive</div>
+          </div>
+          <div className={styles.label_circle}>
+            <Image
+              src={icon_check_blue}
+              alt=''
+              className={styles.label_check}
+            />
           </div>
         </div>
       </label>
@@ -90,6 +105,13 @@ function Step3() {
             />
             <div className={styles.label_text}>Low connection speed</div>
           </div>
+          <div className={styles.label_circle}>
+            <Image
+              src={icon_check_blue}
+              alt=''
+              className={styles.label_check}
+            />
+          </div>
         </div>
       </label>
 
@@ -112,27 +134,12 @@ function Step3() {
             />
             <div className={styles.label_text}>Wasn’t safe</div>
           </div>
-        </div>
-      </label>
-
-      <label className={styles.label}>
-        <input
-          onChange={(e) => inputChangeHandler(e)}
-          type='checkbox'
-          name='input_name'
-          value='input_value'
-          style={{ display: 'none' }}
-        />
-        <div className={styles.label_wrapper}>
-          <div className={styles.label_content}>
+          <div className={styles.label_circle}>
             <Image
-              src={icon_other}
+              src={icon_check_blue}
               alt=''
-              className={styles.label_icon}
-              width={40}
-              height={40}
+              className={styles.label_check}
             />
-            <div className={styles.label_text}>Other</div>
           </div>
         </div>
       </label>
@@ -156,159 +163,12 @@ function Step3() {
             />
             <div className={styles.label_text}>Other</div>
           </div>
-        </div>
-      </label>
-
-      <label className={styles.label}>
-        <input
-          onChange={(e) => inputChangeHandler(e)}
-          type='checkbox'
-          name='input_name'
-          value='input_value'
-          style={{ display: 'none' }}
-        />
-        <div className={styles.label_wrapper}>
-          <div className={styles.label_content}>
+          <div className={styles.label_circle}>
             <Image
-              src={icon_other}
+              src={icon_check_blue}
               alt=''
-              className={styles.label_icon}
-              width={40}
-              height={40}
+              className={styles.label_check}
             />
-            <div className={styles.label_text}>Other</div>
-          </div>
-        </div>
-      </label>
-
-      <label className={styles.label}>
-        <input
-          onChange={(e) => inputChangeHandler(e)}
-          type='checkbox'
-          name='input_name'
-          value='input_value'
-          style={{ display: 'none' }}
-        />
-        <div className={styles.label_wrapper}>
-          <div className={styles.label_content}>
-            <Image
-              src={icon_other}
-              alt=''
-              className={styles.label_icon}
-              width={40}
-              height={40}
-            />
-            <div className={styles.label_text}>Other</div>
-          </div>
-        </div>
-      </label>
-
-      <label className={styles.label}>
-        <input
-          onChange={(e) => inputChangeHandler(e)}
-          type='checkbox'
-          name='input_name'
-          value='input_value'
-          style={{ display: 'none' }}
-        />
-        <div className={styles.label_wrapper}>
-          <div className={styles.label_content}>
-            <Image
-              src={icon_other}
-              alt=''
-              className={styles.label_icon}
-              width={40}
-              height={40}
-            />
-            <div className={styles.label_text}>Other</div>
-          </div>
-        </div>
-      </label>
-
-      <label className={styles.label}>
-        <input
-          onChange={(e) => inputChangeHandler(e)}
-          type='checkbox'
-          name='input_name'
-          value='input_value'
-          style={{ display: 'none' }}
-        />
-        <div className={styles.label_wrapper}>
-          <div className={styles.label_content}>
-            <Image
-              src={icon_other}
-              alt=''
-              className={styles.label_icon}
-              width={40}
-              height={40}
-            />
-            <div className={styles.label_text}>Other</div>
-          </div>
-        </div>
-      </label>
-
-      <label className={styles.label}>
-        <input
-          onChange={(e) => inputChangeHandler(e)}
-          type='checkbox'
-          name='input_name'
-          value='input_value'
-          style={{ display: 'none' }}
-        />
-        <div className={styles.label_wrapper}>
-          <div className={styles.label_content}>
-            <Image
-              src={icon_other}
-              alt=''
-              className={styles.label_icon}
-              width={40}
-              height={40}
-            />
-            <div className={styles.label_text}>Other</div>
-          </div>
-        </div>
-      </label>
-
-      <label className={styles.label}>
-        <input
-          onChange={(e) => inputChangeHandler(e)}
-          type='checkbox'
-          name='input_name'
-          value='input_value'
-          style={{ display: 'none' }}
-        />
-        <div className={styles.label_wrapper}>
-          <div className={styles.label_content}>
-            <Image
-              src={icon_other}
-              alt=''
-              className={styles.label_icon}
-              width={40}
-              height={40}
-            />
-            <div className={styles.label_text}>Other</div>
-          </div>
-        </div>
-      </label>
-
-      <label className={styles.label}>
-        <input
-          onChange={(e) => inputChangeHandler(e)}
-          type='checkbox'
-          name='input_name'
-          value='input_value'
-          style={{ display: 'none' }}
-        />
-        <div className={styles.label_wrapper}>
-          <div className={styles.label_content}>
-            <Image
-              src={icon_other}
-              alt=''
-              className={styles.label_icon}
-              width={40}
-              height={40}
-            />
-            <div className={styles.label_text}>Other</div>
           </div>
         </div>
       </label>
