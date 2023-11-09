@@ -48,6 +48,7 @@ export const MultiStepBar = () => {
           display: 'flex',
           alignItems: 'center',
           maxWidth: '428px',
+          margin: '0 15px',
           flexGrow: '1',
         }}
       >
@@ -57,9 +58,7 @@ export const MultiStepBar = () => {
           alt=''
           onClick={() => goBack(stepNumber)}
         />
-        <div
-          style={{ width: '100%', margin: '30px 10px', position: 'relative' }}
-        >
+        <div style={{ width: '100%', margin: '30px 0', position: 'relative' }}>
           <div
             style={{
               transition: 'all 0.5s ease-in-out',
