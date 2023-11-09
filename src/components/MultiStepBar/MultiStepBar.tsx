@@ -20,11 +20,15 @@ export const MultiStepBar = () => {
     }
   }, [stepNumber]);
 
-  const goBack = useCallback((step: string) => {
-    router.push(`/quiz?q=${parseInt(step) - 1}`);
-  }, []);
+  const isFirstStep = (step: string) => step === '2';
 
-  const isFirstStep = () => stepNumber === '2';
+  const goBack = useCallback((step: string) => {
+    if (isFirstStep(step)) {
+      router.push(`/`);
+    } else {
+      router.push(`/quiz?q=${parseInt(step) - 1}`);
+    }
+  }, []);
 
   return (
     <div className={styles.multi_step_bar_wrapper}>
@@ -32,17 +36,14 @@ export const MultiStepBar = () => {
         style={{
           display: 'flex',
           alignItems: 'center',
-          // position: 'relative',
         }}
       >
-        {!isFirstStep() && (
-          <Image
-            className={styles.btn_back}
-            src={icon_step_back}
-            alt=''
-            onClick={() => goBack(stepNumber)}
-          />
-        )}
+        <Image
+          className={styles.btn_back}
+          src={icon_step_back}
+          alt=''
+          onClick={() => goBack(stepNumber)}
+        />
         <div style={{ width: '100%', margin: '50px 0', position: 'relative' }}>
           <div
             style={{
