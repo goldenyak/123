@@ -5,6 +5,8 @@ import steps from './steps';
 import styles from './Quiz.module.scss';
 import { MultiStepBar } from '@/components/MultiStepBar/MultiStepBar';
 
+const STEPS_WO_STEP_BAR = [4, 10, 11, 17, 18, 19, 20];
+
 export default function QuizPage() {
   const params = useSearchParams();
   const queryValue = params.get('q');
@@ -12,6 +14,8 @@ export default function QuizPage() {
   const StepComponent = steps[stepNumber];
 
   const fillGradient = stepNumber === 15 || stepNumber === 16;
+
+  const showStepBar = () => !STEPS_WO_STEP_BAR.includes(stepNumber);
 
   return (
     <div
@@ -21,7 +25,7 @@ export default function QuizPage() {
           : styles.main_wrapper
       }
     >
-      <MultiStepBar />
+      {showStepBar() && <MultiStepBar />}
       <div
         style={{
           paddingTop: '100px',
