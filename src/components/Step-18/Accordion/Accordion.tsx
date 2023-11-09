@@ -90,7 +90,6 @@ export const Accordion = () => {
         flexDirection: 'column',
         gap: '10px',
         alignItems: 'center',
-        marginBottom: '100px',
       }}
     >
       {accordionData.map((data, index) => (

@@ -28,7 +28,8 @@ export default function QuizPage() {
       {showStepBar() && <MultiStepBar />}
       <div
         style={{
-          paddingTop: '100px',
+          paddingTop: `${showStepBar() ? '100px' : '0'}`,
+          marginBottom: '100px',
         }}
       >
         <StepComponent />
