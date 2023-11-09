@@ -19,12 +19,8 @@ import Step19 from '@/components/Step-19/Step19';
 import Step20 from '@/components/Step-20/Step20';
 
 const steps: React.FC[] = [
-  () => {
-    return <>Something went wrong</>;
-  },
-  () => {
-    return <>Something went wrong</>;
-  },
+  Step2,
+  Step2,
   Step2,
   Step3,
   Step4,
