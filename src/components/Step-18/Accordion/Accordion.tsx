@@ -50,7 +50,7 @@ export const AccordionItem = ({
         </div>
         <Image
           src={icon_arrow}
-          alt=""
+          alt=''
           className={
             active ? [styles.arrow, styles.arrow_down].join(' ') : styles.arrow
           }
@@ -90,6 +90,7 @@ export const Accordion = () => {
         flexDirection: 'column',
         gap: '10px',
         alignItems: 'center',
+        marginBottom: '100px',
       }}
     >
       {accordionData.map((data, index) => (

@@ -9,7 +9,12 @@ interface ButtonProps {
 export const Button = ({ title, onClick, disabled }: ButtonProps) => {
   return (
     <div className={styles.button_wrapper}>
-      <button type="button" className={styles.button} onClick={onClick} disabled={disabled}>
+      <button
+        type='button'
+        className={styles.button}
+        onClick={onClick}
+        disabled={disabled}
+      >
         {title}
       </button>
     </div>

@@ -30,15 +30,15 @@ function Step8() {
       <label className={styles.label}>
         <input
           onChange={(e) => inputChangeHandler(e)}
-          type="checkbox"
-          name="input_name"
-          value="one"
+          type='checkbox'
+          name='input_name'
+          value='one'
         />
         <div className={styles.label_wrapper}>
           <div className={styles.label_content}>
             <Image
               src={icon_whatsapp}
-              alt="icon_whatsapp"
+              alt='icon_whatsapp'
               className={styles.label_icon}
               width={40}
               height={40}
@@ -51,15 +51,15 @@ function Step8() {
       <label className={styles.label}>
         <input
           onChange={inputChangeHandler}
-          type="checkbox"
-          name="input_name"
-          value="input_value"
+          type='checkbox'
+          name='input_name'
+          value='input_value'
         />
         <div className={styles.label_wrapper}>
           <div className={styles.label_content}>
             <Image
               src={icon_facebook}
-              alt="icon_facebook"
+              alt='icon_facebook'
               className={styles.label_icon}
               width={40}
               height={40}
@@ -72,16 +72,16 @@ function Step8() {
       <label className={styles.label}>
         <input
           onChange={inputChangeHandler}
-          type="checkbox"
-          name="input_name2"
-          value="input_value"
+          type='checkbox'
+          name='input_name2'
+          value='input_value'
           style={{ display: 'none' }}
         />
         <div className={styles.label_wrapper}>
           <div className={styles.label_content}>
             <Image
               src={icon_telegram}
-              alt="icon_telegram"
+              alt='icon_telegram'
               className={styles.label_icon}
               width={40}
               height={40}
@@ -94,16 +94,16 @@ function Step8() {
       <label className={styles.label}>
         <input
           onChange={inputChangeHandler}
-          type="checkbox"
-          name="input_name"
-          value="input_value"
+          type='checkbox'
+          name='input_name'
+          value='input_value'
           style={{ display: 'none' }}
         />
         <div className={styles.label_wrapper}>
           <div className={styles.label_content}>
             <Image
               src={icon_viber}
-              alt="icon_viber"
+              alt='icon_viber'
               className={styles.label_icon}
               width={40}
               height={40}
@@ -113,7 +113,7 @@ function Step8() {
         </div>
       </label>
       <Button
-        title="Continue"
+        title='Continue'
         onClick={() => router.push('/quiz?q=9')}
         disabled={isChecked ? false : true}
       />

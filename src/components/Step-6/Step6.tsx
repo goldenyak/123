@@ -31,15 +31,15 @@ function Step6() {
       <label className={styles.label}>
         <input
           onChange={(e) => inputChangeHandler(e)}
-          type="checkbox"
-          name="input_name"
-          value="input_value"
+          type='checkbox'
+          name='input_name'
+          value='input_value'
         />
         <div className={styles.label_wrapper}>
           <div className={styles.label_content}>
             <Image
               src={icon_film_projector}
-              alt="icon_film_projector"
+              alt='icon_film_projector'
               className={styles.label_icon}
               width={40}
               height={40}
@@ -52,15 +52,15 @@ function Step6() {
       <label className={styles.label}>
         <input
           onChange={(e) => inputChangeHandler(e)}
-          type="checkbox"
-          name="input_name"
-          value="input_value"
+          type='checkbox'
+          name='input_name'
+          value='input_value'
         />
         <div className={styles.label_wrapper}>
           <div className={styles.label_content}>
             <Image
               src={icon_adult_sites}
-              alt="icon_adult_sites"
+              alt='icon_adult_sites'
               className={styles.label_icon}
               width={40}
               height={40}
@@ -73,16 +73,16 @@ function Step6() {
       <label className={styles.label}>
         <input
           onChange={(e) => inputChangeHandler(e)}
-          type="checkbox"
-          name="input_name"
-          value="input_value"
+          type='checkbox'
+          name='input_name'
+          value='input_value'
           style={{ display: 'none' }}
         />
         <div className={styles.label_wrapper}>
           <div className={styles.label_content}>
             <Image
               src={icon_social_networks}
-              alt="icon_social_networks"
+              alt='icon_social_networks'
               className={styles.label_icon}
               width={40}
               height={40}
@@ -95,16 +95,16 @@ function Step6() {
       <label className={styles.label}>
         <input
           onChange={(e) => inputChangeHandler(e)}
-          type="checkbox"
-          name="input_name"
-          value="input_value"
+          type='checkbox'
+          name='input_name'
+          value='input_value'
           style={{ display: 'none' }}
         />
         <div className={styles.label_wrapper}>
           <div className={styles.label_content}>
             <Image
               src={icon_sport_sites}
-              alt="icon_sport_sites"
+              alt='icon_sport_sites'
               className={styles.label_icon}
               width={40}
               height={40}
@@ -117,16 +117,16 @@ function Step6() {
       <label className={styles.label}>
         <input
           onChange={(e) => inputChangeHandler(e)}
-          type="checkbox"
-          name="input_name"
-          value="input_value"
+          type='checkbox'
+          name='input_name'
+          value='input_value'
           style={{ display: 'none' }}
         />
         <div className={styles.label_wrapper}>
           <div className={styles.label_content}>
             <Image
               src={icon_other}
-              alt="icon_other"
+              alt='icon_other'
               className={styles.label_icon}
               width={40}
               height={40}
@@ -136,7 +136,7 @@ function Step6() {
         </div>
       </label>
       <Button
-        title="Continue"
+        title='Continue'
         onClick={() => router.push('/quiz?q=7')}
         disabled={isChecked ? false : true}
       />

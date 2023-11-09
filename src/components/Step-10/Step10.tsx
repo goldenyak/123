@@ -6,7 +6,6 @@ import map from '../../assets/images/map.png';
 import ProgressBar from '../ProgressBar/ProgressBar';
 
 function Step10() {
-
   return (
     <div>
       <div className={styles.main_wrapper}>
@@ -16,13 +15,13 @@ function Step10() {
         <div className={styles.image_wrapper}>
           <Image
             src={map}
-            alt="world_map"
+            alt='world_map'
             className={styles.label_icon}
             width={320}
             height={200}
           />
         </div>
-        <ProgressBar path='/quiz?q=11'/>
+        <ProgressBar path='/quiz?q=11' />
       </div>
     </div>
   );

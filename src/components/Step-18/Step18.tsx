@@ -12,43 +12,62 @@ function Step18() {
 
   return (
     <div>
-      <header className={styles.header}>
-        <h1 className={styles.header_title}>Your risk profile</h1>
-      </header>
-
       <div
         style={{
           display: 'flex',
-          gap: '8px',
-          justifyContent: 'center',
-          alignItems: 'center',
+          flexDirection: 'column',
+          gap: '18px',
         }}
       >
-        <Image src={icon_warning} alt="icon_warning" />
+        <h1 className={styles.header_title}>Your risk profile</h1>
+
         <div
           style={{
-            fontSize: ' 14px',
-            fontWeight: '500',
-            textTransform: 'uppercase',
+            display: 'flex',
+            gap: '8px',
+            justifyContent: 'center',
+            alignItems: 'center',
           }}
         >
-          High risk data leakage
+          <Image src={icon_warning} alt='icon_warning' />
+          <div
+            style={{
+              fontSize: ' 14px',
+              fontWeight: '500',
+              textTransform: 'uppercase',
+            }}
+          >
+            High risk data leakage
+          </div>
         </div>
-      </div>
 
-      <DiagramHigh />
+        <div
+          style={{
+            textAlign: 'center',
+            fontSize: '14px',
 
-      <div
-        style={{
-          fontSize: '16px',
-          fontWeight: '700',
-          lineHeight: '1.2',
-          textAlign: 'left',
-        }}
-      >
-        To reduce your risk, follow the safety guidelines below:
+            lineHeight: '1.3',
+          }}
+        >
+          <span style={{ fontWeight: '700' }}>1,025,648 users like you</span>{' '}
+          have been able to mitigate the risk of data leakage by applying the
+          recommendations and using our VPN
+        </div>
+
+        <DiagramHigh />
+
+        <div
+          style={{
+            fontSize: '16px',
+            fontWeight: '700',
+            lineHeight: '1.2',
+            textAlign: 'left',
+          }}
+        >
+          To reduce your risk, follow the safety guidelines below:
+        </div>
+        <Accordion />
       </div>
-      <Accordion />
 
       <Button
         title={`Let's begin!`}

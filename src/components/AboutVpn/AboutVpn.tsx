@@ -12,7 +12,7 @@ function AboutVpn() {
         <div className={styles.image_wrapper}>
           <Image
             src={about_vpn}
-            alt="about_vpn"
+            alt='about_vpn'
             className={styles.image}
             width={375}
             height={315}
@@ -31,7 +31,10 @@ function AboutVpn() {
             thereby makes it difficult for others to track your online
             activities or identify your location
           </h3>
-          <h3 className={styles.description}>That is why you get the opportunity to use services that are not available in your country.</h3>
+          <h3 className={styles.description}>
+            That is why you get the opportunity to use services that are not
+            available in your country.
+          </h3>
         </div>
 
         <div className={styles.button_wrapper}>

@@ -142,12 +142,10 @@
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
 
-
 /////////////
 
-
 .input_body {
-  --primary: 25,91,255;
+  --primary: 25, 91, 255;
   --color: 44, 62, 80;
   display: flex;
   align-items: center;
@@ -177,30 +175,29 @@
     padding: 11px 15px;
     border-radius: 25px;
     border: 0px;
-    box-shadow: 0px 8px 25px 0px rgba(0,0,0,.05);
-    transition: all .25s ease;
+    box-shadow: 0px 8px 25px 0px rgba(0, 0, 0, 0.05);
+    transition: all 0.25s ease;
     min-width: 250px;
   }
-  input.valid ~ .icons .check{
+  input.valid ~ .icons .check {
     opacity: 1;
     visibility: visible;
     transform: scale(1);
   }
-  input.invalid ~ .icons .x{
+  input.invalid ~ .icons .x {
     opacity: 1;
     visibility: visible;
     transform: scale(1);
   }
   input:focus {
-    transform: translate(0,-6px);
-    box-shadow: 0px 15px 25px 0px rgba(0,0,0,.09);
+    transform: translate(0, -6px);
+    box-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 0.09);
     padding-left: 20px;
   }
   input:focus ~ .icons {
     transform: translate(0, -6px);
   }
 }
-
 
 .icons {
   position: absolute;
@@ -211,22 +208,22 @@
   pointer-events: none;
   width: 20px;
   height: 20px;
-  transition: all .25s ease;
+  transition: all 0.25s ease;
   i {
     position: absolute;
-    transition: all .25s ease;
+    transition: all 0.25s ease;
     font-size: 1.3rem;
     opacity: 0;
     visibility: hidden;
-    transform: scale(.5);
+    transform: scale(0.5);
   }
 }
 
 .check {
   color: #3aba6f;
-  text-shadow: 0px 5px 10px rgba(58, 186, 111, .3);
+  text-shadow: 0px 5px 10px rgba(58, 186, 111, 0.3);
 }
 .x {
   color: rgb(240, 90, 92);
-  text-shadow: 0px 5px 10px rgba(240, 90, 92, .3);
+  text-shadow: 0px 5px 10px rgba(240, 90, 92, 0.3);
 }

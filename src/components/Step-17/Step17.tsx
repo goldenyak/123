@@ -6,7 +6,6 @@ import ProgressBar from '../ProgressBar/ProgressBar';
 import review_stars from '../../assets/images/review_stars.png';
 
 function Step17() {
-
   return (
     <div style={{ position: 'relative', boxSizing: 'border-box' }}>
       <div className={styles.main_wrapper}>
@@ -18,7 +17,7 @@ function Step17() {
             <h3 className={styles.review_title}>Love this app</h3>
             <Image
               src={review_stars}
-              alt="review_stars"
+              alt='review_stars'
               className={styles.image}
               width={90}
               height={15}
@@ -38,7 +37,7 @@ function Step17() {
             <h3 className={styles.review_title}>Stunning</h3>
             <Image
               src={review_stars}
-              alt="review_stars"
+              alt='review_stars'
               className={styles.image}
               width={90}
               height={15}
@@ -59,7 +58,7 @@ function Step17() {
             <h3 className={styles.review_title}>Stunning</h3>
             <Image
               src={review_stars}
-              alt="review_stars"
+              alt='review_stars'
               className={styles.image}
               width={90}
               height={15}
@@ -80,7 +79,7 @@ function Step17() {
             <h3 className={styles.review_title}>Stunning</h3>
             <Image
               src={review_stars}
-              alt="review_stars"
+              alt='review_stars'
               className={styles.image}
               width={90}
               height={15}
@@ -101,7 +100,7 @@ function Step17() {
             <h3 className={styles.review_title}>Stunning</h3>
             <Image
               src={review_stars}
-              alt="review_stars"
+              alt='review_stars'
               className={styles.image}
               width={90}
               height={15}
@@ -122,7 +121,7 @@ function Step17() {
             <h3 className={styles.review_title}>Stunning</h3>
             <Image
               src={review_stars}
-              alt="review_stars"
+              alt='review_stars'
               className={styles.image}
               width={90}
               height={15}
@@ -143,7 +142,7 @@ function Step17() {
             <h3 className={styles.review_title}>Stunning</h3>
             <Image
               src={review_stars}
-              alt="review_stars"
+              alt='review_stars'
               className={styles.image}
               width={90}
               height={15}

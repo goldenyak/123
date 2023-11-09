@@ -11,8 +11,16 @@ export default function QuizPage() {
   const stepNumber = queryValue !== null ? parseInt(queryValue) : 0;
   const StepComponent = steps[stepNumber];
 
+  const fillGradient = stepNumber === 15 || stepNumber === 16;
+
   return (
-    <div className={styles.main_wrapper}>
+    <div
+      className={
+        fillGradient
+          ? [styles.main_wrapper, styles.gradient].join(' ')
+          : styles.main_wrapper
+      }
+    >
       <MultiStepBar />
       <StepComponent />
     </div>

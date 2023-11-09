@@ -43,7 +43,7 @@ const steps: React.FC[] = [
   Step17,
   Step18,
   Step19,
-  Step20
+  Step20,
 ];
 
 export default steps;

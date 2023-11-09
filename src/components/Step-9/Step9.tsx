@@ -30,15 +30,15 @@ function Step9() {
       <label className={styles.label}>
         <input
           onChange={(e) => inputChangeHandler(e)}
-          type="checkbox"
-          name="input_name"
-          value="input_value"
+          type='checkbox'
+          name='input_name'
+          value='input_value'
         />
         <div className={styles.label_wrapper}>
           <div className={styles.label_content}>
             <Image
               src={icon_rocket}
-              alt="icon_rocket"
+              alt='icon_rocket'
               className={styles.label_icon}
               width={40}
               height={40}
@@ -51,15 +51,15 @@ function Step9() {
       <label className={styles.label}>
         <input
           onChange={(e) => inputChangeHandler(e)}
-          type="checkbox"
-          name="input_name"
-          value="input_value"
+          type='checkbox'
+          name='input_name'
+          value='input_value'
         />
         <div className={styles.label_wrapper}>
           <div className={styles.label_content}>
             <Image
               src={icon_locked}
-              alt="icon_locked"
+              alt='icon_locked'
               className={styles.label_icon}
               width={40}
               height={40}
@@ -72,16 +72,16 @@ function Step9() {
       <label className={styles.label}>
         <input
           onChange={(e) => inputChangeHandler(e)}
-          type="checkbox"
-          name="input_name"
-          value="input_value"
+          type='checkbox'
+          name='input_name'
+          value='input_value'
           style={{ display: 'none' }}
         />
         <div className={styles.label_wrapper}>
           <div className={styles.label_content}>
             <Image
               src={icon_world_map}
-              alt="icon_world_map"
+              alt='icon_world_map'
               className={styles.label_icon}
               width={40}
               height={40}
@@ -94,16 +94,16 @@ function Step9() {
       <label className={styles.label}>
         <input
           onChange={(e) => inputChangeHandler(e)}
-          type="checkbox"
-          name="input_name"
-          value="input_value"
+          type='checkbox'
+          name='input_name'
+          value='input_value'
           style={{ display: 'none' }}
         />
         <div className={styles.label_wrapper}>
           <div className={styles.label_content}>
             <Image
               src={icon_ninja}
-              alt="icon_ninja"
+              alt='icon_ninja'
               className={styles.label_icon}
               width={40}
               height={40}
@@ -113,7 +113,7 @@ function Step9() {
         </div>
       </label>
       <Button
-        title="Continue"
+        title='Continue'
         onClick={() => router.push('/quiz?q=10')}
         disabled={isChecked ? false : true}
       />

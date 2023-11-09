@@ -17,10 +17,10 @@ function Step20() {
 
       <div className={styles.input_body}>
         <div className={styles.con_input}>
-          <input placeholder="Email" type="text" />
+          <input placeholder='Email' type='text' />
           <div className={styles.icons}>
-            <i className="bx bxs-check-circle check"></i>
-            <i className="bx bxs-x-circle x"></i>
+            <i className='bx bxs-check-circle check'></i>
+            <i className='bx bxs-x-circle x'></i>
           </div>
         </div>
       </div>

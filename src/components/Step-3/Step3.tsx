@@ -32,15 +32,15 @@ function Step3() {
       <label className={styles.label}>
         <input
           onChange={(e) => inputChangeHandler(e)}
-          type="checkbox"
-          name="input_name"
-          value="input_value"
+          type='checkbox'
+          name='input_name'
+          value='input_value'
         />
         <div className={styles.label_wrapper}>
           <div className={styles.label_content}>
             <Image
               src={icon_was_not_working}
-              alt=""
+              alt=''
               className={styles.label_icon}
               width={40}
               height={40}
@@ -53,15 +53,15 @@ function Step3() {
       <label className={styles.label}>
         <input
           onChange={(e) => inputChangeHandler(e)}
-          type="checkbox"
-          name="input_name"
-          value="input_value"
+          type='checkbox'
+          name='input_name'
+          value='input_value'
         />
         <div className={styles.label_wrapper}>
           <div className={styles.label_content}>
             <Image
               src={icon_expensive}
-              alt=""
+              alt=''
               className={styles.label_icon}
               width={40}
               height={40}
@@ -74,16 +74,16 @@ function Step3() {
       <label className={styles.label}>
         <input
           onChange={(e) => inputChangeHandler(e)}
-          type="checkbox"
-          name="input_name"
-          value="input_value"
+          type='checkbox'
+          name='input_name'
+          value='input_value'
           style={{ display: 'none' }}
         />
         <div className={styles.label_wrapper}>
           <div className={styles.label_content}>
             <Image
               src={icon_low_connection}
-              alt=""
+              alt=''
               className={styles.label_icon}
               width={40}
               height={40}
@@ -96,16 +96,16 @@ function Step3() {
       <label className={styles.label}>
         <input
           onChange={(e) => inputChangeHandler(e)}
-          type="checkbox"
-          name="input_name"
-          value="input_value"
+          type='checkbox'
+          name='input_name'
+          value='input_value'
           style={{ display: 'none' }}
         />
         <div className={styles.label_wrapper}>
           <div className={styles.label_content}>
             <Image
               src={icon_was_not_safe}
-              alt=""
+              alt=''
               className={styles.label_icon}
               width={40}
               height={40}
@@ -118,16 +118,16 @@ function Step3() {
       <label className={styles.label}>
         <input
           onChange={(e) => inputChangeHandler(e)}
-          type="checkbox"
-          name="input_name"
-          value="input_value"
+          type='checkbox'
+          name='input_name'
+          value='input_value'
           style={{ display: 'none' }}
         />
         <div className={styles.label_wrapper}>
           <div className={styles.label_content}>
             <Image
               src={icon_other}
-              alt=""
+              alt=''
               className={styles.label_icon}
               width={40}
               height={40}
@@ -137,20 +137,19 @@ function Step3() {
         </div>
       </label>
 
-
       <label className={styles.label}>
         <input
           onChange={(e) => inputChangeHandler(e)}
-          type="checkbox"
-          name="input_name"
-          value="input_value"
+          type='checkbox'
+          name='input_name'
+          value='input_value'
           style={{ display: 'none' }}
         />
         <div className={styles.label_wrapper}>
           <div className={styles.label_content}>
             <Image
               src={icon_other}
-              alt=""
+              alt=''
               className={styles.label_icon}
               width={40}
               height={40}
@@ -160,20 +159,19 @@ function Step3() {
         </div>
       </label>
 
-
       <label className={styles.label}>
         <input
           onChange={(e) => inputChangeHandler(e)}
-          type="checkbox"
-          name="input_name"
-          value="input_value"
+          type='checkbox'
+          name='input_name'
+          value='input_value'
           style={{ display: 'none' }}
         />
         <div className={styles.label_wrapper}>
           <div className={styles.label_content}>
             <Image
               src={icon_other}
-              alt=""
+              alt=''
               className={styles.label_icon}
               width={40}
               height={40}
@@ -183,20 +181,19 @@ function Step3() {
         </div>
       </label>
 
-
       <label className={styles.label}>
         <input
           onChange={(e) => inputChangeHandler(e)}
-          type="checkbox"
-          name="input_name"
-          value="input_value"
+          type='checkbox'
+          name='input_name'
+          value='input_value'
           style={{ display: 'none' }}
         />
         <div className={styles.label_wrapper}>
           <div className={styles.label_content}>
             <Image
               src={icon_other}
-              alt=""
+              alt=''
               className={styles.label_icon}
               width={40}
               height={40}
@@ -206,20 +203,19 @@ function Step3() {
         </div>
       </label>
 
-
       <label className={styles.label}>
         <input
           onChange={(e) => inputChangeHandler(e)}
-          type="checkbox"
-          name="input_name"
-          value="input_value"
+          type='checkbox'
+          name='input_name'
+          value='input_value'
           style={{ display: 'none' }}
         />
         <div className={styles.label_wrapper}>
           <div className={styles.label_content}>
             <Image
               src={icon_other}
-              alt=""
+              alt=''
               className={styles.label_icon}
               width={40}
               height={40}
@@ -229,20 +225,19 @@ function Step3() {
         </div>
       </label>
 
-
       <label className={styles.label}>
         <input
           onChange={(e) => inputChangeHandler(e)}
-          type="checkbox"
-          name="input_name"
-          value="input_value"
+          type='checkbox'
+          name='input_name'
+          value='input_value'
           style={{ display: 'none' }}
         />
         <div className={styles.label_wrapper}>
           <div className={styles.label_content}>
             <Image
               src={icon_other}
-              alt=""
+              alt=''
               className={styles.label_icon}
               width={40}
               height={40}
@@ -252,20 +247,19 @@ function Step3() {
         </div>
       </label>
 
-
       <label className={styles.label}>
         <input
           onChange={(e) => inputChangeHandler(e)}
-          type="checkbox"
-          name="input_name"
-          value="input_value"
+          type='checkbox'
+          name='input_name'
+          value='input_value'
           style={{ display: 'none' }}
         />
         <div className={styles.label_wrapper}>
           <div className={styles.label_content}>
             <Image
               src={icon_other}
-              alt=""
+              alt=''
               className={styles.label_icon}
               width={40}
               height={40}
@@ -275,20 +269,19 @@ function Step3() {
         </div>
       </label>
 
-
       <label className={styles.label}>
         <input
           onChange={(e) => inputChangeHandler(e)}
-          type="checkbox"
-          name="input_name"
-          value="input_value"
+          type='checkbox'
+          name='input_name'
+          value='input_value'
           style={{ display: 'none' }}
         />
         <div className={styles.label_wrapper}>
           <div className={styles.label_content}>
             <Image
               src={icon_other}
-              alt=""
+              alt=''
               className={styles.label_icon}
               width={40}
               height={40}
@@ -298,20 +291,19 @@ function Step3() {
         </div>
       </label>
 
-
       <label className={styles.label}>
         <input
           onChange={(e) => inputChangeHandler(e)}
-          type="checkbox"
-          name="input_name"
-          value="input_value"
+          type='checkbox'
+          name='input_name'
+          value='input_value'
           style={{ display: 'none' }}
         />
         <div className={styles.label_wrapper}>
           <div className={styles.label_content}>
             <Image
               src={icon_other}
-              alt=""
+              alt=''
               className={styles.label_icon}
               width={40}
               height={40}
@@ -322,7 +314,7 @@ function Step3() {
       </label>
 
       <Button
-        title="Continue"
+        title='Continue'
         onClick={() => router.push('/quiz?q=4')}
         disabled={isChecked ? false : true}
       />

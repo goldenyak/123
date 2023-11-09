@@ -8,29 +8,29 @@ function Step15() {
   const [isChecked, setIsChecked] = useState(false);
   const inputChangeHandler = () => {
     setIsChecked(true);
+    setTimeout(() => router.push('/quiz?q=16'), 200);
   };
 
   return (
-    <div style={{background: 'linear-gradient(180deg, rgba(255, 255, 255, 0.00) 42.79%, #DEEEFF 99.93%)'}}>
-        <header className={styles.header}>
-          <h1 className={styles.header_title}>
-            Does the statement below characterize you?
-          </h1>
-          <h2 className={styles.header_description}>
-            «If I see links in the incoming email, I open them immediately»
-          </h2>
-        </header>
+    <div>
+      <header className={styles.header}>
+        <h1 className={styles.header_title}>
+          Does the statement below characterize you?
+        </h1>
+        <h2 className={styles.header_description}>
+          «If I see links in the incoming email, I open them immediately»
+        </h2>
+      </header>
 
-        <div className={styles.wrapper_for_answers}>
-          
+      <div className={styles.wrapper_for_answers}>
         <div className={styles.answers_wrapper}>
           <label className={styles.label}>
             <input
               onChange={inputChangeHandler}
               className={styles.input}
-              type="radio"
-              name="input_name"
-              value="one"
+              type='radio'
+              name='input_name'
+              value='one'
             />
             <div className={styles.label_text}>1</div>
           </label>
@@ -39,9 +39,9 @@ function Step15() {
             <input
               onChange={inputChangeHandler}
               className={styles.input}
-              type="radio"
-              name="input_name"
-              value="two"
+              type='radio'
+              name='input_name'
+              value='two'
             />
             <div className={styles.label_text}>2</div>
           </label>
@@ -50,9 +50,9 @@ function Step15() {
             <input
               onChange={inputChangeHandler}
               className={styles.input}
-              type="radio"
-              name="input_name"
-              value="three"
+              type='radio'
+              name='input_name'
+              value='three'
             />
             <div className={styles.label_text}>3</div>
           </label>
@@ -61,9 +61,9 @@ function Step15() {
             <input
               onChange={inputChangeHandler}
               className={styles.input}
-              type="radio"
-              name="input_name"
-              value="four"
+              type='radio'
+              name='input_name'
+              value='four'
             />
             <div className={styles.label_text}>4</div>
           </label>
@@ -72,9 +72,9 @@ function Step15() {
             <input
               onChange={inputChangeHandler}
               className={styles.input}
-              type="radio"
-              name="input_name"
-              value="five"
+              type='radio'
+              name='input_name'
+              value='five'
             />
             <div className={styles.label_text}>5</div>
           </label>
@@ -84,11 +84,8 @@ function Step15() {
           <span>Not at all</span>
           <span>Totally</span>
         </div>
-
-        </div>
-
-
       </div>
+    </div>
   );
 }
 

@@ -16,7 +16,7 @@ function Step11() {
         <div className={styles.image_wrapper}>
           <Image
             src={man_with_paper}
-            alt="man_with_paper"
+            alt='man_with_paper'
             className={styles.image}
             width={375}
             height={315}

@@ -1,50 +1,38 @@
 'use client';
+import styles from './MainScreen.module.scss';
 import { useRouter } from 'next/navigation';
 import logo from '../../assets/icons/logo.svg';
 import main_image from '../../assets/images/main_image.png';
-import {
-  Button,
-  ButtonsWrapper,
-  ContentWrapper,
-  Description,
-  LogoTitle,
-  LogoWrapper,
-  MainScreenWrapper,
-  PrivacyPolicyDescription,
-  // PrivacyPolicyWrapper,
-  TextWrapper,
-} from './style';
 import Image from 'next/image';
 
 function MainScreen() {
   const router = useRouter();
   return (
-    <MainScreenWrapper>
-      <ContentWrapper>
-        <LogoWrapper>
-          <Image alt="VPN Lumos" src={logo} />
-          <LogoTitle>VPN Lumos</LogoTitle>
-        </LogoWrapper>
-
-        <TextWrapper>
-          <Description>Do you know what is VPN?</Description>
-          <ButtonsWrapper>
-            <Button onClick={() => router.push('/quiz?q=2')}>Yes</Button>
-            <Button onClick={() => router.push('/about-vpn')}>
+    <main className={styles.main}>
+      <div className={styles.content_wrapper}>
+        <div className={styles.logo_wrapper}>
+          <Image alt='VPN Lumos' src={logo} />
+          <div className={styles.logo_title}>VPN Lumos</div>
+        </div>
+        <div className={styles.text_wrapper}>
+          <div className={styles.description}></div>
+          <div className={styles.buttons_wrapper}>
+            <button
+              onClick={() => router.push('/quiz?q=2')}
+              className={styles.btn}
+            >
+              Yes
+            </button>
+            <button
+              onClick={() => router.push('/about-vpn')}
+              className={styles.btn}
+            >
               Not really
-            </Button>
-          </ButtonsWrapper>
-        </TextWrapper>
-
-        <Image
-          alt="MainImage"
-          src={main_image}
-          width={375}
-          height={322}
-          style={{ marginBottom: '16px' }}
-        />
-
-        <PrivacyPolicyDescription>
+            </button>
+          </div>
+        </div>
+        <Image alt='MainImage' src={main_image} className={styles.main_image} />
+        <div className={styles.privacy}>
           By continuing you agree{'\n'}to our{' '}
           <span
             style={{
@@ -62,10 +50,9 @@ function MainScreen() {
             {' '}
             Privacy Policy
           </span>
-        </PrivacyPolicyDescription>
-      </ContentWrapper>
-    </MainScreenWrapper>
+        </div>
+      </div>
+    </main>
   );
 }
-
 export default MainScreen;

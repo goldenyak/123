@@ -30,7 +30,7 @@ function Step15() {
               setIsChecked(!isChecked);
             }}
           >
-            <input type="radio" name="input_name" value="one" />
+            <input type='radio' name='input_name' value='one' />
             <div
               className={
                 isChecked ? styles.label_text : styles.label_text_checked
@@ -41,22 +41,22 @@ function Step15() {
           </label>
 
           <label className={styles.label}>
-            <input type="radio" name="input_name" value="one" />
+            <input type='radio' name='input_name' value='one' />
             <div className={styles.label_text}>2</div>
           </label>
 
           <label className={styles.label}>
-            <input type="radio" name="input_name" value="one" />
+            <input type='radio' name='input_name' value='one' />
             <div className={styles.label_text}>3</div>
           </label>
 
           <label className={styles.label}>
-            <input type="radio" name="input_name" value="one" />
+            <input type='radio' name='input_name' value='one' />
             <div className={styles.label_text}>4</div>
           </label>
 
           <label className={styles.label}>
-            <input type="radio" name="input_name" value="one" />
+            <input type='radio' name='input_name' value='one' />
             <div className={styles.label_text}>5</div>
           </label>
         </div>
