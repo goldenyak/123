@@ -1,13 +1,8 @@
-$mob-height: 551px;
-
 .wrapper {
-  height: 550px;
+  height: calc(100vh - 200px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  @media screen and (max-height: $mob-height) {
-    height: calc(100vh - 200px);
-  }
 }
 
 .header_title {

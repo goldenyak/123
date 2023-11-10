@@ -1,9 +1,9 @@
 'use client';
-import { useRouter } from 'next/navigation';
 import styles from './Step.module.scss';
 import Image from 'next/image';
 import icon_security from '../../assets/icons/icon_security.svg';
 import Link from 'next/link';
+import { Button } from '../Button/Button';
 
 function Step20() {
   return (
@@ -28,11 +28,12 @@ function Step20() {
             type='email'
             style={{
               borderRadius: '10px',
-              border: '0.8px solid #D8D8D8',
+              border: '1px solid #D8D8D8',
               background: '#F8F8F8',
               padding: '16px',
               fontSize: '17px',
               width: '100%',
+              opacity: '0.5',
             }}
           />
         </form>
@@ -66,6 +67,7 @@ function Step20() {
           Privacy Policy
         </Link>
       </div>
+      <Button title={`Register`} onClick={() => {}} disabled={false} />
     </div>
   );
 }
