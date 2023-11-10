@@ -14,6 +14,17 @@ function MainScreen() {
           <Image alt='VPN Lumos' src={logo} />
           <div className={styles.logo_title}>VPN Lumos</div>
         </div>
+        <div
+          style={{
+            color: '#FFF',
+            textAlign: 'center',
+            fontSize: ' 24px',
+            fontWeight: '700',
+            padding: '0 10px',
+          }}
+        >
+          Do you know what is VPN?
+        </div>
         <div className={styles.text_wrapper}>
           <div className={styles.description}></div>
           <div className={styles.buttons_wrapper}>
