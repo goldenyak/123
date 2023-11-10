@@ -11,12 +11,16 @@ function Step18() {
   const router = useRouter();
 
   return (
-    <div>
+    <div
+      style={{
+        marginTop: '35px',
+      }}
+    >
       <div
         style={{
           display: 'flex',
           flexDirection: 'column',
-          gap: '18px',
+          gap: '14px',
         }}
       >
         <h1 className={styles.header_title}>Your risk profile</h1>
@@ -29,15 +33,15 @@ function Step18() {
             alignItems: 'center',
           }}
         >
-          <Image src={icon_warning} alt='icon_warning' />
           <div
             style={{
-              fontSize: ' 14px',
-              fontWeight: '500',
+              fontSize: ' 22px',
+              fontWeight: '800',
               textTransform: 'uppercase',
+              color: '#000',
             }}
           >
-            High risk data leakage
+            <span style={{ color: '#E9262F' }}>High risk</span> data leakage
           </div>
         </div>
 
@@ -54,7 +58,13 @@ function Step18() {
           recommendations and using our VPN
         </div>
 
-        <DiagramHigh />
+        <video
+          src='/videos/chart_high.mp4'
+          autoPlay
+          loop
+          muted
+          playsInline
+        ></video>
 
         <div
           style={{
@@ -62,6 +72,7 @@ function Step18() {
             fontWeight: '700',
             lineHeight: '1.2',
             textAlign: 'left',
+            marginBottom: '-6px',
           }}
         >
           To reduce your risk, follow the safety guidelines below:
