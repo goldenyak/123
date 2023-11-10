@@ -1,27 +1,25 @@
 'use client';
 import { useRouter } from 'next/navigation';
 import styles from './Step.module.scss';
-import { useState } from 'react';
 
 function Step16() {
   const router = useRouter();
-  const [isChecked, setIsChecked] = useState(false);
   const inputChangeHandler = () => {
-    setIsChecked(true);
     setTimeout(() => router.push('/quiz?q=17'), 200);
   };
 
   return (
-    <div>
+    <div className={styles.wrapper}>
       <header className={styles.header}>
         <h1 className={styles.header_title}>
           Does the statement below characterize you?
         </h1>
-        <h2 className={styles.header_description}>
-          «Before entering personal information into a website, I look at the
-          top of my browser to check if there is lock symbol»
-        </h2>
       </header>
+
+      <h2 className={styles.header_description}>
+        «Before entering personal information into a website, I look at the top
+        of my browser to check if there is lock symbol»
+      </h2>
 
       <div className={styles.wrapper_for_answers}>
         <div className={styles.answers_wrapper}>
