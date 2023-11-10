@@ -5,7 +5,7 @@ import steps from './steps';
 import styles from './Quiz.module.scss';
 import { MultiStepBar } from '@/components/MultiStepBar/MultiStepBar';
 
-const STEPS_WO_STEP_BAR = [4, 10, 11, 17, 18, 19, 20];
+const STEPS_WO_STEP_BAR = [4, 10, 11, 17, 18, 19];
 
 export default function QuizPage() {
   const params = useSearchParams();

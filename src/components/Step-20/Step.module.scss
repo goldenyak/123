@@ -1,21 +1,15 @@
-.main_wrapper {
-  margin: 0px auto 16px;
-  max-width: 360px;
-  padding: 0px 10px;
-}
-
-.header {
-  margin-top: 60px;
-  margin-bottom: 40px;
+.wrapper {
+  height: calc(100vh - 200px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .header_title {
   font-weight: 700;
   font-size: 26px;
-  line-height: 32px;
   text-align: left;
   color: rgb(45, 50, 64);
-  margin-bottom: 8px;
 }
 
 .header_description {
@@ -24,6 +18,7 @@
   text-align: left;
   color: rgb(45, 50, 64);
   font-weight: 400;
+  margin-bottom: 4px;
 }
 
 .form_wrapper {
