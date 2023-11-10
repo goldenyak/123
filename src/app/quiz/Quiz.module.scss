@@ -1,4 +1,4 @@
-$mob-width: 500px;
+$mob-width: 769px;
 
 .main_wrapper {
   max-width: 360px;
@@ -12,4 +12,13 @@ $mob-width: 500px;
 .gradient {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 35%, #deeeff 65%);
   padding: 0;
+  @media screen and (max-width: $mob-width) {
+    height: 100vh;
+  }
+
+  .step_wrapper {
+    @media screen and (max-width: $mob-width) {
+      height: 100%;
+    }
+  }
 }

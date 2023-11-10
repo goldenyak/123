@@ -1,7 +1,6 @@
 'use client';
 import { useRouter } from 'next/navigation';
 import styles from './Step.module.scss';
-import { useState } from 'react';
 
 function Step15() {
   const router = useRouter();
@@ -10,15 +9,16 @@ function Step15() {
   };
 
   return (
-    <div>
+    <div className={styles.wrapper}>
       <header className={styles.header}>
         <h1 className={styles.header_title}>
           Does the statement below characterize you?
         </h1>
-        <h2 className={styles.header_description}>
-          «If I see links in the incoming email, I open them immediately»
-        </h2>
       </header>
+
+      <h2 className={styles.header_description}>
+        «If I see links in the incoming email, I open them immediately»
+      </h2>
 
       <div className={styles.wrapper_for_answers}>
         <div className={styles.answers_wrapper}>
