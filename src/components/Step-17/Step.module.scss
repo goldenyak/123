@@ -10,7 +10,7 @@
   line-height: 30px;
   color: rgb(45, 50, 64);
   text-align: center;
-  margin: 35px 0 0 24px;
+  margin: 35px 0 10px 0;
 }
 
 .review_wrapper {
@@ -64,10 +64,13 @@
 
 .checking_answers {
   font-size: 16px;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
+  position: fixed;
+  bottom: 0;
+  left: 0;
   text-align: center;
-  margin-bottom: 5px;
-  margin-top: 30px;
+  margin-bottom: 80px;
+  width: 100%;
+  padding-top: 10px;
+  background-color: #fff;
 }

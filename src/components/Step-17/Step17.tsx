@@ -137,7 +137,12 @@ function Step17() {
           </div>
         </div>
 
-        <div className={styles.review_wrapper}>
+        <div
+          className={styles.review_wrapper}
+          style={{
+            marginBottom: '150px',
+          }}
+        >
           <div className={styles.review_content}>
             <h3 className={styles.review_title}>Stunning</h3>
             <Image
