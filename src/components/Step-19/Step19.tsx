@@ -73,7 +73,12 @@ function Step19() {
             <div className={styles.featureIconImageAnim}></div>
             <div className={styles.featureIconShadowAnim}></div>
           </div>
-          <div className={styles.featureTextAnim}>
+          <div
+            className={styles.featureTextAnim}
+            onAnimationEnd={() =>
+              setTimeout(() => router.push('/quiz?q=20'), 500)
+            }
+          >
             Optimizing VPN settings for maximum security...
           </div>
         </div>
