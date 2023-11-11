@@ -1,9 +1,3 @@
-.main_wrapper {
-  max-width: 360px;
-  margin: 0px auto;
-  padding: 0px 20px;
-}
-
 .header {
   font-weight: 700;
   font-size: 24px;
@@ -13,10 +7,37 @@
   margin: 35px 0 10px 0;
 }
 
+.delayed_slide_left {
+  animation: slide-left 0.75s ease-in;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide-left {
+  to {
+    opacity: 0;
+    margin-left: -600px;
+  }
+}
+
+.slide_in {
+  animation: slide-in 0.75s ease-in;
+  animation-delay: 1.4s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide-in {
+  to {
+    opacity: 1;
+    right: 0;
+  }
+}
+
 .review_wrapper {
   display: flex;
   align-items: flex-start;
-  margin-bottom: 12px;
+  position: absolute;
+  width: 100%;
 }
 
 .image {
