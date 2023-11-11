@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Roboto } from 'next/font/google';
 import './globals.css';
-import { ScoreContextProvider } from '@/hooks/useScoreContext/ScoreContextProvider';
+import Providers from './redux/Provider';
 
 const roboto = Roboto({
   weight: ['400', '700'],
@@ -27,11 +27,10 @@ export default function RootLayout({
           name='viewport'
           content='width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1'
         />
-        {/* <meta name="viewport" content="initial-scale=1, viewport-fit=cover" /> */}
       </head>
 
       <body className={roboto.className}>
-        <ScoreContextProvider>{children}</ScoreContextProvider>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

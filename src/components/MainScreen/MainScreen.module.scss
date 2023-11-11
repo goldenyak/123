@@ -81,7 +81,7 @@ $mob-height: 560px;
   font-weight: 700;
 
   &:hover {
-    background-color: lightgrey;
+   opacity: 0.8;
   }
 
   @media screen and (max-height: $mob-height) {

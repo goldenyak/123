@@ -1,0 +1,22 @@
+.header {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  color: rgb(45, 50, 64);
+  text-align: center;
+  margin: 50px 0px 24px;
+}
+
+.image {
+  display: block;
+  width: 261px;
+  height: 282px;
+  margin: 0 auto;
+  margin-top: 100px;
+  @media screen and (min-height: 844px) {
+    width: 311px;
+    height: 333px;
+    margin-top: 120px;
+  }
+}
+
