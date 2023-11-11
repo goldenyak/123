@@ -6,7 +6,20 @@ import icon_check from '../../assets/icons/icon_check.svg';
 import icon_step_back from '../../assets/icons/icon_step_back.svg';
 import Image from 'next/image';
 
-const TOTAL_STEPS = 20;
+const stepProgressMap: Record<string, number> = {
+  '2': 15,
+  '3': 25,
+  '5': 38,
+  '6': 44,
+  '7': 51,
+  '8': 58,
+  '9': 65,
+  '12': 78,
+  '13': 84,
+  '14': 89,
+  '15': 96,
+  '16': 100,
+};
 
 export const MultiStepBar = () => {
   const [progress, setProgress] = useState(0);
@@ -14,15 +27,14 @@ export const MultiStepBar = () => {
   const stepNumber = params.get('q') || '';
   const router = useRouter();
 
-  useEffect(() => {
-    if (stepNumber) {
-      setProgress((100 / TOTAL_STEPS) * parseInt(stepNumber) || TOTAL_STEPS);
-    }
-  }, [stepNumber]);
-
   const isFirstStep = (step: string) => step === '2';
 
   const isLastStep = () => stepNumber === '20';
+
+  useEffect(() => {
+    setProgress(stepProgressMap[stepNumber]);
+    console.log(progress);
+  }, [stepNumber]);
 
   const goBack = useCallback((step: string) => {
     if (isFirstStep(step)) {
@@ -105,12 +117,12 @@ export const MultiStepBar = () => {
               </div>
               <div
                 className={
-                  progress < 94
+                  progress < 97
                     ? styles.circle
                     : [styles.circle, styles.circle_filled].join(' ')
                 }
               >
-                {progress > 94 && <Image src={icon_check} alt='' />}
+                {progress > 96 && <Image src={icon_check} alt='' />}
               </div>
             </div>
             <div
