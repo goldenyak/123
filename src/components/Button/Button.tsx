@@ -4,10 +4,15 @@ interface ButtonProps {
   title: string;
   onClick: () => void;
   disabled: boolean;
-  type: 'button' | 'submit' | 'reset';
+  type?: 'button' | 'submit' | 'reset';
 }
 
-export const Button = ({ title, onClick, disabled, type }: ButtonProps) => {
+export const Button = ({
+  title,
+  onClick,
+  disabled,
+  type = 'button',
+}: ButtonProps) => {
   return (
     <div className={styles.button_wrapper}>
       <button
