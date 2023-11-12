@@ -33,7 +33,6 @@ export const MultiStepBar = () => {
 
   useEffect(() => {
     setProgress(stepProgressMap[stepNumber]);
-    console.log(progress);
   }, [stepNumber]);
 
   const goBack = useCallback((step: string) => {
@@ -57,15 +56,7 @@ export const MultiStepBar = () => {
         paddingBottom: '30px',
       }}
     >
-      <div
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          maxWidth: '335px',
-          margin: '0 15px',
-          flexGrow: '1',
-        }}
-      >
+      <div className={styles.wrapper}>
         <Image
           className={styles.btn_back}
           src={icon_step_back}
