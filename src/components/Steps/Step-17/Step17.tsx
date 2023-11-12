@@ -4,13 +4,14 @@ import Image from 'next/image';
 import ProgressBar from '../../ProgressBar/ProgressBar';
 import review_stars from '../../../assets/images/review_stars.png';
 import superman_image from '../../../assets/images/superman.png';
+import StepHeader from '@/components/StepHeader/StepHeader';
 
 function Step17() {
   return (
     <div style={{ position: 'relative', boxSizing: 'border-box' }}>
-      <h1 className={styles.header}>
+      <StepHeader align='center'>
         VPN Lumos is an incredibly effective way to shield all your data
-      </h1>
+      </StepHeader>
 
       <Image
         src={superman_image}

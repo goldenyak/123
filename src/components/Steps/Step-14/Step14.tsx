@@ -6,14 +6,13 @@ import icon_smile_glasses from '../../../assets/icons/icon_smile_glasses.png';
 import icon_smile from '../../../assets/icons/icon_smile.png';
 import icon_thinking from '../../../assets/icons/icon_thinking.png';
 import icon_grimacing from '../../../assets/icons/icon_grimacing.png';
+import StepHeader from '@/components/StepHeader/StepHeader';
 
 function Step14() {
   const router = useRouter();
   return (
     <div>
-      <header className={styles.header}>
-        How quickly do you update your devices and apps?
-      </header>
+      <StepHeader>How quickly do you update your devices and apps?</StepHeader>
 
       <label onClick={() => router.push('/quiz?q=15')} className={styles.label}>
         <input type='radio' name='input_name' value='input_value' />

@@ -6,14 +6,23 @@ import icon_hide_ip from '../../../assets/icons/icon_hide_ip.png';
 import icon_helps_watch from '../../../assets/icons/icon_helps_watch.png';
 import icon_helps_access from '../../../assets/icons/icon_helps_access.png';
 import { Button } from '../../Button/Button';
+import StepHeader from '@/components/StepHeader/StepHeader';
 
 function Step4() {
   const router = useRouter();
   return (
     <div>
-      <header className={styles.header}>
-        With VPN Lumos you get a <span>75% faster</span> online connection
-      </header>
+      <StepHeader align='center'>
+        With VPN Lumos you get a{' '}
+        <span
+          style={{
+            color: '#5072f1',
+          }}
+        >
+          75% faster
+        </span>{' '}
+        online connection
+      </StepHeader>
 
       <p className={styles.header_description}>Also, VPN Lumos :</p>
 

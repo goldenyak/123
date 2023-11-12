@@ -10,6 +10,7 @@ import { Button } from '../../Button/Button';
 import { ChangeEvent, useState } from 'react';
 import icon_check_blue from '../../../assets/icons/icon_check_blue.svg';
 import { useAppSelector } from '@/app/redux/hooks/hooks';
+import StepHeader from '@/components/StepHeader/StepHeader';
 
 function Step8() {
   const [isChecked, setIsChecked] = useState(0);
@@ -23,12 +24,9 @@ function Step8() {
     }
   };
 
-
   return (
     <div>
-      <header className={styles.header}>
-        Where do you see this restriction most often?
-      </header>
+      <StepHeader>Where do you see this restriction most often?</StepHeader>
 
       <label className={styles.label}>
         <input

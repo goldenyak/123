@@ -9,6 +9,7 @@ import icon_ninja from '../../../assets/icons/icon_ninja.png';
 import { Button } from '../../Button/Button';
 import { ChangeEvent, useState } from 'react';
 import icon_check_blue from '../../../assets/icons/icon_check_blue.svg';
+import StepHeader from '@/components/StepHeader/StepHeader';
 
 function Step9() {
   const [isChecked, setIsChecked] = useState(0);
@@ -24,9 +25,7 @@ function Step9() {
   const router = useRouter();
   return (
     <div>
-      <header className={styles.header}>
-        Choose additional benefits of VPN Lumos:
-      </header>
+      <StepHeader>Choose additional benefits of VPN Lumos:</StepHeader>
 
       <label className={styles.label}>
         <input

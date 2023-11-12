@@ -29,7 +29,7 @@ export default function QuizPage() {
       <div
         className={styles.step_wrapper}
         style={{
-          paddingTop: `${showStepBar() ? '100px' : '0'}`,
+          paddingTop: `${showStepBar() ? '50px' : '0'}`,
           marginBottom: '100px',
         }}
       >

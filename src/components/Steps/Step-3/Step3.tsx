@@ -10,6 +10,7 @@ import icon_other from '../../../assets/icons/icon_other.png';
 import icon_check_blue from '../../../assets/icons/icon_check_blue.svg';
 import { ChangeEvent, useState } from 'react';
 import { Button } from '../../Button/Button';
+import StepHeader from '@/components/StepHeader/StepHeader';
 
 function Step3() {
   const [isChecked, setIsChecked] = useState(0);
@@ -25,9 +26,9 @@ function Step3() {
   const router = useRouter();
   return (
     <div>
-      <header className={styles.header}>
+      <StepHeader>
         What did not you like about other VPN services before?
-      </header>
+      </StepHeader>
 
       <label className={styles.label}>
         <input

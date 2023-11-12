@@ -4,14 +4,13 @@ import styles from './Step.module.scss';
 import Image from 'next/image';
 import icon_yes from '../../../assets/icons/icon_yes.png';
 import icon_no from '../../../assets/icons/icon_no.png';
+import StepHeader from '@/components/StepHeader/StepHeader';
 
 function Step13() {
   const router = useRouter();
   return (
     <div>
-      <header className={styles.header}>
-        Do you save passwords to your browser?
-      </header>
+      <StepHeader>Do you save passwords to your browser?</StepHeader>
 
       <label onClick={() => router.push('/quiz?q=14')} className={styles.label}>
         <input type='radio' name='input_name' value='input_value' />

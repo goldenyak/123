@@ -6,6 +6,7 @@ import styles from './Step.module.scss';
 // import Image from 'next/image';
 import { Accordion } from './Accordion/Accordion';
 import { Button } from '../../Button/Button';
+import StepHeader from '@/components/StepHeader/StepHeader';
 
 function Step18() {
   const router = useRouter();
@@ -23,7 +24,7 @@ function Step18() {
           gap: '14px',
         }}
       >
-        <h1 className={styles.header_title}>Your risk profile</h1>
+        <StepHeader align='center'>Your risk profile</StepHeader>
 
         <div
           style={{
@@ -65,8 +66,6 @@ function Step18() {
           muted
           playsInline
         ></video>
-
-        
 
         <div
           style={{

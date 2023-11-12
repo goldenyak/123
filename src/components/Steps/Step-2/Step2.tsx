@@ -6,6 +6,7 @@ import icon_yes from '../../../assets/icons/icon_yes.png';
 import icon_no from '../../../assets/icons/icon_no.png';
 import { decrement, increment } from '@/app/redux/slices/counterSlice';
 import { useAppDispatch, useAppSelector } from '@/app/redux/hooks/hooks';
+import StepHeader from '@/components/StepHeader/StepHeader';
 
 function Step2() {
   const router = useRouter();
@@ -14,9 +15,7 @@ function Step2() {
 
   return (
     <div>
-      <header className={styles.header}>
-        Have you ever used any VPN before?
-      </header>
+      <StepHeader>Have you ever used any VPN before?</StepHeader>
 
       <label onClick={() => router.push('/quiz?q=3')} className={styles.label}>
         <input type='radio' name='input_name_yes' value='input_value' />

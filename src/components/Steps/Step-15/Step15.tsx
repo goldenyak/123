@@ -1,6 +1,7 @@
 'use client';
 import { useRouter } from 'next/navigation';
 import styles from './Step.module.scss';
+import StepHeader from '@/components/StepHeader/StepHeader';
 
 function Step15() {
   const router = useRouter();
@@ -10,11 +11,13 @@ function Step15() {
 
   return (
     <div className={styles.wrapper}>
-      <header className={styles.header}>
-        <h1 className={styles.header_title}>
-          Does the statement below characterize you?
-        </h1>
-      </header>
+      <div
+        style={{
+          padding: '0 15px',
+        }}
+      >
+        <StepHeader>Does the statement below characterize you?</StepHeader>
+      </div>
 
       <h2 className={styles.header_description}>
         «If I see links in the incoming email, I open them immediately»

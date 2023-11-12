@@ -4,14 +4,15 @@ import styles from './Step.module.scss';
 import Image from 'next/image';
 import icon_yes from '../../../assets/icons/icon_yes.png';
 import icon_no from '../../../assets/icons/icon_no.png';
+import StepHeader from '@/components/StepHeader/StepHeader';
 
 function Step5() {
   const router = useRouter();
   return (
     <div>
-      <header className={styles.header}>
+      <StepHeader>
         Do you need to fix «Video is not available in your country» issue?
-      </header>
+      </StepHeader>
 
       <label onClick={() => router.push('/quiz?q=6')} className={styles.label}>
         <input type='radio' name='input_name_yes' value='input_value' />

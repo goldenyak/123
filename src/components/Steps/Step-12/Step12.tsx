@@ -7,14 +7,13 @@ import icon_rarely from '../../../assets/icons/icon_rarely.png';
 import icon_every_week from '../../../assets/icons/icon_every_week.png';
 import icon_often from '../../../assets/icons/icon_often.png';
 import icon_several_times from '../../../assets/icons/icon_several_times.png';
+import StepHeader from '@/components/StepHeader/StepHeader';
 
 function Step12() {
   const router = useRouter();
   return (
     <div>
-      <header className={styles.header}>
-        How often do you use Public Wi-Fi?
-      </header>
+      <StepHeader>How often do you use Public Wi-Fi?</StepHeader>
 
       <label onClick={() => router.push('/quiz?q=13')} className={styles.label}>
         <input type='radio' name='input_name' value='input_value' />

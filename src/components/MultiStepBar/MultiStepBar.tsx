@@ -54,14 +54,14 @@ export const MultiStepBar = () => {
         zIndex: '10000',
         display: 'flex',
         justifyContent: 'center',
-        padding: '30px 0',
+        paddingBottom: '30px',
       }}
     >
       <div
         style={{
           display: 'flex',
           alignItems: 'center',
-          maxWidth: '428px',
+          maxWidth: '335px',
           margin: '0 15px',
           flexGrow: '1',
         }}

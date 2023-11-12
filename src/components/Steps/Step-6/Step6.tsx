@@ -10,6 +10,7 @@ import icon_other from '../../../assets/icons/icon_other.png';
 import { ChangeEvent, useState } from 'react';
 import { Button } from '../../Button/Button';
 import icon_check_blue from '../../../assets/icons/icon_check_blue.svg';
+import StepHeader from '@/components/StepHeader/StepHeader';
 
 function Step6() {
   const [isChecked, setIsChecked] = useState(0);
@@ -25,9 +26,7 @@ function Step6() {
   const router = useRouter();
   return (
     <div>
-      <header className={styles.header}>
-        Where do you see this restriction most often?
-      </header>
+      <StepHeader>Where do you see this restriction most often?</StepHeader>
 
       <label className={styles.label}>
         <input
