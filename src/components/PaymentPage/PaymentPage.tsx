@@ -4,20 +4,30 @@ import icon_payment_user from '../../assets/icons/icon_payment_user.svg';
 import icon_payment_youtube from '../../assets/icons/icon_payment_youtube.svg';
 import icon_payment_facebook from '../../assets/icons/icon_payment_facebook.svg';
 import icon_payment_whatsapp from '../../assets/icons/icon_payment_whatsapp.svg';
+import icon_yellow_stars from '../../assets/icons/icon_yellow_stars.svg';
+import icon_google_play from '../../assets/icons/icon_google_play.svg';
+import icon_app_store from '../../assets/icons/icon_app_store.svg';
+import payment_userpic1 from '../../assets/images/payment_userpic1.png';
+import payment_userpic2 from '../../assets/images/payment_userpic2.png';
+import payment_userpic3 from '../../assets/images/payment_userpic3.png';
 import icon_payment_speed from '../../assets/icons/icon_payment_speed.svg';
 import PaymentOption from './PaymentOption/PaymentOption';
 import { useEffect, useRef, useState } from 'react';
+import ButtonPayment from './ButtonPayment/ButtonPayment';
+import PaymentComment from './PaymentComment/PaymentComment';
+import Image from 'next/image';
+import Link from 'next/link';
 
 type Plan = '1month' | '3month' | '6month';
 
 const PaymentPage = () => {
   const [selectedPlan, setSelectedPlan] = useState<Plan>('3month');
-  // const [timeLeft, setTimeLeft] = useState(() => {
-  //   const storedTimer = localStorage.getItem('timer');
-  //   return storedTimer ? Number.parseInt(storedTimer, 10) : 60 * 10;
-  // });
+  const [timeLeft, setTimeLeft] = useState(() => {
+    const storedTimer = localStorage.getItem('timer');
+    return storedTimer ? Number.parseInt(storedTimer, 10) : 60 * 10;
+  });
 
-  const [timeLeft, setTimeLeft] = useState(10);
+  // const [timeLeft, setTimeLeft] = useState(10);
   const timerRef = useRef<NodeJS.Timeout>();
 
   useEffect(() => {
@@ -134,12 +144,20 @@ const PaymentPage = () => {
           color: '#1A1A1A',
           fontSize: '26px',
           fontWeight: '700',
+          marginBottom: '14px',
         }}
       >
         Choose your plan
       </div>
 
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '16px',
+          marginBottom: '16px',
+        }}
+      >
         <PaymentOption
           title='1-month plan'
           weeklyPrice={{ before: '$14.00', after: '$6.99' }}
@@ -162,6 +180,135 @@ const PaymentPage = () => {
           checked={selectedPlan === '6month'}
           onChanged={() => handlePlanChange('6month')}
         />
+      </div>
+
+      <ButtonPayment>Get started</ButtonPayment>
+      <div
+        style={{
+          color: '#BAC0C7',
+          fontSize: '12px',
+          fontWeight: '400',
+          marginBottom: '32px',
+        }}
+      >
+        To avoid any disruption, you agree that the subscription you selected
+        will be automatically charged on a monthly basis until you cancel. You
+        can cancel your subscription anytime. To learn more visit out terms of
+        use.
+      </div>
+
+      <div
+        style={{
+          color: '#1A1A1A',
+          fontSize: '26px',
+          fontWeight: '700',
+          marginBottom: '14px',
+        }}
+      >
+        Customer Reviews
+      </div>
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '16px',
+        }}
+      >
+        <PaymentComment
+          userPic={payment_userpic1}
+          name='Jmmalveda'
+          comment='Great service at a great price. Very happy with this very neat tool that helps keep me secured and protected. Love it!'
+          date='May 11, 2023'
+        />
+        <PaymentComment
+          userPic={payment_userpic2}
+          name='LouaFrançois'
+          comment='Connects quick and disconnects quickly as well. Would not recommend another VPN, after having tried many.'
+          date='June 11, 2023'
+        />
+        <PaymentComment
+          userPic={payment_userpic3}
+          name='Maaaaaaateeeeeuuuuuus'
+          comment='This is the best VPN I have ever used. It works at school or other places when there are blockers on the wifi or data. Also you can put yourself anywhere in the world or use the fastest location.'
+          date='Aug 18, 2022'
+        />
+      </div>
+
+      <div
+        style={{
+          gridTemplateColumns: '1fr, 1fr, 1fr',
+          backgroundColor: 'black',
+        }}
+      >
+        <Link
+          href={''}
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '5px',
+            alignItems: 'center',
+          }}
+        >
+          <Image src={icon_google_play} alt='' />
+          <div
+            style={{
+              color: '#757575',
+              fontSize: '12px',
+              fontWeight: '400',
+            }}
+          >
+            Google play
+          </div>
+          <Image src={icon_yellow_stars} alt='' />
+          <div
+            style={{
+              color: '#757575',
+              fontSize: '12px',
+            }}
+          >
+            <span style={{ fontWeight: '500', color: '#1A1A1A' }}>1M+</span>{' '}
+            downloads
+          </div>
+        </Link>
+
+        <div
+          style={{
+            width: '1px',
+            height: '16px',
+            backgroundColor: 'rgba(51, 51, 51, 0.11)',
+          }}
+        />
+
+        <Link
+          href={''}
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '5px',
+            alignItems: 'center',
+          }}
+        >
+          <Image src={icon_app_store} alt='' />
+          <div
+            style={{
+              color: '#757575',
+              fontSize: '12px',
+              fontWeight: '400',
+            }}
+          >
+            Apple Store
+          </div>
+          <Image src={icon_yellow_stars} alt='' />
+          <div
+            style={{
+              color: '#757575',
+              fontSize: '12px',
+            }}
+          >
+            <span style={{ fontWeight: '500', color: '#1A1A1A' }}>44.3K</span>{' '}
+            5-star ratings
+          </div>
+        </Link>
       </div>
     </div>
   );
