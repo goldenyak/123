@@ -4,9 +4,6 @@ import icon_payment_user from '../../assets/icons/icon_payment_user.svg';
 import icon_payment_youtube from '../../assets/icons/icon_payment_youtube.svg';
 import icon_payment_facebook from '../../assets/icons/icon_payment_facebook.svg';
 import icon_payment_whatsapp from '../../assets/icons/icon_payment_whatsapp.svg';
-import icon_yellow_stars from '../../assets/icons/icon_yellow_stars.svg';
-import icon_google_play from '../../assets/icons/icon_google_play.svg';
-import icon_app_store from '../../assets/icons/icon_app_store.svg';
 import payment_userpic1 from '../../assets/images/payment_userpic1.png';
 import payment_userpic2 from '../../assets/images/payment_userpic2.png';
 import payment_userpic3 from '../../assets/images/payment_userpic3.png';
@@ -15,8 +12,7 @@ import PaymentOption from './PaymentOption/PaymentOption';
 import { useEffect, useRef, useState } from 'react';
 import ButtonPayment from './ButtonPayment/ButtonPayment';
 import PaymentComment from './PaymentComment/PaymentComment';
-import Image from 'next/image';
-import Link from 'next/link';
+import PaymentApps from './PaymentApps';
 
 type Plan = '1month' | '3month' | '6month';
 
@@ -212,6 +208,7 @@ const PaymentPage = () => {
           display: 'flex',
           flexDirection: 'column',
           gap: '16px',
+          marginBottom: '24px',
         }}
       >
         <PaymentComment
@@ -233,82 +230,46 @@ const PaymentPage = () => {
           date='Aug 18, 2022'
         />
       </div>
-
+      <PaymentApps />
       <div
         style={{
-          gridTemplateColumns: '1fr, 1fr, 1fr',
-          backgroundColor: 'black',
+          color: '#1A1A1A',
+          textAlign: 'center',
+          fontSize: '14px',
+          fontWeight: '400',
+          lineHeight: '1.3',
+          margin: '24px 0 32px 0',
         }}
       >
-        <Link
-          href={''}
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            gap: '5px',
-            alignItems: 'center',
-          }}
-        >
-          <Image src={icon_google_play} alt='' />
-          <div
-            style={{
-              color: '#757575',
-              fontSize: '12px',
-              fontWeight: '400',
-            }}
-          >
-            Google play
-          </div>
-          <Image src={icon_yellow_stars} alt='' />
-          <div
-            style={{
-              color: '#757575',
-              fontSize: '12px',
-            }}
-          >
-            <span style={{ fontWeight: '500', color: '#1A1A1A' }}>1M+</span>{' '}
-            downloads
-          </div>
-        </Link>
-
-        <div
-          style={{
-            width: '1px',
-            height: '16px',
-            backgroundColor: 'rgba(51, 51, 51, 0.11)',
-          }}
-        />
-
-        <Link
-          href={''}
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            gap: '5px',
-            alignItems: 'center',
-          }}
-        >
-          <Image src={icon_app_store} alt='' />
-          <div
-            style={{
-              color: '#757575',
-              fontSize: '12px',
-              fontWeight: '400',
-            }}
-          >
-            Apple Store
-          </div>
-          <Image src={icon_yellow_stars} alt='' />
-          <div
-            style={{
-              color: '#757575',
-              fontSize: '12px',
-            }}
-          >
-            <span style={{ fontWeight: '500', color: '#1A1A1A' }}>44.3K</span>{' '}
-            5-star ratings
-          </div>
-        </Link>
+        You will need an iPhone or Android smartphone to use VPN Lumos.
+      </div>
+      <ButtonPayment>Continue purchase</ButtonPayment>
+      <div
+        style={{
+          color: '#454446',
+          fontWeight: '600',
+          marginBottom: '4px',
+          marginTop: '16px',
+        }}
+      >
+        Continue purchase
+      </div>
+      <div style={{ lineHeight: '1.2', marginBottom: '12px' }}>
+        All information is encrypted and transmitted without risk using a Secure
+        Sockets Layer protocol.
+      </div>
+      <div style={{ color: '#454446', fontWeight: '600', marginBottom: '4px' }}>
+        Your information is safe
+      </div>
+      <div style={{ lineHeight: '1.2', marginBottom: '12px' }}>
+        We won’t sell your personal contant information for any marketing
+        purpose.
+      </div>
+      <div style={{ color: '#454446', fontWeight: '600', marginBottom: '4px' }}>
+        Need help?
+      </div>
+      <div style={{ lineHeight: '1.2', marginBottom: '50px' }}>
+        Send us an email: support@lumos.mobi
       </div>
     </div>
   );
