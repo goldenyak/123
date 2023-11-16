@@ -1,3 +1,5 @@
+'use client';
+
 import StepHeader from '../StepHeader/StepHeader';
 import PaymentRow from './PaymentRow';
 import icon_payment_user from '../../assets/icons/icon_payment_user.svg';
