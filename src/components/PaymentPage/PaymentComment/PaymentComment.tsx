@@ -39,14 +39,7 @@ const PaymentComment = ({
             justifyContent: 'space-between',
           }}
         >
-          <Image
-            src={icon_yellow_stars}
-            alt=''
-            style={{
-              width: '75px',
-              height: '15px',
-            }}
-          />
+          <Image src={icon_yellow_stars} alt='' width={75} />
           <div
             style={{
               color: '#454446',

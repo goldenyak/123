@@ -15,17 +15,18 @@ import { useEffect, useRef, useState } from 'react';
 import ButtonPayment from './ButtonPayment/ButtonPayment';
 import PaymentComment from './PaymentComment/PaymentComment';
 import PaymentApps from './PaymentApps';
+import PaymentTimerBar from './PaymentTimerBar/PaymentTimerBar';
 
 type Plan = '1month' | '3month' | '6month';
 
 const PaymentPage = () => {
   const [selectedPlan, setSelectedPlan] = useState<Plan>('3month');
+  const [showBar, setShowBar] = useState(false);
   const [timeLeft, setTimeLeft] = useState(() => {
     const storedTimer = localStorage.getItem('timer');
     return storedTimer ? Number.parseInt(storedTimer, 10) : 60 * 10;
   });
 
-  // const [timeLeft, setTimeLeft] = useState(10);
   const timerRef = useRef<NodeJS.Timeout>();
 
   useEffect(() => {
@@ -41,6 +42,16 @@ const PaymentPage = () => {
   }, []);
 
   useEffect(() => {
+    const handleScroll = () => {
+      setShowBar(true);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
     localStorage.setItem('timer', timeLeft.toString());
     if (timeLeft < 1) {
       clearInterval(timerRef.current);
@@ -50,7 +61,7 @@ const PaymentPage = () => {
   const formatTime = () => {
     const minutes = Math.floor(timeLeft / 60);
     const seconds = timeLeft % 60;
-    return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+    return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`.padStart(5, '0');
   };
 
   const handlePlanChange = (plan: Plan) => {
@@ -59,6 +70,7 @@ const PaymentPage = () => {
 
   return (
     <div>
+      <PaymentTimerBar timeLeft={formatTime()} show={showBar} />
       <StepHeader align='center'>
         You Personal Plan for a free and secure internet
       </StepHeader>

@@ -1,9 +1,14 @@
 'use client';
 
 import styles from './Payment.module.scss';
-import { useSearchParams } from 'next/navigation';
-import { MultiStepBar } from '@/components/MultiStepBar/MultiStepBar';
-import PaymentPage from '@/components/PaymentPage/PaymentPage';
+import dynamic from 'next/dynamic';
+
+const PaymentPage = dynamic(
+  () => import('@/components/PaymentPage/PaymentPage'),
+  {
+    ssr: false,
+  },
+);
 
 export default function payment() {
   return (
