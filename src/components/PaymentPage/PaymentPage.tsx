@@ -16,6 +16,7 @@ import ButtonPayment from './ButtonPayment/ButtonPayment';
 import PaymentComment from './PaymentComment/PaymentComment';
 import PaymentApps from './PaymentApps';
 import PaymentTimerBar from './PaymentTimerBar/PaymentTimerBar';
+import PaymentOffer from './PaymentOffer';
 
 type Plan = '1month' | '3month' | '6month';
 
@@ -45,6 +46,7 @@ const PaymentPage = () => {
     const handleScroll = () => {
       setShowBar(true);
     };
+
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
@@ -70,48 +72,12 @@ const PaymentPage = () => {
 
   return (
     <div>
-      <PaymentTimerBar timeLeft={formatTime()} show={showBar} />
+      <PaymentTimerBar timeLeft={formatTime()} show={showBar && timeLeft > 0} />
       <StepHeader align='center'>
         You Personal Plan for a free and secure internet
       </StepHeader>
 
-      <div
-        style={{
-          borderRadius: '16px',
-          border: '2px solid #FECD09',
-          background: '#FFFDF3',
-          padding: '15px',
-          marginTop: '-16px',
-        }}
-      >
-        <div
-          style={{
-            color: '#1A1A1A',
-            fontSize: '14px',
-            lineHeight: '1.3',
-            marginBottom: '10px',
-          }}
-        >
-          Reserved price for your personal plan expires in 10 minutes.
-        </div>
-        <div
-          style={{
-            fontSize: '14px',
-            fontWeight: '700',
-            marginBottom: '13px',
-          }}
-        >
-          Time remaining {formatTime()}
-        </div>
-        <div
-          style={{
-            color: '#A3A29C',
-            fontSize: '12px',
-          }}
-        >
-          Scroll down to get started!
-        </div>
-      </div>
+      <PaymentOffer timeLeft={formatTime()} />
 
       <div
         style={{
