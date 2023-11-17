@@ -84,7 +84,6 @@ function Step18() {
       <Button
         title={`Let's begin!`}
         onClick={() => router.push('/quiz?q=19')}
-        disabled={false}
       />
     </div>
   );

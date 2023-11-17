@@ -25,11 +25,7 @@ function Step11() {
         priority={true}
       />
       {/* </div> */}
-      <Button
-        title='Continue'
-        onClick={() => router.push('/quiz?q=12')}
-        disabled={false}
-      />
+      <Button title='Continue' onClick={() => router.push('/quiz?q=12')} />
     </div>
     // </div>
   );

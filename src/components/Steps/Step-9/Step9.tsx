@@ -55,7 +55,7 @@ function Step9() {
       <Button
         title='Continue'
         onClick={() => router.push('/quiz?q=10')}
-        disabled={isChecked ? false : true}
+        disabled={!isChecked}
       />
     </div>
   );

@@ -85,11 +85,7 @@ function Step4() {
         </div>
       </label>
 
-      <Button
-        title='Continue'
-        onClick={() => router.push('/quiz?q=5')}
-        disabled={false}
-      />
+      <Button title='Continue' onClick={() => router.push('/quiz?q=5')} />
     </div>
   );
 }

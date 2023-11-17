@@ -3,14 +3,14 @@ import styles from './Button.module.scss';
 interface ButtonProps {
   title: string;
   onClick: () => void;
-  disabled: boolean;
+  disabled?: boolean;
   type?: 'button' | 'submit' | 'reset';
 }
 
 export const Button = ({
   title,
   onClick,
-  disabled,
+  disabled = false,
   type = 'button',
 }: ButtonProps) => {
   return (

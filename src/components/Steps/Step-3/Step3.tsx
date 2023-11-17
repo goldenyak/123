@@ -64,7 +64,7 @@ function Step3() {
       <Button
         title='Continue'
         onClick={() => router.push('/quiz?q=4')}
-        disabled={isChecked > 0 ? false : true}
+        disabled={!isChecked}
       />
     </div>
   );

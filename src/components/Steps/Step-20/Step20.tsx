@@ -99,12 +99,7 @@ function Step20() {
           Privacy Policy
         </Link>
       </div>
-      <Button
-        type='submit'
-        title={`Register`}
-        onClick={handleSubmit}
-        disabled={false}
-      />
+      <Button type='submit' title={`Register`} onClick={handleSubmit} />
     </div>
   );
 }
