@@ -13,6 +13,7 @@ import Step18 from '../Steps/Step-18/Step18';
 import Step19 from '../Steps/Step-19/Step19';
 import Step20 from '../Steps/Step-20/Step20';
 import { ProgressBar } from '../ProgressBar/ProgressBar';
+import { StaticImageData } from 'next/image';
 
 interface StepContentProps {
   config: IStepConfig;

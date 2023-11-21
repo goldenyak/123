@@ -1,11 +1,14 @@
 import { ICheckboxOption } from '../StepContent/types';
 import CheckBoxOption from '../CheckBoxOption/CheckBoxOption';
-import getIcon from '@/assets/icons';
 import { ChangeEvent, useState } from 'react';
+import { StaticImageData } from 'next/image';
 
 interface CheckBoxGroupProps {
   options: ICheckboxOption[];
 }
+
+const getIcon = (iconName: string): StaticImageData =>
+  require(`../assets/icons/${iconName}.svg`);
 
 const CheckBoxGroup = ({ options }: CheckBoxGroupProps) => {
   const [isChecked, setIsChecked] = useState(0);

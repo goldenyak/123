@@ -1,10 +1,13 @@
 import { IRadioOption } from '../StepContent/types';
 import RadioOption from '../RadioOption/RadioOption';
-import getIcon from '../../assets/icons';
+import { StaticImageData } from 'next/image';
 
 interface RadioGroupProps {
   options: IRadioOption[];
 }
+
+const getIcon = (iconName: string): StaticImageData =>
+  require(`../assets/icons/${iconName}.svg`);
 
 const RadioGroup = ({ options }: RadioGroupProps) => {
   return (
