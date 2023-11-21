@@ -9,7 +9,7 @@ interface RadioGroupProps {
 const RadioGroup = ({ options }: RadioGroupProps) => {
   return (
     <>
-      {options.map((props, index) => (
+      {options.map((props) => (
         <RadioOption {...props} icon={getIcon(props.icon)} key={props.value} />
       ))}
     </>

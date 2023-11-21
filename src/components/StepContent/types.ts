@@ -9,7 +9,7 @@ export interface IStepConfig {
 }
 
 export interface IRadioGroup {
-  type: 'radioGroup';
+  type: 'radio-group';
   options: IRadioOption[];
 }
 
@@ -20,7 +20,7 @@ export interface IRadioOption {
 }
 
 export interface ICheckboxGroup {
-  type: 'checkboxGroup';
+  type: 'checkbox-group';
   options: IRadioOption[];
 }
 
@@ -29,7 +29,19 @@ export interface ICheckboxOption {
   icon: string;
 }
 
-type IStepContent = IRadioGroup | ICheckboxGroup | Step4 | Step10 | Step11;
+export interface IAgreementScale {
+  type: 'agreement-scale';
+  value: string;
+  redirectTo: string[];
+}
+
+type IStepContent =
+  | IRadioGroup
+  | ICheckboxGroup
+  | IAgreementScale
+  | Step4
+  | Step10
+  | Step11;
 
 export interface INextButton {
   value: string;

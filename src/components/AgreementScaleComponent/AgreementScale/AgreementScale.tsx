@@ -1,16 +1,19 @@
-import styles from './StepOptionNumber.module.scss';
+import { IAgreementScale } from '@/components/StepContent/types';
+import styles from './AgreementScale.module.scss';
+import { useRouter } from 'next/navigation';
 
-interface StepOptionNumberProps {
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+interface AgreementScaleProps {
+  redirectTo: IAgreementScale['redirectTo'];
 }
 
-const StepOptionNumber = ({ onChange }: StepOptionNumberProps) => {
+const AgreementScale = ({ redirectTo }: AgreementScaleProps) => {
+  const router = useRouter();
   return (
     <div className={styles.wrapper_for_answers}>
       <div className={styles.answers_wrapper}>
         <label className={styles.label}>
           <input
-            onChange={onChange}
+            onChange={() => router.push(`/quiz?q=${redirectTo[0]}`)}
             className={styles.input}
             type='radio'
             name='input_name'
@@ -21,7 +24,7 @@ const StepOptionNumber = ({ onChange }: StepOptionNumberProps) => {
 
         <label className={styles.label}>
           <input
-            onChange={onChange}
+            onChange={() => router.push(`/quiz?q=${redirectTo[1]}`)}
             className={styles.input}
             type='radio'
             name='input_name'
@@ -32,7 +35,7 @@ const StepOptionNumber = ({ onChange }: StepOptionNumberProps) => {
 
         <label className={styles.label}>
           <input
-            onChange={onChange}
+            onChange={() => router.push(`/quiz?q=${redirectTo[2]}`)}
             className={styles.input}
             type='radio'
             name='input_name'
@@ -43,7 +46,7 @@ const StepOptionNumber = ({ onChange }: StepOptionNumberProps) => {
 
         <label className={styles.label}>
           <input
-            onChange={onChange}
+            onChange={() => router.push(`/quiz?q=${redirectTo[3]}`)}
             className={styles.input}
             type='radio'
             name='input_name'
@@ -54,7 +57,7 @@ const StepOptionNumber = ({ onChange }: StepOptionNumberProps) => {
 
         <label className={styles.label}>
           <input
-            onChange={onChange}
+            onChange={() => router.push(`/quiz?q=${redirectTo[4]}`)}
             className={styles.input}
             type='radio'
             name='input_name'
@@ -72,4 +75,4 @@ const StepOptionNumber = ({ onChange }: StepOptionNumberProps) => {
   );
 };
 
-export default StepOptionNumber;
+export default AgreementScale;

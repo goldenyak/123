@@ -2,7 +2,7 @@
 import { useRouter } from 'next/navigation';
 import styles from './Step.module.scss';
 import StepHeader from '@/components/StepHeader/StepHeader';
-import StepOptionNumber from '@/components/StepOptionNumber/StepOptionNumber';
+import AgreementScale from '@/components/AgreementScaleComponent/AgreementScale/AgreementScale';
 
 function Step16() {
   const router = useRouter();
@@ -25,7 +25,7 @@ function Step16() {
         of my browser to check if there is lock symbol»
       </h2>
 
-      <StepOptionNumber onChange={onChangeHandler} />
+      <AgreementScale onChange={onChangeHandler} />
     </div>
   );
 }

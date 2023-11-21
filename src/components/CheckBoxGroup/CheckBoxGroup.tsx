@@ -20,9 +20,10 @@ const CheckBoxGroup = ({ options }: CheckBoxGroupProps) => {
 
   const changeHandler = (e: ChangeEvent<HTMLInputElement>) =>
     inputChangeHandler(e);
+
   return (
     <>
-      {options.map(({ value, icon }, index) => (
+      {options.map(({ value, icon }) => (
         <CheckBoxOption
           value={value}
           icon={getIcon(icon)}

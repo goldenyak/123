@@ -8,7 +8,7 @@
           "showMultiStepBar": true,
           "header": "Have you ever used any VPN before?",
           "content": {
-            "type": "radioGroup",
+            "type": "radio-group",
             "options": [
               {
                 "value": "yes",
@@ -33,7 +33,7 @@
           "prevStep": "2",
           "header": "What didn't you like about other VPN services before?",
           "content": {
-            "type": "checkboxGroup",
+            "type": "checkbox-group",
             "options": [
               {
                 "value": "Wasn't working",
@@ -75,7 +75,7 @@
           "header": "Do you need to fix «Video is not available in your country» issue?",
           "prevStep": "3",
           "content": {
-            "type": "radioGroup",
+            "type": "radio-group",
             "options": [
               {
                 "value": "yes",
@@ -100,7 +100,7 @@
           "prevStep": "5",
           "header": "Where do you see this restriction most often?",
           "content": {
-            "type": "checkboxGroup",
+            "type": "checkbox-group",
             "options": [
               {
                 "value": "Netflix or other streaming",
@@ -131,7 +131,7 @@
           "header": "Do you need to use  Messengers which are not available in your country?",
           "prevStep": "6",
           "content": {
-            "type": "radioGroup",
+            "type": "radio-group",
             "options": [
               {
                 "value": "yes",
@@ -156,7 +156,7 @@
           "prevStep": "7",
           "header": "Choose messengers that you have trouble accessing?",
           "content": {
-            "type": "checkboxGroup",
+            "type": "checkbox-group",
             "options": [
               {
                 "value": "WhatsApp",
@@ -187,7 +187,7 @@
           "prevStep": "8",
           "header": "Choose additional benefits of VPN Lumos:",
           "content": {
-            "type": "checkboxGroup",
+            "type": "checkbox-group",
             "options": [
               {
                 "value": "Internet speed boost",
@@ -230,7 +230,7 @@
           "prevStep": "9",
           "header": "Choose additional benefits of VPN Lumos:",
           "content": {
-            "type": "radioGroup",
+            "type": "radio-group",
             "options": [
               {
                 "value": "Almost never",
@@ -266,7 +266,7 @@
           "header": "Do you save passwords to your browser?",
           "prevStep": "12",
           "content": {
-            "type": "radioGroup",
+            "type": "radio-group",
             "options": [
               {
                 "value": "yes",
@@ -287,7 +287,7 @@
           "prevStep": "13",
           "header": "How quickly do you update your devices and apps?",
           "content": {
-            "type": "radioGroup",
+            "type": "radio-group",
             "options": [
               {
                 "value": "I have auto-update enabled",
@@ -310,6 +310,17 @@
                 "redirectTo": "15"
               }
             ]
+          }
+        },
+        {
+          "id": 15,
+          "showMultiStepBar": true,
+          "prevStep": "14",
+          "header": "Does the statement below characterize you?",
+          "content": {
+            "type": "agreement-scale",
+            "value": "«If I see links in the incoming email, I open them immediately»",
+            "redirectTo": ["16", "16", "16", "16", "16"]
           }
         }
       ]
