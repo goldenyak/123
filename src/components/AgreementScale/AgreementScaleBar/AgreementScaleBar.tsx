@@ -1,5 +1,5 @@
 import { IAgreementScale } from '@/components/StepContent/types';
-import styles from './AgreementScale.module.scss';
+import styles from './AgreementScaleBar.module.scss';
 import { useRouter } from 'next/navigation';
 
 interface AgreementScaleProps {

@@ -8,11 +8,19 @@ interface RadioGroupProps {
 
 const RadioGroup = ({ options }: RadioGroupProps) => {
   return (
-    <>
-      {options.map((props) => (
-        <RadioOption {...props} icon={getIcon(props.icon)} key={props.value} />
+    <div
+      style={{
+        padding: ' 0 15px',
+      }}
+    >
+      {options.map((props, index) => (
+        <RadioOption
+          {...props}
+          icon={getIcon(props.icon)}
+          key={props.value + index}
+        />
       ))}
-    </>
+    </div>
   );
 };
 

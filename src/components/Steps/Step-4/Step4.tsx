@@ -8,7 +8,11 @@ import StepHeader from '@/components/StepHeader/StepHeader';
 
 function Step4() {
   return (
-    <div>
+    <div
+      style={{
+        padding: '45px 15px',
+      }}
+    >
       <StepHeader
         value={
           <>

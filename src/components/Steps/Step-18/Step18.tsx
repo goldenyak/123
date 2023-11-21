@@ -5,7 +5,7 @@ import styles from './Step.module.scss';
 // import icon_warning from '../../../assets/icons/icon_warning.svg';
 // import Image from 'next/image';
 import { Accordion } from './Accordion/Accordion';
-import { Button } from '../../Button/NextButton';
+import { NextButton } from '@/components/NextButton/NextButton';
 import StepHeader from '@/components/StepHeader/StepHeader';
 
 function Step18() {
@@ -14,7 +14,7 @@ function Step18() {
   return (
     <div
       style={{
-        marginTop: '35px',
+        padding: '35px 15px 0 15px',
       }}
     >
       <div
@@ -24,7 +24,7 @@ function Step18() {
           gap: '14px',
         }}
       >
-        <StepHeader align='center'>Your risk profile</StepHeader>
+        <StepHeader align='center' value={'Your risk profile'} />
 
         <div
           style={{
@@ -81,10 +81,7 @@ function Step18() {
         <Accordion />
       </div>
 
-      <Button
-        title={`Let's begin!`}
-        onClick={() => router.push('/quiz?q=19')}
-      />
+      <NextButton value={`Let's begin!`} redirectTo={'19'} />
     </div>
   );
 }

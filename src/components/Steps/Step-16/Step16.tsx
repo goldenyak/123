@@ -2,7 +2,7 @@
 import { useRouter } from 'next/navigation';
 import styles from './Step.module.scss';
 import StepHeader from '@/components/StepHeader/StepHeader';
-import AgreementScale from '@/components/AgreementScaleComponent/AgreementScale/AgreementScale';
+import AgreementScale from '@/components/AgreementScale/AgreementScaleBar/AgreementScaleBar';
 
 function Step16() {
   const router = useRouter();

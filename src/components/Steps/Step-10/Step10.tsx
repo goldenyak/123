@@ -5,7 +5,7 @@ import world_map from '../../../assets/images/world_map.png';
 import icon_point_small from '../../../assets/icons/icon_point_small.svg';
 import icon_point_medium from '../../../assets/icons/icon_point_medium.svg';
 import icon_point_big from '../../../assets/icons/icon_point_big.svg';
-import ProgressBar from '../../ProgressBar/ProgressBar';
+import ProgressIndicator from '../../ProgressIndicator/ProgressIndicator';
 import StepHeader from '@/components/StepHeader/StepHeader';
 
 function Step10() {
@@ -47,7 +47,7 @@ function Step10() {
         />
       </div>
 
-      <ProgressBar path='/quiz?q=11' />
+      <ProgressIndicator path='/quiz?q=11' />
     </div>
   );
 }

@@ -1,17 +1,14 @@
 'use client';
-import styles from './AgreementScaleComponent.module.scss';
-import AgreementScale from './AgreementScale/AgreementScale';
+import styles from './AgreementScale.module.scss';
+import AgreementScaleBar from './AgreementScaleBar/AgreementScaleBar';
 import { IAgreementScale } from '../StepContent/types';
 
-interface AgreementScaleComponentProps {
+interface AgreementScaleProps {
   value: IAgreementScale['value'];
   redirectTo: IAgreementScale['redirectTo'];
 }
 
-function AgreementScaleComponent({
-  value,
-  redirectTo,
-}: AgreementScaleComponentProps) {
+function AgreementScale({ value, redirectTo }: AgreementScaleProps) {
   return (
     <div className={styles.wrapper}>
       <div
@@ -20,9 +17,9 @@ function AgreementScaleComponent({
         }}
       ></div>
       <h2 className={styles.header_description}>{value}</h2>
-      <AgreementScale redirectTo={redirectTo} />
+      <AgreementScaleBar redirectTo={redirectTo} />
     </div>
   );
 }
 
-export default AgreementScaleComponent;
+export default AgreementScale;

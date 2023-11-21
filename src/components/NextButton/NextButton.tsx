@@ -5,6 +5,7 @@ import styles from './NextButton.module.scss';
 interface NextButtonProps extends INextButton {
   disabled?: boolean;
   type?: 'button' | 'submit' | 'reset';
+  onClick?: () => void;
 }
 
 export const NextButton = ({
@@ -12,6 +13,7 @@ export const NextButton = ({
   redirectTo,
   disabled = false,
   type = 'button',
+  onClick,
 }: NextButtonProps) => {
   const router = useRouter();
   return (
@@ -19,7 +21,9 @@ export const NextButton = ({
       <button
         type={type}
         className={styles.button}
-        onClick={() => router.push(`/quiz?q=${redirectTo}`)}
+        onClick={
+          !onClick ? () => router.push(`/quiz?q=${redirectTo}`) : onClick
+        }
         disabled={disabled}
       >
         {value}

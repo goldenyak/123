@@ -2,7 +2,7 @@
 
 import { useSearchParams } from 'next/navigation';
 import styles from './Quiz.module.scss';
-import { MultiStepBar } from '@/components/MultiStepBar/MultiStepBar';
+import { ProgressBar } from '@/components/ProgressBar/ProgressBar';
 import StepContent from '@/components/StepContent/StepContent';
 import config from '../../../quiz-config.json';
 import { IStepConfig } from '@/components/StepContent/types';
@@ -19,21 +19,17 @@ export default function QuizPage() {
   return (
     <div
       className={
-        stepConfig?.fillGradient
+        stepConfig?.gradientFill
           ? [styles.main_wrapper, styles.gradient].join(' ')
           : styles.main_wrapper
       }
+      style={
+        {
+          // background: 'gray',
+        }
+      }
     >
-      {stepConfig?.showMultiStepBar && <MultiStepBar />}
-      <div
-        className={styles.step_wrapper}
-        style={{
-          paddingTop: `${stepConfig?.showMultiStepBar ? '50px' : '0'}`,
-          marginBottom: '100px',
-        }}
-      >
-        <StepContent config={stepConfig} />
-      </div>
+      <StepContent config={stepConfig} />
     </div>
   );
 }

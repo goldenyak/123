@@ -3,7 +3,7 @@ export interface IStepConfig {
   showMultiStepBar?: boolean;
   nextButton?: INextButton;
   prevStep?: string;
-  fillGradient?: boolean;
+  gradientFill?: boolean;
   header?: string;
   content: IStepContent;
 }
@@ -41,11 +41,15 @@ type IStepContent =
   | IAgreementScale
   | Step4
   | Step10
-  | Step11;
+  | Step11
+  | Step17
+  | Step18
+  | Step19
+  | Step20;
 
 export interface INextButton {
   value: string;
-  redirectTo: string;
+  redirectTo?: string;
 }
 
 //Workaround - remove
@@ -60,4 +64,16 @@ interface Step10 {
 
 interface Step11 {
   type: 'step11';
+}
+interface Step17 {
+  type: 'step17';
+}
+interface Step18 {
+  type: 'step18';
+}
+interface Step19 {
+  type: 'step19';
+}
+interface Step20 {
+  type: 'step20';
 }

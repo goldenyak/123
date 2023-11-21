@@ -22,16 +22,16 @@ const CheckBoxGroup = ({ options }: CheckBoxGroupProps) => {
     inputChangeHandler(e);
 
   return (
-    <>
-      {options.map(({ value, icon }) => (
+    <div style={{ padding: '0 15px' }}>
+      {options.map(({ value, icon }, index) => (
         <CheckBoxOption
           value={value}
           icon={getIcon(icon)}
           onChange={changeHandler}
-          key={value}
+          key={value + index}
         />
       ))}
-    </>
+    </div>
   );
 };
 

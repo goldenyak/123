@@ -1,37 +1,35 @@
-.zx {
-  width: 100%;
-  height: 80px;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  padding: 25px 25px;
+$mob-width: 601px;
+
+.wrapper {
   display: flex;
   align-items: center;
+  max-width: 335px;
+  margin: 0 15px;
+  flex-grow: 1;
+  @media screen and (max-width: $mob-width) {
+    max-width: $mob-width;
+  }
+}
+
+.circle {
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background-color: #e4e9f9;
+  transition: background-color 0.5s ease-in-out;
+  display: flex;
   justify-content: center;
-  background-color: white;
-  z-index: 2;
+  align-items: center;
 }
 
-.progressbar_wrapper {
-  position: relative;
-  max-width: 360px;
-  overflow: hidden;
-  width: 100%;
-  height: 50px;
-  border-radius: 100px;
-  background-color: #d8d8d8;
+.circle_filled {
+  background-color: #5072f1;
 }
 
-.progressbar_content {
-  height: 100%;
-  background: linear-gradient(91deg, #50aef1 0%, #506ef1 100%);
-  transition: width 0.5s;
-}
-
-.progress_percent {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
+.btn_back {
+  cursor: pointer;
+  margin-right: 10px;
+  &:hover {
+    opacity: 0.5;
+  }
 }

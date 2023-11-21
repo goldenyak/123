@@ -27,7 +27,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/components/Button/NextButton"
+    "src/components/NextButton/NextButton"
   ],
   "exclude": ["node_modules"]
 }

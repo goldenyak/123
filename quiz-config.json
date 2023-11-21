@@ -128,7 +128,7 @@
         {
           "id": 7,
           "showMultiStepBar": true,
-          "header": "Do you need to use  Messengers which are not available in your country?",
+          "header": "Do you need to use Messengers which are not available in your country?",
           "prevStep": "6",
           "content": {
             "type": "radio-group",
@@ -315,12 +315,49 @@
         {
           "id": 15,
           "showMultiStepBar": true,
-          "prevStep": "14",
           "header": "Does the statement below characterize you?",
+          "gradientFill": "true",
+          "prevStep": "14",
           "content": {
             "type": "agreement-scale",
             "value": "«If I see links in the incoming email, I open them immediately»",
             "redirectTo": ["16", "16", "16", "16", "16"]
+          }
+        },
+        {
+          "id": 16,
+          "showMultiStepBar": true,
+          "header": "Does the statement below characterize you?",
+          "gradientFill": "true",
+          "prevStep": "15",
+          "content": {
+            "type": "agreement-scale",
+            "value": "«Before entering personal information into a website, I look at the top of my browser to check if there is lock symbol»",
+            "redirectTo": ["17", "17", "17", "17", "17"]
+          }
+        },
+        {
+          "id": 17,
+          "content": {
+            "type": "step17"
+          }
+        },
+        {
+          "id": 18,
+          "content": {
+            "type": "step18"
+          }
+        },
+        {
+          "id": 19,
+          "content": {
+            "type": "step19"
+          }
+        },
+        {
+          "id": 20,
+          "content": {
+            "type": "step20"
           }
         }
       ]

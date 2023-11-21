@@ -3,7 +3,7 @@ import { useRouter } from 'next/navigation';
 import styles from './AboutVpn.module.scss';
 import Image from 'next/image';
 import about_vpn from '../../assets/images/about_vpn.webp';
-import { Button } from '../Button/NextButton';
+import { Button } from '../NextButton/NextButton';
 
 function AboutVpn() {
   const router = useRouter();

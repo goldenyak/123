@@ -3,8 +3,8 @@ import styles from './Step.module.scss';
 import Image from 'next/image';
 import icon_security from '../../../assets/icons/icon_security.svg';
 import Link from 'next/link';
-import { Button } from '@/components/Button/Button';
-import { ChangeEvent, FormEvent, useState } from 'react';
+import { NextButton } from '@/components/NextButton/NextButton';
+import { ChangeEvent, useState } from 'react';
 import StepHeader from '@/components/StepHeader/StepHeader';
 
 function Step20() {
@@ -38,11 +38,12 @@ function Step20() {
           flexDirection: 'column',
           justifyContent: 'center',
           gap: '8px',
+          padding: '30px 15px 0 15px',
         }}
       >
-        <StepHeader>
-          Your Personal Plan for a free and secure internet is ready!
-        </StepHeader>
+        <StepHeader
+          value={'Your Personal Plan for a free and secure internet is ready!'}
+        />
         <h2 className={styles.header_description}>
           Enter your email to gets started
         </h2>
@@ -87,6 +88,7 @@ function Step20() {
           textAlign: 'center',
           fontSize: '13px',
           lineHeight: '1.4',
+          marginTop: '50px',
         }}
       >
         By submitting your email address, you acknowledge that you have read and
@@ -99,7 +101,7 @@ function Step20() {
           Privacy Policy
         </Link>
       </div>
-      <Button type='submit' title={`Register`} onClick={handleSubmit} />
+      <NextButton type='submit' value={`Register`} onClick={handleSubmit} />
     </div>
   );
 }

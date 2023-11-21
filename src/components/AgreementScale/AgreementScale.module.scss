@@ -7,6 +7,8 @@ $mob-width: 601px;
   height: 560px;
   @media screen and (max-width: $mob-width) {
     height: 100%;
+    position: absolute;
+    bottom: 0;
   }
 }
 
@@ -16,5 +18,7 @@ $mob-width: 601px;
   text-align: center;
   color: rgb(45, 50, 64);
   font-weight: 400;
-  margin: 0px 15px;
+  @media screen and (max-width: $mob-width) {
+    margin-top: 50px;
+  }
 }
