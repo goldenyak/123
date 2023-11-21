@@ -5,7 +5,7 @@ import icon_no from '../../../assets/icons/icon_no.png';
 import { decrement, increment } from '@/app/redux/slices/counterSlice';
 import { useAppDispatch, useAppSelector } from '@/app/redux/hooks/hooks';
 import StepHeader from '@/components/StepHeader/StepHeader';
-import StepOption from '@/components/StepOption/StepOption';
+import RadioOption from '@/components/RadioOption/RadioOption';
 
 function Step2() {
   const router = useRouter();
@@ -16,16 +16,16 @@ function Step2() {
     <>
       <StepHeader>Have you ever used any VPN before?</StepHeader>
 
-      <StepOption
+      <RadioOption
         value='Yes'
         icon={icon_yes}
-        onClick={() => router.push('/quiz?q=3')}
+        redirectTo={() => router.push('/quiz?q=3')}
       />
 
-      <StepOption
+      <RadioOption
         value='No'
         icon={icon_no}
-        onClick={() => router.push('/quiz?q=4')}
+        redirectTo={() => router.push('/quiz?q=4')}
       />
     </>
   );

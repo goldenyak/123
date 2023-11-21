@@ -5,7 +5,7 @@ import Image from 'next/image';
 import icon_hide_ip from '../../../assets/icons/icon_hide_ip.png';
 import icon_helps_watch from '../../../assets/icons/icon_helps_watch.png';
 import icon_helps_access from '../../../assets/icons/icon_helps_access.png';
-import { Button } from '../../Button/Button';
+import { Button } from '../../Button/NextButton';
 import StepHeader from '@/components/StepHeader/StepHeader';
 
 function Step4() {

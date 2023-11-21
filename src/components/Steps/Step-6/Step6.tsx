@@ -6,9 +6,9 @@ import icon_social_networks from '../../../assets/icons/icon_social_networks.png
 import icon_sport_sites from '../../../assets/icons/icon_sport_sites.png';
 import icon_other from '../../../assets/icons/icon_other.png';
 import { ChangeEvent, useState } from 'react';
-import { Button } from '../../Button/Button';
+import { Button } from '../../Button/NextButton';
 import StepHeader from '@/components/StepHeader/StepHeader';
-import StepOptionCheckbox from '@/components/StepOptionCheckbox/StepOptionCheckbox';
+import CheckBoxOption from '@/components/CheckBoxOption/CheckBoxOption';
 
 function Step6() {
   const [isChecked, setIsChecked] = useState(0);
@@ -29,31 +29,31 @@ function Step6() {
     <div>
       <StepHeader>Where do you see this restriction most often?</StepHeader>
 
-      <StepOptionCheckbox
+      <CheckBoxOption
         value='Netflix or other streaming'
         icon={icon_film_projector}
         onChange={changeHandler}
       />
 
-      <StepOptionCheckbox
+      <CheckBoxOption
         value='Adult sites'
         icon={icon_adult_sites}
         onChange={changeHandler}
       />
 
-      <StepOptionCheckbox
+      <CheckBoxOption
         value='Social Networks'
         icon={icon_social_networks}
         onChange={changeHandler}
       />
 
-      <StepOptionCheckbox
+      <CheckBoxOption
         value='Sport sites'
         icon={icon_sport_sites}
         onChange={changeHandler}
       />
 
-      <StepOptionCheckbox
+      <CheckBoxOption
         value='Other'
         icon={icon_other}
         onChange={changeHandler}

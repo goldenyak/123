@@ -6,9 +6,9 @@ import icon_low_connection from '../../../assets/icons/icon_low_connection.png';
 import icon_was_not_safe from '../../../assets/icons/icon_was_not_safe.png';
 import icon_other from '../../../assets/icons/icon_other.png';
 import { ChangeEvent, useState } from 'react';
-import { Button } from '../../Button/Button';
+import { Button } from '../../Button/NextButton';
 import StepHeader from '@/components/StepHeader/StepHeader';
-import StepOptionCheckbox from '@/components/StepOptionCheckbox/StepOptionCheckbox';
+import CheckBoxOption from '@/components/CheckBoxOption/CheckBoxOption';
 
 function Step3() {
   const [isChecked, setIsChecked] = useState(0);
@@ -31,31 +31,31 @@ function Step3() {
         What did not you like about other VPN services before?
       </StepHeader>
 
-      <StepOptionCheckbox
+      <CheckBoxOption
         value='Was not working'
         icon={icon_was_not_working}
         onChange={changeHandler}
       />
 
-      <StepOptionCheckbox
+      <CheckBoxOption
         value='Too expensive'
         icon={icon_expensive}
         onChange={changeHandler}
       />
 
-      <StepOptionCheckbox
+      <CheckBoxOption
         value='Low connection speed'
         icon={icon_low_connection}
         onChange={changeHandler}
       />
 
-      <StepOptionCheckbox
+      <CheckBoxOption
         value='Wasn’t safe'
         icon={icon_was_not_safe}
         onChange={changeHandler}
       />
 
-      <StepOptionCheckbox
+      <CheckBoxOption
         value='Other'
         icon={icon_other}
         onChange={changeHandler}

@@ -6,7 +6,7 @@ import icon_every_week from '../../../assets/icons/icon_every_week.png';
 import icon_often from '../../../assets/icons/icon_often.png';
 import icon_several_times from '../../../assets/icons/icon_several_times.png';
 import StepHeader from '@/components/StepHeader/StepHeader';
-import StepOption from '@/components/StepOption/StepOption';
+import RadioOption from '@/components/RadioOption/RadioOption';
 
 function Step12() {
   const router = useRouter();
@@ -17,24 +17,28 @@ function Step12() {
     <>
       <StepHeader>How often do you use Public Wi-Fi?</StepHeader>
 
-      <StepOption
-        onClick={clickHandler}
+      <RadioOption
+        redirectTo={clickHandler}
         icon={icon_almost_never}
         value='Almost never'
       />
 
-      <StepOption onClick={clickHandler} icon={icon_rarely} value='Rarely' />
+      <RadioOption
+        redirectTo={clickHandler}
+        icon={icon_rarely}
+        value='Rarely'
+      />
 
-      <StepOption
-        onClick={clickHandler}
+      <RadioOption
+        redirectTo={clickHandler}
         icon={icon_every_week}
         value='Every week'
       />
 
-      <StepOption onClick={clickHandler} icon={icon_often} value='Often' />
+      <RadioOption redirectTo={clickHandler} icon={icon_often} value='Often' />
 
-      <StepOption
-        onClick={clickHandler}
+      <RadioOption
+        redirectTo={clickHandler}
         icon={icon_several_times}
         value='Several times a day'
       />

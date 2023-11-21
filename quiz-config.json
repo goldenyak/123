@@ -1,0 +1,64 @@
+{
+  "variants": [
+    {
+      "name": "default",
+      "steps": [
+        {
+          "id": 2,
+          "showMultiStepBar": true,
+          "header": "Have you ever used any VPN before?",
+          "content": {
+            "type": "radioGroup",
+            "options": [
+              {
+                "value": "yes",
+                "icon": "yes",
+                "redirectTo": "3"
+              },
+              {
+                "value": "no",
+                "icon": "no",
+                "redirectTo": "4"
+              }
+            ]
+          }
+        },
+        {
+          "id": 3,
+          "showMultiStepBar": true,
+          "nextButton": {
+            "value": "Continue",
+            "redirectTo": "4"
+          },
+          "prevStep": "2",
+          "header": "What didn't you like about other VPN services before?",
+          "content": {
+            "type": "checkboxGroup",
+            "options": [
+              {
+                "value": "Wasn't working",
+                "icon": "wrench"
+              },
+              {
+                "value": "Too expensive",
+                "icon": "moneyBag"
+              },
+              {
+                "value": "Low connection speed",
+                "icon": "snail"
+              },
+              {
+                "value": "Wasn’t safe",
+                "icon": "warning"
+              },
+              {
+                "value": "Other",
+                "icon": "bubbleCloud"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

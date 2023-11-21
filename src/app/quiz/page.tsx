@@ -1,39 +1,38 @@
 'use client';
 
 import { useSearchParams } from 'next/navigation';
-import steps from './steps';
 import styles from './Quiz.module.scss';
 import { MultiStepBar } from '@/components/MultiStepBar/MultiStepBar';
-
-const STEPS_WO_STEP_BAR = [4, 10, 11, 17, 18, 19];
+import StepContent from '@/components/StepContent/StepContent';
+import config from '../../../quiz-config.json';
+import { IStepConfig } from '@/components/StepContent/types';
 
 export default function QuizPage() {
   const params = useSearchParams();
   const queryValue = params.get('q');
   const stepNumber = queryValue !== null ? parseInt(queryValue) : 0;
-  const StepComponent = steps[stepNumber];
 
-  const fillGradient = stepNumber === 15 || stepNumber === 16;
-
-  const showStepBar = () => !STEPS_WO_STEP_BAR.includes(stepNumber);
+  let stepConfig = config.variants[0].steps.find(
+    (item) => item.id === stepNumber,
+  ) as IStepConfig;
 
   return (
     <div
       className={
-        fillGradient
+        stepConfig?.fillGradient
           ? [styles.main_wrapper, styles.gradient].join(' ')
           : styles.main_wrapper
       }
     >
-      {showStepBar() && <MultiStepBar />}
+      {stepConfig?.showMultiStepBar && <MultiStepBar />}
       <div
         className={styles.step_wrapper}
         style={{
-          paddingTop: `${showStepBar() ? '50px' : '0'}`,
+          paddingTop: `${stepConfig.showMultiStepBar ? '50px' : '0'}`,
           marginBottom: '100px',
         }}
       >
-        <StepComponent />
+        <StepContent config={stepConfig} />
       </div>
     </div>
   );

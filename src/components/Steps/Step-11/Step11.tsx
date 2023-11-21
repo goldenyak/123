@@ -3,7 +3,7 @@ import { useRouter } from 'next/navigation';
 import styles from './Step.module.scss';
 import Image from 'next/image';
 import man_with_paper from '../../../assets/images/man_with_paper.png';
-import { Button } from '../../Button/Button';
+import { Button } from '../../Button/NextButton';
 import StepHeader from '@/components/StepHeader/StepHeader';
 
 function Step11() {

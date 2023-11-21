@@ -2,11 +2,11 @@ import { ReactNode } from 'react';
 import styles from './StepHeader.module.scss';
 
 interface StepHeaderProps {
-  children: ReactNode;
+  value: ReactNode;
   align?: 'left' | 'center';
 }
 
-const StepHeader = ({ children, align = 'left' }: StepHeaderProps) => {
+const StepHeader = ({ value, align = 'left' }: StepHeaderProps) => {
   return (
     <header
       className={styles.header}
@@ -14,7 +14,7 @@ const StepHeader = ({ children, align = 'left' }: StepHeaderProps) => {
         textAlign: align,
       }}
     >
-      {children}
+      {value}
     </header>
   );
 };

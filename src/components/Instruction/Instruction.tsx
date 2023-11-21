@@ -4,7 +4,7 @@ import InstructionRow from './InstructionRow';
 import instructions from '../../assets/images/instructions.png';
 import clipboard from '../../assets/icons/icon_clipboard.svg';
 import Image from 'next/image';
-import { Button } from '../Button/Button';
+import { Button } from '../Button/NextButton';
 
 interface InstructionProps {
   email: string;

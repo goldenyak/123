@@ -5,7 +5,7 @@ import icon_smile from '../../../assets/icons/icon_smile.png';
 import icon_thinking from '../../../assets/icons/icon_thinking.png';
 import icon_grimacing from '../../../assets/icons/icon_grimacing.png';
 import StepHeader from '@/components/StepHeader/StepHeader';
-import StepOption from '@/components/StepOption/StepOption';
+import RadioOption from '@/components/RadioOption/RadioOption';
 
 function Step14() {
   const router = useRouter();
@@ -14,26 +14,26 @@ function Step14() {
     <div>
       <StepHeader>How quickly do you update your devices and apps?</StepHeader>
 
-      <StepOption
-        onClick={clickHandler}
+      <RadioOption
+        redirectTo={clickHandler}
         icon={icon_smile_glasses}
         value='I have auto-update enabled'
       />
 
-      <StepOption
-        onClick={clickHandler}
+      <RadioOption
+        redirectTo={clickHandler}
         icon={icon_smile}
         value='Installing every version of the update'
       />
 
-      <StepOption
-        onClick={clickHandler}
+      <RadioOption
+        redirectTo={clickHandler}
         icon={icon_thinking}
         value='Installing updates through multiple versions'
       />
 
-      <StepOption
-        onClick={clickHandler}
+      <RadioOption
+        redirectTo={clickHandler}
         icon={icon_grimacing}
         value='Almost never'
       />

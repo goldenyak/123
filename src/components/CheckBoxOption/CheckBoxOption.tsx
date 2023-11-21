@@ -1,18 +1,14 @@
-import styles from './StepOptionCheckbox.module.scss';
+import styles from './CheckBoxOption.module.scss';
 import Image, { StaticImageData } from 'next/image';
 import icon_check_blue from '../../assets/icons/icon_check_blue.svg';
 
-interface StepOptionCheckboxProps {
+interface CheckBoxOptionProps {
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   icon: StaticImageData;
   value: string;
 }
 
-const StepOptionCheckbox = ({
-  onChange,
-  icon,
-  value,
-}: StepOptionCheckboxProps) => {
+const CheckBoxOption = ({ onChange, icon, value }: CheckBoxOptionProps) => {
   return (
     <label className={styles.label}>
       <input
@@ -34,4 +30,4 @@ const StepOptionCheckbox = ({
   );
 };
 
-export default StepOptionCheckbox;
+export default CheckBoxOption;

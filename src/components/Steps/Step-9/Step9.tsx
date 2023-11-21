@@ -4,10 +4,10 @@ import icon_rocket from '../../../assets/icons/icon_rocket.png';
 import icon_locked from '../../../assets/icons/icon_locked.png';
 import icon_world_map from '../../../assets/icons/icon_world_map.png';
 import icon_ninja from '../../../assets/icons/icon_ninja.png';
-import { Button } from '../../Button/Button';
+import { Button } from '../../Button/NextButton';
 import { ChangeEvent, useState } from 'react';
 import StepHeader from '@/components/StepHeader/StepHeader';
-import StepOptionCheckbox from '@/components/StepOptionCheckbox/StepOptionCheckbox';
+import CheckBoxOption from '@/components/CheckBoxOption/CheckBoxOption';
 
 function Step9() {
   const [isChecked, setIsChecked] = useState(0);
@@ -28,25 +28,25 @@ function Step9() {
     <div>
       <StepHeader>Choose additional benefits of VPN Lumos:</StepHeader>
 
-      <StepOptionCheckbox
+      <CheckBoxOption
         value='Internet speed boost'
         icon={icon_rocket}
         onChange={changeHandler}
       />
 
-      <StepOptionCheckbox
+      <CheckBoxOption
         value='Secure Online browsing'
         icon={icon_locked}
         onChange={changeHandler}
       />
 
-      <StepOptionCheckbox
+      <CheckBoxOption
         value='Hide real location'
         icon={icon_world_map}
         onChange={changeHandler}
       />
 
-      <StepOptionCheckbox
+      <CheckBoxOption
         value='Hide browser history'
         icon={icon_ninja}
         onChange={changeHandler}

@@ -1,16 +1,21 @@
 import { StaticImageData } from 'next/image';
-import styles from './StepOption.module.scss';
+import styles from './RadioOption.module.scss';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
-interface StepOptionProps {
-  onClick: () => void;
+interface RadioOptionsProps {
+  redirectTo: string;
   icon: StaticImageData;
   value: string;
 }
 
-const StepOption = ({ onClick, icon, value }: StepOptionProps) => {
+const RadioOption = ({ redirectTo, icon, value }: RadioOptionsProps) => {
+  const router = useRouter();
   return (
-    <label onClick={onClick} className={styles.label}>
+    <label
+      onClick={() => router.push(`/quiz?q=${redirectTo}`)}
+      className={styles.label}
+    >
       <input type='radio' value='input_value' />
       <div className={styles.label_wrapper}>
         <div className={styles.label_content}>
@@ -22,4 +27,4 @@ const StepOption = ({ onClick, icon, value }: StepOptionProps) => {
   );
 };
 
-export default StepOption;
+export default RadioOption;

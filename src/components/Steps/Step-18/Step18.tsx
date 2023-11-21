@@ -5,7 +5,7 @@ import styles from './Step.module.scss';
 // import icon_warning from '../../../assets/icons/icon_warning.svg';
 // import Image from 'next/image';
 import { Accordion } from './Accordion/Accordion';
-import { Button } from '../../Button/Button';
+import { Button } from '../../Button/NextButton';
 import StepHeader from '@/components/StepHeader/StepHeader';
 
 function Step18() {
