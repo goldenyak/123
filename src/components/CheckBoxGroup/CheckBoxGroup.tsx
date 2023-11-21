@@ -8,7 +8,7 @@ interface CheckBoxGroupProps {
 }
 
 const getIcon = (iconName: string): StaticImageData =>
-  require(`../assets/icons/${iconName}.svg`);
+  require(`../../assets/icons/${iconName}.svg`);
 
 const CheckBoxGroup = ({ options }: CheckBoxGroupProps) => {
   const [isChecked, setIsChecked] = useState(0);

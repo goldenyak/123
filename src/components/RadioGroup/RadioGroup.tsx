@@ -7,7 +7,7 @@ interface RadioGroupProps {
 }
 
 const getIcon = (iconName: string): StaticImageData =>
-  require(`../assets/icons/${iconName}.svg`);
+  require(`../../assets/icons/${iconName}.svg`);
 
 const RadioGroup = ({ options }: RadioGroupProps) => {
   return (
