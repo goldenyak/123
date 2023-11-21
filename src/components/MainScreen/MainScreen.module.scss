@@ -1,4 +1,4 @@
-$mob-width: 768px;
+$mob-width: 601px;
 $mob-height: 560px;
 
 .main {
@@ -81,7 +81,7 @@ $mob-height: 560px;
   font-weight: 700;
 
   &:hover {
-   opacity: 0.8;
+    opacity: 0.8;
   }
 
   @media screen and (max-height: $mob-height) {

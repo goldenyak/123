@@ -1,3 +1,16 @@
+$mob-width: 601px;
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  max-width: 335px;
+  margin: 0 15px;
+  flex-grow: 1;
+  @media screen and (max-width: $mob-width) {
+    max-width: $mob-width;
+  }
+}
+
 .circle {
   width: 17px;
   height: 17px;

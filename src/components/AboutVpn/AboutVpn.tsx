@@ -39,7 +39,6 @@ function AboutVpn() {
         <Button
           title='Wow! That’s great'
           onClick={() => router.push('/quiz?q=3')}
-          disabled={false}
         />
       </div>
     </div>

@@ -42,7 +42,12 @@ function MainScreen() {
             </button>
           </div>
         </div>
-        <Image alt='MainImage' src={main_image} className={styles.main_image} />
+        <Image
+          alt='MainImage'
+          src={main_image}
+          className={styles.main_image}
+          priority={true}
+        />
         <div className={styles.privacy}>
           By continuing you agree{'\n'}to our{' '}
           <span

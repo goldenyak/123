@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { Roboto } from 'next/font/google';
 import './globals.css';
-import Providers from './redux/Provider';
 
 const roboto = Roboto({
   weight: ['400', '700'],
@@ -29,9 +28,7 @@ export default function RootLayout({
         />
       </head>
 
-      <body className={roboto.className}>
-        <Providers>{children}</Providers>
-      </body>
+      <body className={roboto.className}>{children}</body>
     </html>
   );
 }

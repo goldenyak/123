@@ -5,13 +5,6 @@
   justify-content: space-between;
 }
 
-.header_title {
-  font-weight: 700;
-  font-size: 26px;
-  text-align: left;
-  color: rgb(45, 50, 64);
-}
-
 .header_description {
   font-size: 17px;
   line-height: 22px;
@@ -23,8 +16,8 @@
 
 .input {
   border-radius: 10px;
-  border: 1px solid #D8D8D8;
-  background: #F8F8F8;
+  border: 1px solid #d8d8d8;
+  background: #f8f8f8;
   padding: 16px;
   font-size: 17px;
   width: 100%;
@@ -34,7 +27,7 @@
 .input_error {
   border-radius: 10px;
   border: 1px solid red;
-  background: #F8F8F8;
+  background: #f8f8f8;
   padding: 16px;
   font-size: 17px;
   width: 100%;

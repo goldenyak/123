@@ -3,6 +3,7 @@ import { useRouter } from 'next/navigation';
 import styles from './Step.module.scss';
 import Image from 'next/image';
 import loader from '../../../assets/icons/loader.png';
+import StepHeader from '@/components/StepHeader/StepHeader';
 
 function Step19() {
   const router = useRouter();
@@ -19,9 +20,9 @@ function Step19() {
           priority={true}
         />
       </div>
-      <h1 className={styles.header}>
+      <StepHeader align='center'>
         We optimize the settings according to your preferences...
-      </h1>
+      </StepHeader>
 
       <div className={styles.features}>
         <div className={styles.feature}>

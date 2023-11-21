@@ -5,6 +5,7 @@ import icon_security from '../../../assets/icons/icon_security.svg';
 import Link from 'next/link';
 import { Button } from '@/components/Button/Button';
 import { ChangeEvent, FormEvent, useState } from 'react';
+import StepHeader from '@/components/StepHeader/StepHeader';
 
 function Step20() {
   const [email, setEmail] = useState('');
@@ -39,9 +40,9 @@ function Step20() {
           gap: '8px',
         }}
       >
-        <h1 className={styles.header_title}>
+        <StepHeader>
           Your Personal Plan for a free and secure internet is ready!
-        </h1>
+        </StepHeader>
         <h2 className={styles.header_description}>
           Enter your email to gets started
         </h2>
@@ -98,12 +99,7 @@ function Step20() {
           Privacy Policy
         </Link>
       </div>
-      <Button
-        type='submit'
-        title={`Register`}
-        onClick={handleSubmit}
-        disabled={false}
-      />
+      <Button type='submit' title={`Register`} onClick={handleSubmit} />
     </div>
   );
 }

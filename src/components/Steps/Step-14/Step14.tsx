@@ -1,97 +1,42 @@
 'use client';
 import { useRouter } from 'next/navigation';
-import styles from './Step.module.scss';
-import Image from 'next/image';
 import icon_smile_glasses from '../../../assets/icons/icon_smile_glasses.png';
 import icon_smile from '../../../assets/icons/icon_smile.png';
 import icon_thinking from '../../../assets/icons/icon_thinking.png';
 import icon_grimacing from '../../../assets/icons/icon_grimacing.png';
+import StepHeader from '@/components/StepHeader/StepHeader';
+import StepOption from '@/components/StepOption/StepOption';
 
 function Step14() {
   const router = useRouter();
+  const clickHandler = () => router.push('/quiz?q=15');
   return (
     <div>
-      <header className={styles.header}>
-        How quickly do you update your devices and apps?
-      </header>
+      <StepHeader>How quickly do you update your devices and apps?</StepHeader>
 
-      <label onClick={() => router.push('/quiz?q=15')} className={styles.label}>
-        <input type='radio' name='input_name' value='input_value' />
-        <div className={styles.label_wrapper}>
-          <div className={styles.label_content}>
-            <Image
-              src={icon_smile_glasses}
-              alt='icon_smile_glasses'
-              className={styles.label_icon}
-              width={40}
-              height={40}
-            />
-            <div className={styles.label_text}>I have auto-update enabled</div>
-          </div>
-        </div>
-      </label>
+      <StepOption
+        onClick={clickHandler}
+        icon={icon_smile_glasses}
+        value='I have auto-update enabled'
+      />
 
-      <label onClick={() => router.push('/quiz?q=15')} className={styles.label}>
-        <input type='radio' name='input_name' value='input_value' />
-        <div className={styles.label_wrapper}>
-          <div className={styles.label_content}>
-            <Image
-              src={icon_smile}
-              alt='icon_smile'
-              className={styles.label_icon}
-              width={40}
-              height={40}
-            />
-            <div className={styles.label_text}>
-              Installing every version of the update
-            </div>
-          </div>
-        </div>
-      </label>
+      <StepOption
+        onClick={clickHandler}
+        icon={icon_smile}
+        value='Installing every version of the update'
+      />
 
-      <label onClick={() => router.push('/quiz?q=15')} className={styles.label}>
-        <input
-          type='radio'
-          name='input_name'
-          value='input_value'
-          style={{ display: 'none' }}
-        />
-        <div className={styles.label_wrapper}>
-          <div className={styles.label_content}>
-            <Image
-              src={icon_thinking}
-              alt='icon_thinking'
-              className={styles.label_icon}
-              width={40}
-              height={40}
-            />
-            <div className={styles.label_text}>
-              Installing updates through multiple versions
-            </div>
-          </div>
-        </div>
-      </label>
+      <StepOption
+        onClick={clickHandler}
+        icon={icon_thinking}
+        value='Installing updates through multiple versions'
+      />
 
-      <label onClick={() => router.push('/quiz?q=15')} className={styles.label}>
-        <input
-          type='radio'
-          name='input_name'
-          value='input_value'
-          style={{ display: 'none' }}
-        />
-        <div className={styles.label_wrapper}>
-          <div className={styles.label_content}>
-            <Image
-              src={icon_grimacing}
-              alt='icon_grimacing'
-              className={styles.label_icon}
-              width={40}
-              height={40}
-            />
-            <div className={styles.label_text}>Almost never</div>
-          </div>
-        </div>
-      </label>
+      <StepOption
+        onClick={clickHandler}
+        icon={icon_grimacing}
+        value='Almost never'
+      />
     </div>
   );
 }

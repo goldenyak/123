@@ -6,14 +6,23 @@ import icon_hide_ip from '../../../assets/icons/icon_hide_ip.png';
 import icon_helps_watch from '../../../assets/icons/icon_helps_watch.png';
 import icon_helps_access from '../../../assets/icons/icon_helps_access.png';
 import { Button } from '../../Button/Button';
+import StepHeader from '@/components/StepHeader/StepHeader';
 
 function Step4() {
   const router = useRouter();
   return (
     <div>
-      <header className={styles.header}>
-        With VPN Lumos you get a <span>75% faster</span> online connection
-      </header>
+      <StepHeader align='center'>
+        With VPN Lumos you get a{' '}
+        <span
+          style={{
+            color: '#5072f1',
+          }}
+        >
+          75% faster
+        </span>{' '}
+        online connection
+      </StepHeader>
 
       <p className={styles.header_description}>Also, VPN Lumos :</p>
 
@@ -25,8 +34,6 @@ function Step4() {
               src={icon_hide_ip}
               alt='icon_hide_ip'
               className={styles.label_icon}
-              width={60}
-              height={70}
             />
             <div className={styles.label_text}>
               Hides your IP and does not storage your data
@@ -43,8 +50,6 @@ function Step4() {
               src={icon_helps_watch}
               alt='icon_helps_watch'
               className={styles.label_icon}
-              width={60}
-              height={70}
             />
             <div className={styles.label_text}>
               Helps watch videos that are not available in your country
@@ -66,8 +71,6 @@ function Step4() {
               src={icon_helps_access}
               alt='icon_helps_access'
               className={styles.label_icon}
-              width={60}
-              height={70}
             />
             <div className={styles.label_text}>
               Helps you access social networks and messengers
@@ -76,11 +79,7 @@ function Step4() {
         </div>
       </label>
 
-      <Button
-        title='Continue'
-        onClick={() => router.push('/quiz?q=5')}
-        disabled={false}
-      />
+      <Button title='Continue' onClick={() => router.push('/quiz?q=5')} />
     </div>
   );
 }

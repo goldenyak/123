@@ -1,17 +1,3 @@
-.header {
-  margin-top: 45px;
-  margin-bottom: 16px;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 32px;
-  letter-spacing: 0.41px;
-  text-align: center;
-
-  span {
-    color: #5072f1;
-  }
-}
-
 .header_description {
   margin-bottom: 24px;
   font-weight: 600;
@@ -26,7 +12,6 @@
 }
 
 .label {
-  cursor: pointer;
   display: block;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
   width: auto;
@@ -41,7 +26,6 @@
 .label_wrapper {
   width: 100%;
   border-radius: 16px;
-  cursor: pointer;
   background-color: #f8f8f8;
   color: #1a1a1a;
   padding: 0px 15px 0px 0px;
@@ -61,6 +45,8 @@
 }
 
 .label_icon {
+  width: 60px;
+  height: 70px;
   margin-right: 16px;
 }
 
