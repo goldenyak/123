@@ -28,7 +28,7 @@ export default function QuizPage() {
       <div
         className={styles.step_wrapper}
         style={{
-          paddingTop: `${stepConfig.showMultiStepBar ? '50px' : '0'}`,
+          paddingTop: `${stepConfig?.showMultiStepBar ? '50px' : '0'}`,
           marginBottom: '100px',
         }}
       >

@@ -1,6 +1,6 @@
 import { IRadioOption } from '../StepContent/types';
 import RadioOption from '../RadioOption/RadioOption';
-import icons from '../../assets/icons';
+import getIcon from '../../assets/icons';
 
 interface RadioGroupProps {
   options: IRadioOption[];
@@ -10,7 +10,7 @@ const RadioGroup = ({ options }: RadioGroupProps) => {
   return (
     <>
       {options.map((props, index) => (
-        <RadioOption {...props} icon={icons[props.icon]} key={index} />
+        <RadioOption {...props} icon={getIcon(props.icon)} key={props.value} />
       ))}
     </>
   );

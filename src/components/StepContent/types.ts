@@ -1,6 +1,6 @@
 export interface IStepConfig {
   id: number;
-  showMultiStepBar: boolean;
+  showMultiStepBar?: boolean;
   nextButton?: INextButton;
   prevStep?: string;
   fillGradient?: boolean;
@@ -29,9 +29,23 @@ export interface ICheckboxOption {
   icon: string;
 }
 
-type IStepContent = IRadioGroup | ICheckboxGroup;
+type IStepContent = IRadioGroup | ICheckboxGroup | Step4 | Step10 | Step11;
 
 export interface INextButton {
   value: string;
   redirectTo: string;
+}
+
+//Workaround - remove
+
+interface Step4 {
+  type: 'step4';
+}
+
+interface Step10 {
+  type: 'step10';
+}
+
+interface Step11 {
+  type: 'step11';
 }

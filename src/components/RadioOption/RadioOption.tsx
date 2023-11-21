@@ -19,7 +19,9 @@ const RadioOption = ({ redirectTo, icon, value }: RadioOptionsProps) => {
       <input type='radio' value='input_value' />
       <div className={styles.label_wrapper}>
         <div className={styles.label_content}>
-          <Image src={icon} alt='' className={styles.label_icon} />
+          <div className={styles.icon_circle}>
+            <Image src={icon} alt='' />
+          </div>
           <div className={styles.label_text}>{value}</div>
         </div>
       </div>

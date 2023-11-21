@@ -1,28 +1,31 @@
 'use client';
-import { useRouter } from 'next/navigation';
 import styles from './Step.module.scss';
 import Image from 'next/image';
 import icon_hide_ip from '../../../assets/icons/icon_hide_ip.png';
 import icon_helps_watch from '../../../assets/icons/icon_helps_watch.png';
 import icon_helps_access from '../../../assets/icons/icon_helps_access.png';
-import { Button } from '../../Button/NextButton';
 import StepHeader from '@/components/StepHeader/StepHeader';
 
 function Step4() {
-  const router = useRouter();
   return (
     <div>
-      <StepHeader align='center'>
-        With VPN Lumos you get a{' '}
-        <span
-          style={{
-            color: '#5072f1',
-          }}
-        >
-          75% faster
-        </span>{' '}
-        online connection
-      </StepHeader>
+      <StepHeader
+        value={
+          <>
+            {' '}
+            With VPN Lumos you get a{' '}
+            <span
+              style={{
+                color: '#5072f1',
+              }}
+            >
+              75% faster
+            </span>{' '}
+            online connection
+          </>
+        }
+        align='center'
+      />
 
       <p className={styles.header_description}>Also, VPN Lumos :</p>
 
@@ -84,8 +87,6 @@ function Step4() {
           </div>
         </div>
       </label>
-
-      <Button title='Continue' onClick={() => router.push('/quiz?q=5')} />
     </div>
   );
 }

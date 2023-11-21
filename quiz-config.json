@@ -41,7 +41,7 @@
               },
               {
                 "value": "Too expensive",
-                "icon": "moneyBag"
+                "icon": "money-bag"
               },
               {
                 "value": "Low connection speed",
@@ -53,7 +53,261 @@
               },
               {
                 "value": "Other",
-                "icon": "bubbleCloud"
+                "icon": "other"
+              }
+            ]
+          }
+        },
+        {
+          "id": 4,
+          "nextButton": {
+            "value": "Got it",
+            "redirectTo": "5"
+          },
+          "prevStep": "3",
+          "content": {
+            "type": "step4"
+          }
+        },
+        {
+          "id": 5,
+          "showMultiStepBar": true,
+          "header": "Do you need to fix «Video is not available in your country» issue?",
+          "prevStep": "3",
+          "content": {
+            "type": "radioGroup",
+            "options": [
+              {
+                "value": "yes",
+                "icon": "yes",
+                "redirectTo": "6"
+              },
+              {
+                "value": "no",
+                "icon": "no",
+                "redirectTo": "7"
+              }
+            ]
+          }
+        },
+        {
+          "id": 6,
+          "showMultiStepBar": true,
+          "nextButton": {
+            "value": "Continue",
+            "redirectTo": "7"
+          },
+          "prevStep": "5",
+          "header": "Where do you see this restriction most often?",
+          "content": {
+            "type": "checkboxGroup",
+            "options": [
+              {
+                "value": "Netflix or other streaming",
+                "icon": "film-projector"
+              },
+              {
+                "value": "Adult sites",
+                "icon": "couple-with-heart"
+              },
+              {
+                "value": "Social Networks",
+                "icon": "mobile-phone"
+              },
+              {
+                "value": "Sport sites",
+                "icon": "basketball-player"
+              },
+              {
+                "value": "Other",
+                "icon": "other"
+              }
+            ]
+          }
+        },
+        {
+          "id": 7,
+          "showMultiStepBar": true,
+          "header": "Do you need to use  Messengers which are not available in your country?",
+          "prevStep": "6",
+          "content": {
+            "type": "radioGroup",
+            "options": [
+              {
+                "value": "yes",
+                "icon": "yes",
+                "redirectTo": "8"
+              },
+              {
+                "value": "no",
+                "icon": "no",
+                "redirectTo": "9"
+              }
+            ]
+          }
+        },
+        {
+          "id": 8,
+          "showMultiStepBar": true,
+          "nextButton": {
+            "value": "Continue",
+            "redirectTo": "9"
+          },
+          "prevStep": "7",
+          "header": "Choose messengers that you have trouble accessing?",
+          "content": {
+            "type": "checkboxGroup",
+            "options": [
+              {
+                "value": "WhatsApp",
+                "icon": "whatsapp"
+              },
+              {
+                "value": "Facebook messenger",
+                "icon": "facebook-messenger"
+              },
+              {
+                "value": "Telegram",
+                "icon": "telegram"
+              },
+              {
+                "value": "Viber",
+                "icon": "viber"
+              }
+            ]
+          }
+        },
+        {
+          "id": 9,
+          "showMultiStepBar": true,
+          "nextButton": {
+            "value": "Continue",
+            "redirectTo": "10"
+          },
+          "prevStep": "8",
+          "header": "Choose additional benefits of VPN Lumos:",
+          "content": {
+            "type": "checkboxGroup",
+            "options": [
+              {
+                "value": "Internet speed boost",
+                "icon": "rocket"
+              },
+              {
+                "value": "Secure Online browsing",
+                "icon": "locked"
+              },
+              {
+                "value": "Hide real location",
+                "icon": "world-map"
+              },
+              {
+                "value": "Hide browser history",
+                "icon": "ninja"
+              }
+            ]
+          }
+        },
+        {
+          "id": 10,
+          "content": {
+            "type": "step10"
+          }
+        },
+        {
+          "id": 11,
+          "nextButton": {
+            "value": "Continue",
+            "redirectTo": "12"
+          },
+          "content": {
+            "type": "step11"
+          }
+        },
+        {
+          "id": 12,
+          "showMultiStepBar": true,
+          "prevStep": "9",
+          "header": "Choose additional benefits of VPN Lumos:",
+          "content": {
+            "type": "radioGroup",
+            "options": [
+              {
+                "value": "Almost never",
+                "icon": "man-gesturing-3",
+                "redirectTo": "13"
+              },
+              {
+                "value": "Rarely",
+                "icon": "man-tipping-hard",
+                "redirectTo": "13"
+              },
+              {
+                "value": "Every week",
+                "icon": "man-raising-hand",
+                "redirectTo": "13"
+              },
+              {
+                "value": "Often",
+                "icon": "man-dancing",
+                "redirectTo": "13"
+              },
+              {
+                "value": "Several times a day",
+                "icon": "man-gesturing-ok",
+                "redirectTo": "13"
+              }
+            ]
+          }
+        },
+        {
+          "id": 13,
+          "showMultiStepBar": true,
+          "header": "Do you save passwords to your browser?",
+          "prevStep": "12",
+          "content": {
+            "type": "radioGroup",
+            "options": [
+              {
+                "value": "yes",
+                "icon": "yes",
+                "redirectTo": "14"
+              },
+              {
+                "value": "no",
+                "icon": "no",
+                "redirectTo": "14"
+              }
+            ]
+          }
+        },
+        {
+          "id": 14,
+          "showMultiStepBar": true,
+          "prevStep": "13",
+          "header": "How quickly do you update your devices and apps?",
+          "content": {
+            "type": "radioGroup",
+            "options": [
+              {
+                "value": "I have auto-update enabled",
+                "icon": "smile-with-sunglasses",
+                "redirectTo": "15"
+              },
+              {
+                "value": "Installing every version of the update",
+                "icon": "slightly-smiling-face",
+                "redirectTo": "15"
+              },
+              {
+                "value": "Installing updates through multiple versions",
+                "icon": "thinking-face",
+                "redirectTo": "15"
+              },
+              {
+                "value": "Almost never",
+                "icon": "grimacing-face",
+                "redirectTo": "15"
               }
             ]
           }

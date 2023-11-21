@@ -15,9 +15,10 @@ function Step10() {
         marginTop: '15px',
       }}
     >
-      <StepHeader align='center'>
-        VPN Lumos will help you explore internet without borders
-      </StepHeader>
+      <StepHeader
+        align='center'
+        value='VPN Lumos will help you explore internet without borders'
+      />
 
       <div className={styles.image_wrapper}>
         <Image

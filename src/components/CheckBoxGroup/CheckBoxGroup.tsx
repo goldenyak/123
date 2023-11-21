@@ -1,6 +1,6 @@
 import { ICheckboxOption } from '../StepContent/types';
 import CheckBoxOption from '../CheckBoxOption/CheckBoxOption';
-import icons from '@/assets/icons';
+import getIcon from '@/assets/icons';
 import { ChangeEvent, useState } from 'react';
 
 interface CheckBoxGroupProps {
@@ -25,9 +25,9 @@ const CheckBoxGroup = ({ options }: CheckBoxGroupProps) => {
       {options.map(({ value, icon }, index) => (
         <CheckBoxOption
           value={value}
-          icon={icons[icon]}
+          icon={getIcon(icon)}
           onChange={changeHandler}
-          key={index}
+          key={value}
         />
       ))}
     </>
