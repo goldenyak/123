@@ -17,7 +17,7 @@ const RadioGroup = ({ options }: RadioGroupProps) => {
         <RadioOption
           {...props}
           icon={getIcon(props.icon)}
-          key={props.value + index}
+          key={Math.random()}
         />
       ))}
     </div>
