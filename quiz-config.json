@@ -5,7 +5,7 @@
       "steps": [
         {
           "id": 2,
-          "showMultiStepBar": true,
+          "showProgressBar": true,
           "header": "Have you ever used any VPN before?",
           "content": {
             "type": "radio-group",
@@ -25,7 +25,7 @@
         },
         {
           "id": 3,
-          "showMultiStepBar": true,
+          "showProgressBar": true,
           "nextButton": {
             "value": "Continue",
             "redirectTo": "4"
@@ -71,7 +71,7 @@
         },
         {
           "id": 5,
-          "showMultiStepBar": true,
+          "showProgressBar": true,
           "header": "Do you need to fix «Video is not available in your country» issue?",
           "prevStep": "3",
           "content": {
@@ -92,7 +92,7 @@
         },
         {
           "id": 6,
-          "showMultiStepBar": true,
+          "showProgressBar": true,
           "nextButton": {
             "value": "Continue",
             "redirectTo": "7"
@@ -127,7 +127,7 @@
         },
         {
           "id": 7,
-          "showMultiStepBar": true,
+          "showProgressBar": true,
           "header": "Do you need to use Messengers which are not available in your country?",
           "prevStep": "6",
           "content": {
@@ -148,7 +148,7 @@
         },
         {
           "id": 8,
-          "showMultiStepBar": true,
+          "showProgressBar": true,
           "nextButton": {
             "value": "Continue",
             "redirectTo": "9"
@@ -179,7 +179,7 @@
         },
         {
           "id": 9,
-          "showMultiStepBar": true,
+          "showProgressBar": true,
           "nextButton": {
             "value": "Continue",
             "redirectTo": "10"
@@ -226,7 +226,7 @@
         },
         {
           "id": 12,
-          "showMultiStepBar": true,
+          "showProgressBar": true,
           "prevStep": "9",
           "header": "Choose additional benefits of VPN Lumos:",
           "content": {
@@ -262,7 +262,7 @@
         },
         {
           "id": 13,
-          "showMultiStepBar": true,
+          "showProgressBar": true,
           "header": "Do you save passwords to your browser?",
           "prevStep": "12",
           "content": {
@@ -283,7 +283,7 @@
         },
         {
           "id": 14,
-          "showMultiStepBar": true,
+          "showProgressBar": true,
           "prevStep": "13",
           "header": "How quickly do you update your devices and apps?",
           "content": {
@@ -314,7 +314,7 @@
         },
         {
           "id": 15,
-          "showMultiStepBar": true,
+          "showProgressBar": true,
           "header": "Does the statement below characterize you?",
           "gradientFill": "true",
           "prevStep": "14",
@@ -326,7 +326,7 @@
         },
         {
           "id": 16,
-          "showMultiStepBar": true,
+          "showProgressBar": true,
           "header": "Does the statement below characterize you?",
           "gradientFill": "true",
           "prevStep": "15",

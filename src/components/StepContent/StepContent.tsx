@@ -13,7 +13,6 @@ import Step18 from '../Steps/Step-18/Step18';
 import Step19 from '../Steps/Step-19/Step19';
 import Step20 from '../Steps/Step-20/Step20';
 import { ProgressBar } from '../ProgressBar/ProgressBar';
-import { StaticImageData } from 'next/image';
 
 interface StepContentProps {
   config: IStepConfig;
@@ -49,10 +48,10 @@ const StepContent = ({ config }: StepContentProps) => {
 
   return (
     <>
-      {config?.showMultiStepBar && <ProgressBar />}
+      {config?.showProgressBar && <ProgressBar />}
       <div
         className={styles.step_content_wrapper}
-        style={{ paddingTop: `${config?.showMultiStepBar ? '50px' : '0'}` }}
+        style={{ paddingTop: `${config?.showProgressBar ? '50px' : '0'}` }}
       >
         {config.header && <StepHeader value={config.header} />}
         {component}

@@ -2,7 +2,6 @@
 
 import { useSearchParams } from 'next/navigation';
 import styles from './Quiz.module.scss';
-import { ProgressBar } from '@/components/ProgressBar/ProgressBar';
 import StepContent from '@/components/StepContent/StepContent';
 import config from '../../../quiz-config.json';
 import { IStepConfig } from '@/components/StepContent/types';
@@ -22,11 +21,6 @@ export default function QuizPage() {
         stepConfig?.gradientFill
           ? [styles.main_wrapper, styles.gradient].join(' ')
           : styles.main_wrapper
-      }
-      style={
-        {
-          // background: 'gray',
-        }
       }
     >
       <StepContent config={stepConfig} />

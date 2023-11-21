@@ -1,6 +1,6 @@
 export interface IStepConfig {
   id: number;
-  showMultiStepBar?: boolean;
+  showProgressBar?: boolean;
   nextButton?: INextButton;
   prevStep?: string;
   gradientFill?: boolean;
