@@ -4,7 +4,7 @@ import RadioGroup from '../contentVariants/RadioGroup/RadioGroup';
 import CheckBoxGroup from '../contentVariants/CheckBoxGroup/CheckBoxGroup';
 import { NextButton } from '../NextButton/NextButton';
 import AgreementScale from '../contentVariants/AgreementScale/AgreementScale';
-import Step4 from '../Steps/Step-4/Step4';
+import FactImage from '../Steps/FactImage/FactImage';
 import AnimatedMap from '../contentVariants/AnimatedMap/AnimatedMap';
 import BigImage from '../contentVariants/BigImage/BigImage';
 import Feedback from '../contentVariants/Feedback/Feedback';
@@ -42,8 +42,8 @@ const StepContent = ({ config }: StepContentProps) => {
         return <AnimatedMap />;
       case 'risk':
         return <Risk {...config.content} />;
-      case 'step4':
-        return <Step4 />;
+      case 'facts-image':
+        return <FactImage {...config.content} />;
       case 'step20':
         return <Step20 />;
       default:

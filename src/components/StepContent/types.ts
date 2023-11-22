@@ -89,6 +89,17 @@ export interface IRisk {
   };
 }
 
+export interface IFactsImage {
+  type: 'facts-image';
+  caption: string;
+  items: IFactImageItem[];
+}
+
+export interface IFactImageItem {
+  text: string;
+  image: string;
+}
+
 type IStepContent =
   | IRadioGroup
   | ICheckboxGroup
@@ -98,7 +109,7 @@ type IStepContent =
   | IAnimatedMap
   | IAnalyzer
   | IRisk
-  | Step4
+  | IFactsImage
   | Step20;
 
 export interface INextButton {

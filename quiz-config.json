@@ -64,13 +64,31 @@
         },
         {
           "id": 4,
+          "header": {
+            "value": "With VPN Lumos you get a 75% faster online connection",
+            "type": "center"
+          },
           "nextButton": {
             "value": "Got it",
             "redirectTo": "5"
           },
-          "prevStep": "3",
           "content": {
-            "type": "step4"
+            "type": "facts-image",
+            "caption": "Also, VPN Lumos :",
+            "items": [
+              {
+                "text": "Hides your IP and does not storage your data",
+                "image": "hacker"
+              },
+              {
+                "text": "Helps watch videos that are not available in your country",
+                "image": "man-watching-phone"
+              },
+              {
+                "text": "Helps you access social networks and messengers",
+                "image": "girl-texting"
+              }
+            ]
           }
         },
         {
