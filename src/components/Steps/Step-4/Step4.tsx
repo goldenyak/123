@@ -28,7 +28,7 @@ function Step4() {
             online connection
           </>
         }
-        align='center'
+        type='center'
       />
 
       <p className={styles.header_description}>Also, VPN Lumos :</p>
