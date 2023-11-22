@@ -1,25 +1,23 @@
 'use client';
-import styles from './Step.module.scss';
+import styles from './AnimatedMap.module.scss';
 import Image from 'next/image';
 import world_map from '../../../assets/images/world_map.png';
 import icon_point_small from '../../../assets/icons/icon_point_small.svg';
 import icon_point_medium from '../../../assets/icons/icon_point_medium.svg';
 import icon_point_big from '../../../assets/icons/icon_point_big.svg';
 import ProgressIndicator from '../../ProgressIndicator/ProgressIndicator';
-import StepHeader from '@/components/StepHeader/StepHeader';
 
-function Step10() {
+interface AnimatedMapProps {
+  header?: string;
+}
+
+function AnimatedMap({ header }: AnimatedMapProps) {
   return (
     <div
       style={{
         marginTop: '15px',
       }}
     >
-      <StepHeader
-        align='center'
-        value='VPN Lumos will help you explore internet without borders'
-      />
-
       <div className={styles.image_wrapper}>
         <Image
           className={styles.image}
@@ -52,4 +50,4 @@ function Step10() {
   );
 }
 
-export default Step10;
+export default AnimatedMap;

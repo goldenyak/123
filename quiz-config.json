@@ -6,9 +6,11 @@
         {
           "id": 2,
           "showProgressBar": true,
+          "header": {
+            "value": "Have you ever used any VPN before?"
+          },
           "content": {
             "type": "radio-group",
-            "header": "Have you ever used any VPN before?",
             "options": [
               {
                 "value": "yes",
@@ -31,9 +33,11 @@
             "redirectTo": "4"
           },
           "prevStep": "2",
+          "header": {
+            "value": "What didn't you like about other VPN services before?"
+          },
           "content": {
             "type": "checkbox-group",
-            "header": "What didn't you like about other VPN services before?",
             "options": [
               {
                 "value": "Wasn't working",
@@ -73,9 +77,11 @@
           "id": 5,
           "showProgressBar": true,
           "prevStep": "3",
+          "header": {
+            "value": "Do you need to fix «Video is not available in your country» issue?"
+          },
           "content": {
             "type": "radio-group",
-            "header": "Do you need to fix «Video is not available in your country» issue?",
             "options": [
               {
                 "value": "yes",
@@ -98,9 +104,11 @@
             "redirectTo": "7"
           },
           "prevStep": "5",
+          "header": {
+            "value": "Where do you see this restriction most often?"
+          },
           "content": {
             "type": "checkbox-group",
-            "header": "Where do you see this restriction most often?",
             "options": [
               {
                 "value": "Netflix or other streaming",
@@ -129,9 +137,11 @@
           "id": 7,
           "showProgressBar": true,
           "prevStep": "6",
+          "header": {
+            "value": "Do you need to use Messengers which are not available in your country?"
+          },
           "content": {
             "type": "radio-group",
-            "header": "Do you need to use Messengers which are not available in your country?",
             "options": [
               {
                 "value": "yes",
@@ -154,9 +164,11 @@
             "redirectTo": "9"
           },
           "prevStep": "7",
+          "header": {
+            "value": "Choose messengers that you have trouble accessing?"
+          },
           "content": {
             "type": "checkbox-group",
-            "header": "Choose messengers that you have trouble accessing?",
             "options": [
               {
                 "value": "WhatsApp",
@@ -185,9 +197,11 @@
             "redirectTo": "10"
           },
           "prevStep": "8",
+          "header": {
+            "value": "Choose additional benefits of VPN Lumos:"
+          },
           "content": {
             "type": "checkbox-group",
-            "header": "Choose additional benefits of VPN Lumos:",
             "options": [
               {
                 "value": "Internet speed boost",
@@ -210,8 +224,12 @@
         },
         {
           "id": 10,
+          "header": {
+            "value": "VPN Lumos will help you explore internet without borders",
+            "type": "center"
+          },
           "content": {
-            "type": "step10"
+            "type": "animated-map"
           }
         },
         {
@@ -220,9 +238,12 @@
             "value": "Let's begin!",
             "redirectTo": "12"
           },
+          "header": {
+            "value": "Let's define your risk profile for data leakage",
+            "type": "center"
+          },
           "content": {
             "type": "big-image",
-            "header": "Let's define your risk profile for data leakage",
             "image": "man-with-paper"
           }
         },
@@ -230,9 +251,11 @@
           "id": 12,
           "showProgressBar": true,
           "prevStep": "9",
+          "header": {
+            "value": "Choose additional benefits of VPN Lumos:"
+          },
           "content": {
             "type": "radio-group",
-            "header": "Choose additional benefits of VPN Lumos:",
             "options": [
               {
                 "value": "Almost never",
@@ -266,9 +289,11 @@
           "id": 13,
           "showProgressBar": true,
           "prevStep": "12",
+          "header": {
+            "value": "Do you save passwords to your browser?"
+          },
           "content": {
             "type": "radio-group",
-            "header": "Do you save passwords to your browser?",
             "options": [
               {
                 "value": "yes",
@@ -287,9 +312,11 @@
           "id": 14,
           "showProgressBar": true,
           "prevStep": "13",
+          "header": {
+            "value": "How quickly do you update your devices and apps?"
+          },
           "content": {
             "type": "radio-group",
-            "header": "How quickly do you update your devices and apps?",
             "options": [
               {
                 "value": "I have auto-update enabled",
@@ -319,9 +346,11 @@
           "showProgressBar": true,
           "gradientFill": "true",
           "prevStep": "14",
+          "header": {
+            "value": "Does the statement below characterize you?"
+          },
           "content": {
             "type": "agreement-scale",
-            "header": "Does the statement below characterize you?",
             "value": "«If I see links in the incoming email, I open them immediately»",
             "redirectTo": ["16", "16", "16", "16", "16"]
           }
@@ -331,17 +360,35 @@
           "showProgressBar": true,
           "gradientFill": "true",
           "prevStep": "15",
+          "header": {
+            "value": "Does the statement below characterize you?"
+          },
           "content": {
             "type": "agreement-scale",
-            "header": "Does the statement below characterize you?",
             "value": "«Before entering personal information into a website, I look at the top of my browser to check if there is lock symbol»",
             "redirectTo": ["17", "17", "17", "17", "17"]
           }
         },
         {
           "id": 17,
+          "header": {
+            "value": "VPN Lumos is an incredibly effective way to shield all your data",
+            "type": "center"
+          },
           "content": {
-            "type": "step17"
+            "type": "feedback",
+            "firstFeedback": {
+              "title": "Love this app",
+              "author": "figrx",
+              "date": "Oct 13, 2023",
+              "value": "Easy to use, reliable & affordable"
+            },
+            "secondFeedback": {
+              "title": "Stunning",
+              "author": "Dinar-ka",
+              "date": "Oct 13, 2023",
+              "value": "Great service at a great price. Very happy with this very neat tool that helps keep me secured and protected. Love it!"
+            }
           }
         },
         {

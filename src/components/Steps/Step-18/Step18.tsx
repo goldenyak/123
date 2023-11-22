@@ -14,7 +14,7 @@ function Step18() {
   return (
     <div
       style={{
-        padding: '35px 15px 0 15px',
+        padding: '0 15px',
       }}
     >
       <div
@@ -24,7 +24,7 @@ function Step18() {
           gap: '14px',
         }}
       >
-        <StepHeader align='center' value={'Your risk profile'} />
+        <StepHeader type='center' value={'Your risk profile'} />
 
         <div
           style={{

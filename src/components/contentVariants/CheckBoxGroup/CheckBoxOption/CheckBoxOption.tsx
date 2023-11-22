@@ -1,6 +1,6 @@
 import styles from './CheckBoxOption.module.scss';
 import Image, { StaticImageData } from 'next/image';
-import icon_check_blue from '../../assets/icons/icon_check_blue.svg';
+import icon_check_blue from '../../../../assets/icons/icon_check_blue.svg';
 
 interface CheckBoxOptionProps {
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;

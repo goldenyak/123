@@ -4,12 +4,18 @@ export interface IStepConfig {
   nextButton?: INextButton;
   prevStep?: string;
   gradientFill?: boolean;
+  header?: IStepHeader;
   content: IStepContent;
+}
+
+export interface IStepHeader {
+  value: string;
+  type?: 'center';
 }
 
 export interface IRadioGroup {
   type: 'radio-group';
-  header?: string;
+
   options: IRadioOption[];
 }
 
@@ -21,7 +27,7 @@ export interface IRadioOption {
 
 export interface ICheckboxGroup {
   type: 'checkbox-group';
-  header?: string;
+
   options: IRadioOption[];
 }
 
@@ -38,8 +44,26 @@ export interface IAgreementScale {
 
 export interface IBigImage {
   type: 'big-image';
-  header?: string;
+
   image: string;
+}
+
+export interface IFeedback {
+  type: 'feedback';
+
+  firstFeedback: IFeedbackItem;
+  secondFeedback: IFeedbackItem;
+}
+
+export interface IFeedbackItem {
+  title: string;
+  date: string;
+  author: string;
+  value: string;
+}
+
+export interface IAnimatedMap {
+  type: 'animated-map';
 }
 
 type IStepContent =
@@ -47,6 +71,8 @@ type IStepContent =
   | ICheckboxGroup
   | IAgreementScale
   | IBigImage
+  | IFeedback
+  | IAnimatedMap
   | Step4
   | Step10
   | Step11

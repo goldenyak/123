@@ -3,15 +3,20 @@ import styles from './StepHeader.module.scss';
 
 interface StepHeaderProps {
   value: ReactNode;
-  align?: 'left' | 'center';
+  type?: 'left' | 'center';
 }
 
-const StepHeader = ({ value, align = 'left' }: StepHeaderProps) => {
+const StepHeader = ({ value, type = 'left' }: StepHeaderProps) => {
+  console.log(type);
   return (
     <header
-      className={styles.header}
+      className={
+        type === 'center'
+          ? [styles.header, styles.center].join(' ')
+          : styles.header
+      }
       style={{
-        textAlign: align,
+        textAlign: type,
       }}
     >
       {value}

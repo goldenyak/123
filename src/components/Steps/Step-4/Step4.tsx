@@ -17,7 +17,7 @@ function Step4() {
         value={
           <>
             {' '}
-            With VPN Lumos you get a{' '}
+            With VPN you get a{' '}
             <span
               style={{
                 color: '#5072f1',

@@ -1,18 +1,13 @@
-import { ICheckboxOption } from '../StepContent/types';
-import CheckBoxOption from '../CheckBoxOption/CheckBoxOption';
+import { ICheckboxOption } from '../../StepContent/types';
+import CheckBoxOption from './CheckBoxOption/CheckBoxOption';
 import { ChangeEvent, useState } from 'react';
-import { StaticImageData } from 'next/image';
-import StepHeader from '../StepHeader/StepHeader';
+import { getIcon } from '@/utils/utils';
 
 interface CheckBoxGroupProps {
   options: ICheckboxOption[];
-  header?: string;
 }
 
-const getIcon = (iconName: string): StaticImageData =>
-  require(`../../assets/icons/${iconName}.svg`);
-
-const CheckBoxGroup = ({ options, header }: CheckBoxGroupProps) => {
+const CheckBoxGroup = ({ options }: CheckBoxGroupProps) => {
   const [isChecked, setIsChecked] = useState(0);
 
   const inputChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
@@ -28,7 +23,6 @@ const CheckBoxGroup = ({ options, header }: CheckBoxGroupProps) => {
 
   return (
     <div style={{ padding: '0 15px' }}>
-      {header && <StepHeader value={header} />}
       {options.map(({ value, icon }, index) => (
         <CheckBoxOption
           value={value}

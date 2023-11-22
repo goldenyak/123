@@ -1,12 +1,17 @@
 'use client';
-import styles from './Step.module.scss';
+import styles from './Feedback.module.scss';
 import Image from 'next/image';
 import ProgressIndicator from '../../ProgressIndicator/ProgressIndicator';
 import review_stars from '../../../assets/images/review_stars.png';
 import superman_image from '../../../assets/images/superman.png';
-import StepHeader from '@/components/StepHeader/StepHeader';
+import { IFeedbackItem } from '@/components/StepContent/types';
 
-function Step17() {
+interface FeedbackProps {
+  firstFeedback: IFeedbackItem;
+  secondFeedback: IFeedbackItem;
+}
+
+function Feedback({ firstFeedback, secondFeedback }: FeedbackProps) {
   return (
     <div
       style={{
@@ -16,11 +21,6 @@ function Step17() {
         overflow: 'hidden',
       }}
     >
-      <StepHeader
-        align='center'
-        value='VPN Lumos is an incredibly effective way to shield all your data'
-      />
-
       <Image
         src={superman_image}
         alt=''
@@ -43,7 +43,7 @@ function Step17() {
           )}
         >
           <div className={styles.review_content}>
-            <h3 className={styles.review_title}>Love this app</h3>
+            <h3 className={styles.review_title}>{firstFeedback.title}</h3>
             <Image
               src={review_stars}
               alt='review_stars'
@@ -51,12 +51,10 @@ function Step17() {
               width={90}
               height={15}
             />
-            <p className={styles.review_text}>
-              Easy to use, reliable & affordable
-            </p>
+            <p className={styles.review_text}>{firstFeedback.value}</p>
             <div className={styles.review_description}>
-              <span>figrx</span>
-              <span>Oct 13, 2023</span>
+              <span>{firstFeedback.author}</span>
+              <span>{firstFeedback.date}</span>
             </div>
           </div>
         </div>
@@ -69,7 +67,7 @@ function Step17() {
           }}
         >
           <div className={styles.review_content}>
-            <h3 className={styles.review_title}>Stunning</h3>
+            <h3 className={styles.review_title}>{secondFeedback.title}</h3>
             <Image
               src={review_stars}
               alt='review_stars'
@@ -77,13 +75,10 @@ function Step17() {
               width={90}
               height={15}
             />
-            <p className={styles.review_text}>
-              Great service at a great price. Very happy with this very neat
-              tool that helps keep me secured and protected. Love it!
-            </p>
+            <p className={styles.review_text}>{secondFeedback.value}</p>
             <div className={styles.review_description}>
-              <span>Dinar-ka</span>
-              <span>Oct 13, 2023</span>
+              <span>{secondFeedback.author}</span>
+              <span>{secondFeedback.date}</span>
             </div>
           </div>
         </div>
@@ -95,4 +90,4 @@ function Step17() {
   );
 }
 
-export default Step17;
+export default Feedback;

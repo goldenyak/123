@@ -1,59 +1,47 @@
 import { IStepConfig } from './types';
 import styles from './StepContent.module.scss';
-import RadioGroup from '../RadioGroup/RadioGroup';
-import CheckBoxGroup from '../CheckBoxGroup/CheckBoxGroup';
-import StepHeader from '../StepHeader/StepHeader';
+import RadioGroup from '../contentVariants/RadioGroup/RadioGroup';
+import CheckBoxGroup from '../contentVariants/CheckBoxGroup/CheckBoxGroup';
 import { NextButton } from '../NextButton/NextButton';
-import AgreementScale from '../AgreementScale/AgreementScale';
+import AgreementScale from '../contentVariants/AgreementScale/AgreementScale';
 import Step4 from '../Steps/Step-4/Step4';
-import Step10 from '../Steps/Step-10/Step10';
-import BigImage from '../BigImage/BigImage';
-import Step17 from '../Steps/Step-17/Step17';
+import AnimatedMap from '../contentVariants/AnimatedMap/AnimatedMap';
+import BigImage from '../contentVariants/BigImage/BigImage';
+import Feedback from '../contentVariants/Feedback/Feedback';
 import Step18 from '../Steps/Step-18/Step18';
 import Step19 from '../Steps/Step-19/Step19';
 import Step20 from '../Steps/Step-20/Step20';
 import { ProgressBar } from '../ProgressBar/ProgressBar';
-import { StaticImageData } from 'next/image';
+import StepHeader from '../StepHeader/StepHeader';
 
 interface StepContentProps {
   config: IStepConfig;
 }
 
-const getImage = (imageName: string): StaticImageData =>
-  require(`../../assets/images/${imageName}.png`);
-
 const StepContent = ({ config }: StepContentProps) => {
   const component = (() => {
     switch (config.content.type) {
       case 'radio-group':
-        return (
-          <RadioGroup
-            options={config.content.options}
-            header={config.content.header}
-          />
-        );
+        return <RadioGroup options={config.content.options} />;
       case 'checkbox-group':
-        return (
-          <CheckBoxGroup
-            options={config.content.options}
-            header={config.content.header}
-          />
-        );
+        return <CheckBoxGroup options={config.content.options} />;
       case 'agreement-scale':
         return <AgreementScale {...config.content} />;
       case 'big-image':
+        return <BigImage image={config.content.image} />;
+      case 'feedback':
         return (
-          <BigImage
-            header={config.content.header}
-            image={getImage(config.content.image)}
+          <Feedback
+            firstFeedback={config.content.firstFeedback}
+            secondFeedback={config.content.secondFeedback}
           />
         );
+      case 'animated-map':
+        return <AnimatedMap />;
       case 'step4':
         return <Step4 />;
       case 'step10':
-        return <Step10 />;
-      case 'step17':
-        return <Step17 />;
+        return <AnimatedMap />;
       case 'step18':
         return <Step18 />;
       case 'step19':
@@ -65,6 +53,8 @@ const StepContent = ({ config }: StepContentProps) => {
     }
   })();
 
+  console.log(config.header);
+
   return (
     <>
       {config?.showProgressBar && <ProgressBar />}
@@ -72,6 +62,7 @@ const StepContent = ({ config }: StepContentProps) => {
         className={styles.step_content_wrapper}
         style={{ paddingTop: `${config?.showProgressBar ? '50px' : '0'}` }}
       >
+        {config.header && <StepHeader {...config.header} />}
         {component}
         {config.nextButton && <NextButton {...config.nextButton} />}
       </div>

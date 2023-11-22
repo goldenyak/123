@@ -20,9 +20,10 @@ function Step19() {
           priority={true}
         />
       </div>
-      <StepHeader align='center'>
-        We optimize the settings according to your preferences...
-      </StepHeader>
+      <StepHeader
+        type='center'
+        value='We optimize the settings according to your preferences...'
+      />
 
       <div className={styles.features}>
         <div className={styles.feature}>
