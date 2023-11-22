@@ -8,8 +8,8 @@ import Step4 from '../Steps/Step-4/Step4';
 import AnimatedMap from '../contentVariants/AnimatedMap/AnimatedMap';
 import BigImage from '../contentVariants/BigImage/BigImage';
 import Feedback from '../contentVariants/Feedback/Feedback';
-import Step18 from '../Steps/Step-18/Step18';
-import Step19 from '../Steps/Step-19/Step19';
+import Risk from '../contentVariants/Risk/Risk';
+import Analyzer from '../contentVariants/Analyzer/Analyzer';
 import Step20 from '../Steps/Step-20/Step20';
 import { ProgressBar } from '../ProgressBar/ProgressBar';
 import StepHeader from '../StepHeader/StepHeader';
@@ -36,16 +36,14 @@ const StepContent = ({ config }: StepContentProps) => {
             secondFeedback={config.content.secondFeedback}
           />
         );
+      case 'analyzer':
+        return <Analyzer {...config.content} />;
       case 'animated-map':
         return <AnimatedMap />;
+      case 'risk':
+        return <Risk {...config.content} />;
       case 'step4':
         return <Step4 />;
-      case 'step10':
-        return <AnimatedMap />;
-      case 'step18':
-        return <Step18 />;
-      case 'step19':
-        return <Step19 />;
       case 'step20':
         return <Step20 />;
       default:

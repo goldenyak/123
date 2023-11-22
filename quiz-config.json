@@ -393,14 +393,63 @@
         },
         {
           "id": 18,
+          "header": {
+            "value": "Your risk profile",
+            "type": "center"
+          },
+          "nextButton": {
+            "value": "Continue",
+            "redirectTo": "20"
+          },
           "content": {
-            "type": "step18"
+            "type": "risk",
+            "video": "chart-high-risk",
+            "subtitle": {
+              "colored": "high risk",
+              "regular": "data leakage"
+            },
+            "statInfo": {
+              "bold": "1,025,648 users like you ",
+              "regular": "have been able to mitigate the risk of data leakage by applying the recommendations and using our VPN"
+            },
+            "accordion": {
+              "caption": "To reduce your risk, follow the safety guidelines below:",
+              "items": [
+                {
+                  "title": "Use VPN Lumos",
+                  "value": "VPN encryption hides the contents of Internet traffic from unauthorized reading, allowing you to increase your online security."
+                },
+                {
+                  "title": "Protect your Wi-Fi connection",
+                  "value": "VPN is an incredibly effective way to shield all your data while connected to a public WiFi. The hacker will be able to see that you are connected, but won't be able to see any details of the traffic transmitted."
+                },
+                {
+                  "title": "Keep passwords securely",
+                  "value": "Storing your passwords in browsers is extremely insecure. It is better to use special programs to protect them."
+                },
+                {
+                  "title": "Get regular updates",
+                  "value": "Keeping your software and apps up-to-date is essential for maintaining the security."
+                },
+                {
+                  "title": "Secure Internet Connection",
+                  "value": "You should always check all the links you follow and whether the connection is secure on a particular site."
+                }
+              ]
+            }
           }
         },
         {
           "id": 19,
           "content": {
-            "type": "step19"
+            "type": "analyzer",
+            "header": "We optimize the settings according to your preferences...",
+            "stepsContent": [
+              "Analyzing received data",
+              "Searching for a perfect plan",
+              "We analyze possible content restrictions in your country...",
+              "Optimizing VPN settings for maximum security..."
+            ]
           }
         },
         {

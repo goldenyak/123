@@ -1,11 +1,14 @@
 'use client';
 import { useRouter } from 'next/navigation';
-import styles from './Step.module.scss';
+import styles from './Analyzer.module.scss';
 import Image from 'next/image';
 import loader from '../../../assets/icons/loader.png';
 import StepHeader from '@/components/StepHeader/StepHeader';
+import { IRisk } from '@/components/StepContent/types';
 
-function Step19() {
+type AnalyzerProps = Omit<IRisk, 'type'>;
+
+function Analyzer({ header, stepsContent }: AnalyzerProps) {
   const router = useRouter();
 
   return (
@@ -20,10 +23,7 @@ function Step19() {
           priority={true}
         />
       </div>
-      <StepHeader
-        type='center'
-        value='We optimize the settings according to your preferences...'
-      />
+      {header && <StepHeader type='center' value={header} />}
 
       <div className={styles.features}>
         <div className={styles.feature}>
@@ -32,7 +32,7 @@ function Step19() {
             <div className={styles.featureIconImageAnim}></div>
             <div className={styles.featureIconShadowAnim}></div>
           </div>
-          <div className={styles.featureTextAnim}>Analyzing received data</div>
+          <div className={styles.featureTextAnim}>{stepsContent[0]}</div>
           <div className={styles.stripe}></div>
           <div className={styles.stripeActiveWrapperAnim}>
             <div className={styles.stripeActive}></div>
@@ -45,9 +45,7 @@ function Step19() {
             <div className={styles.featureIconImageAnim}></div>
             <div className={styles.featureIconShadowAnim}></div>
           </div>
-          <div className={styles.featureTextAnim}>
-            Searching for a perfect plan
-          </div>
+          <div className={styles.featureTextAnim}>{stepsContent[1]}</div>
           <div className={styles.stripe}></div>
           <div className={styles.stripeActiveWrapperAnim}>
             <div className={styles.stripeActive}></div>
@@ -60,9 +58,7 @@ function Step19() {
             <div className={styles.featureIconImageAnim}></div>
             <div className={styles.featureIconShadowAnim}></div>
           </div>
-          <div className={styles.featureTextAnim}>
-            We analyze possible content restrictions in your country...
-          </div>
+          <div className={styles.featureTextAnim}>{stepsContent[2]}</div>
           <div className={styles.stripe}></div>
           <div className={styles.stripeActiveWrapperAnim}>
             <div className={styles.stripeActive}></div>
@@ -81,7 +77,7 @@ function Step19() {
             //   setTimeout(() => router.push('/quiz?q=20'), 500)
             // }
           >
-            Optimizing VPN settings for maximum security...
+            {stepsContent[3]}
           </div>
         </div>
       </div>
@@ -89,4 +85,4 @@ function Step19() {
   );
 }
 
-export default Step19;
+export default Analyzer;

@@ -1,14 +1,12 @@
 'use client';
 import { useRouter } from 'next/navigation';
-import styles from './Step.module.scss';
-// import { DiagramHigh } from './DiagramHigh';
-// import icon_warning from '../../../assets/icons/icon_warning.svg';
-// import Image from 'next/image';
 import { Accordion } from './Accordion/Accordion';
-import { NextButton } from '@/components/NextButton/NextButton';
 import StepHeader from '@/components/StepHeader/StepHeader';
+import { IRisk } from '@/components/StepContent/types';
 
-function Step18() {
+type RiskProps = Omit<IRisk, 'type'>;
+
+function Risk({ video, subtitle, statInfo, accordion }: RiskProps) {
   const router = useRouter();
 
   return (
@@ -24,8 +22,6 @@ function Step18() {
           gap: '14px',
         }}
       >
-        <StepHeader type='center' value={'Your risk profile'} />
-
         <div
           style={{
             display: 'flex',
@@ -42,7 +38,8 @@ function Step18() {
               color: '#000',
             }}
           >
-            <span style={{ color: '#E9262F' }}>High risk</span> data leakage
+            <span style={{ color: '#E9262F' }}>{subtitle.colored}</span>{' '}
+            {subtitle.regular}
           </div>
         </div>
 
@@ -53,14 +50,13 @@ function Step18() {
             lineHeight: '1.3',
           }}
         >
-          <span style={{ fontWeight: '700' }}>1,025,648 users like you</span>{' '}
-          have been able to mitigate the risk of data leakage by applying the
-          recommendations and using our VPN
+          <span style={{ fontWeight: '700' }}>{statInfo.bold}</span>{' '}
+          {statInfo.regular}
         </div>
 
         <video
           id='vid'
-          src='../videos/chart_high.mp4'
+          src={`../videos/${video}.mp4`}
           autoPlay
           loop
           muted
@@ -76,14 +72,12 @@ function Step18() {
             marginBottom: '-6px',
           }}
         >
-          To reduce your risk, follow the safety guidelines below:
+          {accordion.caption}
         </div>
-        <Accordion />
+        <Accordion items={accordion.items} />
       </div>
-
-      <NextButton value={`Let's begin!`} redirectTo={'19'} />
     </div>
   );
 }
 
-export default Step18;
+export default Risk;

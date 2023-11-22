@@ -66,6 +66,29 @@ export interface IAnimatedMap {
   type: 'animated-map';
 }
 
+export interface IAnalyzer {
+  type: 'analyzer';
+  header?: string;
+  stepsContent: [string, string, string, string];
+}
+
+export interface IRisk {
+  type: 'risk';
+  video: string;
+  subtitle: {
+    colored: string;
+    regular: string;
+  };
+  statInfo: {
+    bold: string;
+    regular: string;
+  };
+  accordion: {
+    caption: string;
+    items: { title: string; value: string }[];
+  };
+}
+
 type IStepContent =
   | IRadioGroup
   | ICheckboxGroup
@@ -73,12 +96,9 @@ type IStepContent =
   | IBigImage
   | IFeedback
   | IAnimatedMap
+  | IAnalyzer
+  | IRisk
   | Step4
-  | Step10
-  | Step11
-  | Step17
-  | Step18
-  | Step19
   | Step20;
 
 export interface INextButton {
@@ -92,22 +112,6 @@ interface Step4 {
   type: 'step4';
 }
 
-interface Step10 {
-  type: 'step10';
-}
-
-interface Step11 {
-  type: 'step11';
-}
-interface Step17 {
-  type: 'step17';
-}
-interface Step18 {
-  type: 'step18';
-}
-interface Step19 {
-  type: 'step19';
-}
 interface Step20 {
   type: 'step20';
 }
