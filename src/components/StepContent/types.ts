@@ -36,10 +36,17 @@ export interface IAgreementScale {
   redirectTo: string[];
 }
 
+export interface IBigImage {
+  type: 'big-image';
+  header?: string;
+  image: string;
+}
+
 type IStepContent =
   | IRadioGroup
   | ICheckboxGroup
   | IAgreementScale
+  | IBigImage
   | Step4
   | Step10
   | Step11

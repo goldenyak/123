@@ -7,16 +7,20 @@ import { NextButton } from '../NextButton/NextButton';
 import AgreementScale from '../AgreementScale/AgreementScale';
 import Step4 from '../Steps/Step-4/Step4';
 import Step10 from '../Steps/Step-10/Step10';
-import Step11 from '../Steps/Step-11/Step11';
+import BigImage from '../BigImage/BigImage';
 import Step17 from '../Steps/Step-17/Step17';
 import Step18 from '../Steps/Step-18/Step18';
 import Step19 from '../Steps/Step-19/Step19';
 import Step20 from '../Steps/Step-20/Step20';
 import { ProgressBar } from '../ProgressBar/ProgressBar';
+import { StaticImageData } from 'next/image';
 
 interface StepContentProps {
   config: IStepConfig;
 }
+
+const getImage = (imageName: string): StaticImageData =>
+  require(`../../assets/images/${imageName}.png`);
 
 const StepContent = ({ config }: StepContentProps) => {
   const component = (() => {
@@ -37,12 +41,17 @@ const StepContent = ({ config }: StepContentProps) => {
         );
       case 'agreement-scale':
         return <AgreementScale {...config.content} />;
+      case 'big-image':
+        return (
+          <BigImage
+            header={config.content.header}
+            image={getImage(config.content.image)}
+          />
+        );
       case 'step4':
         return <Step4 />;
       case 'step10':
         return <Step10 />;
-      case 'step11':
-        return <Step11 />;
       case 'step17':
         return <Step17 />;
       case 'step18':

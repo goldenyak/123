@@ -217,11 +217,13 @@
         {
           "id": 11,
           "nextButton": {
-            "value": "Continue",
+            "value": "Let's begin!",
             "redirectTo": "12"
           },
           "content": {
-            "type": "step11"
+            "type": "big-image",
+            "header": "Let's define your risk profile for data leakage",
+            "image": "man-with-paper"
           }
         },
         {
