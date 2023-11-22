@@ -77,9 +77,9 @@ function Step19() {
           </div>
           <div
             className={styles.featureTextAnim}
-            onAnimationEnd={() =>
-              setTimeout(() => router.push('/quiz?q=20'), 500)
-            }
+            // onAnimationEnd={() =>
+            //   setTimeout(() => router.push('/quiz?q=20'), 500)
+            // }
           >
             Optimizing VPN settings for maximum security...
           </div>
