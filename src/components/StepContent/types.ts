@@ -119,10 +119,6 @@ export interface INextButton {
 
 //Workaround - remove
 
-interface Step4 {
-  type: 'step4';
-}
-
 interface Step20 {
   type: 'step20';
 }

@@ -4,7 +4,7 @@ import RadioGroup from '../contentVariants/RadioGroup/RadioGroup';
 import CheckBoxGroup from '../contentVariants/CheckBoxGroup/CheckBoxGroup';
 import { NextButton } from '../NextButton/NextButton';
 import AgreementScale from '../contentVariants/AgreementScale/AgreementScale';
-import FactImage from '../Steps/FactImage/FactImage';
+import FactImage from '../contentVariants/FactImage/FactImage';
 import AnimatedMap from '../contentVariants/AnimatedMap/AnimatedMap';
 import BigImage from '../contentVariants/BigImage/BigImage';
 import Feedback from '../contentVariants/Feedback/Feedback';
