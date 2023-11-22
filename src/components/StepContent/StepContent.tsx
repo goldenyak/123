@@ -22,9 +22,19 @@ const StepContent = ({ config }: StepContentProps) => {
   const component = (() => {
     switch (config.content.type) {
       case 'radio-group':
-        return <RadioGroup options={config.content.options} />;
+        return (
+          <RadioGroup
+            options={config.content.options}
+            header={config.content.header}
+          />
+        );
       case 'checkbox-group':
-        return <CheckBoxGroup options={config.content.options} />;
+        return (
+          <CheckBoxGroup
+            options={config.content.options}
+            header={config.content.header}
+          />
+        );
       case 'agreement-scale':
         return <AgreementScale {...config.content} />;
       case 'step4':
@@ -53,7 +63,6 @@ const StepContent = ({ config }: StepContentProps) => {
         className={styles.step_content_wrapper}
         style={{ paddingTop: `${config?.showProgressBar ? '50px' : '0'}` }}
       >
-        {config.header && <StepHeader value={config.header} />}
         {component}
         {config.nextButton && <NextButton {...config.nextButton} />}
       </div>

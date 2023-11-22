@@ -4,12 +4,12 @@ export interface IStepConfig {
   nextButton?: INextButton;
   prevStep?: string;
   gradientFill?: boolean;
-  header?: string;
   content: IStepContent;
 }
 
 export interface IRadioGroup {
   type: 'radio-group';
+  header?: string;
   options: IRadioOption[];
 }
 
@@ -21,6 +21,7 @@ export interface IRadioOption {
 
 export interface ICheckboxGroup {
   type: 'checkbox-group';
+  header?: string;
   options: IRadioOption[];
 }
 
