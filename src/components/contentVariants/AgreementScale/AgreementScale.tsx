@@ -1,11 +1,12 @@
 'use client';
 import styles from './AgreementScale.module.scss';
 import AgreementScaleBar from './AgreementScaleBar/AgreementScaleBar';
-import { IAgreementScale } from '../StepContent/types';
+import { IAgreementScale } from '../../StepContent/types';
 
 interface AgreementScaleProps {
   value: IAgreementScale['value'];
   redirectTo: IAgreementScale['redirectTo'];
+  header?: string;
 }
 
 function AgreementScale({ value, redirectTo }: AgreementScaleProps) {
@@ -13,10 +14,14 @@ function AgreementScale({ value, redirectTo }: AgreementScaleProps) {
     <div className={styles.wrapper}>
       <div
         style={{
-          padding: '0 15px',
+          flexGrow: '1',
+          display: 'flex',
+          alignItems: 'center',
         }}
-      ></div>
-      <h2 className={styles.header_description}>{value}</h2>
+      >
+        <h2 className={styles.header_description}>{value}</h2>
+      </div>
+
       <AgreementScaleBar redirectTo={redirectTo} />
     </div>
   );

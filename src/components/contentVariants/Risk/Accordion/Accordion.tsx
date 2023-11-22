@@ -1,5 +1,4 @@
 'use client';
-import { accordionData } from './AccordionData';
 import { useState } from 'react';
 import Image from 'next/image';
 import icon_arrow from '../../../../assets/icons/icon_arrow.svg';
@@ -72,7 +71,11 @@ export const AccordionItem = ({
   );
 };
 
-export const Accordion = () => {
+interface AccordionProps {
+  items: { title: string; value: string }[];
+}
+
+export const Accordion = ({ items }: AccordionProps) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   const handleClick = (index: number) => {
@@ -92,10 +95,10 @@ export const Accordion = () => {
         alignItems: 'center',
       }}
     >
-      {accordionData.map((data, index) => (
+      {items.map((data, index) => (
         <AccordionItem
           title={data.title}
-          details={data.details}
+          details={data.value}
           key={index}
           active={index + 1 === selectedIndex}
           onClick={() => {

@@ -1,0 +1,20 @@
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+  padding-top: 5vh;
+  object-fit: contain;
+  @media screen and (max-height: 700px) {
+    padding-bottom: 500px;
+  }
+}
+
+.container {
+  padding: 45px 20px 0 20px;
+}
+
+.image_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
