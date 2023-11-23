@@ -1,19 +1,19 @@
+import { useNavigation } from '@/hooks/useNavigation';
 import { IAgreementScale } from '../../../StepContent/types';
 import styles from './AgreementScaleBar.module.scss';
-import { useRouter } from 'next/navigation';
 
 interface AgreementScaleProps {
   redirectTo: IAgreementScale['redirectTo'];
 }
 
 const AgreementScale = ({ redirectTo }: AgreementScaleProps) => {
-  const router = useRouter();
+  const { goTo } = useNavigation();
   return (
     <div className={styles.wrapper_for_answers}>
       <div className={styles.answers_wrapper}>
         <label className={styles.label}>
           <input
-            onChange={() => router.push(`/quiz?q=${redirectTo[0]}`)}
+            onChange={() => goTo(redirectTo[0])}
             className={styles.input}
             type='radio'
             name='input_name'
@@ -24,7 +24,7 @@ const AgreementScale = ({ redirectTo }: AgreementScaleProps) => {
 
         <label className={styles.label}>
           <input
-            onChange={() => router.push(`/quiz?q=${redirectTo[1]}`)}
+            onChange={() => goTo(redirectTo[1])}
             className={styles.input}
             type='radio'
             name='input_name'
@@ -35,7 +35,7 @@ const AgreementScale = ({ redirectTo }: AgreementScaleProps) => {
 
         <label className={styles.label}>
           <input
-            onChange={() => router.push(`/quiz?q=${redirectTo[2]}`)}
+            onChange={() => goTo(redirectTo[2])}
             className={styles.input}
             type='radio'
             name='input_name'
@@ -46,7 +46,7 @@ const AgreementScale = ({ redirectTo }: AgreementScaleProps) => {
 
         <label className={styles.label}>
           <input
-            onChange={() => router.push(`/quiz?q=${redirectTo[3]}`)}
+            onChange={() => goTo(redirectTo[3])}
             className={styles.input}
             type='radio'
             name='input_name'
@@ -57,7 +57,7 @@ const AgreementScale = ({ redirectTo }: AgreementScaleProps) => {
 
         <label className={styles.label}>
           <input
-            onChange={() => router.push(`/quiz?q=${redirectTo[4]}`)}
+            onChange={() => goTo(redirectTo[4])}
             className={styles.input}
             type='radio'
             name='input_name'
