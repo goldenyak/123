@@ -1,3 +1,5 @@
+export type IConfig = IStepConfig[];
+
 export interface IStepConfig {
   id: string;
   showProgressBar?: boolean;
