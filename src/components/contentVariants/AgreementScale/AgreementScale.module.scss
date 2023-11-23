@@ -1,0 +1,32 @@
+$mob-width: 601px;
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 560px;
+  @media screen and (max-width: $mob-width) {
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+.header_description {
+  font-size: 21px;
+  line-height: 29px;
+  text-align: center;
+  color: rgb(45, 50, 64);
+  padding: 0 15px;
+  font-weight: 400;
+  @media screen and (max-width: $mob-width) {
+    margin-top: 50px;
+  }
+}
+
+.header_wrapper {
+  padding: 0 15px;
+  @media screen and (max-width: $mob-width) {
+    margin-top: 50px;
+  }
+}

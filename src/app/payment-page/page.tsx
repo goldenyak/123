@@ -1,7 +1,7 @@
 'use client';
-import CheckoutForm from '@/components/CheckoutForm/CheckoutForm';
 import { Elements } from '@stripe/react-stripe-js';
 import { StripeElementsOptions, loadStripe } from '@stripe/stripe-js';
+import CheckoutForm from '@/components/CheckoutForm/CheckoutForm';
 
 export default function CheckoutFormPage() {
   const clientSecret = process.env.STRIPE_CLIENT_SECRET_KEY;

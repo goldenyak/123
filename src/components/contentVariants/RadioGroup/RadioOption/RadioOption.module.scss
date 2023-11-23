@@ -1,0 +1,61 @@
+.label {
+  cursor: pointer;
+  display: block;
+  width: auto;
+  margin-bottom: 16px;
+  pointer-events: auto;
+
+  input[type='radio'] {
+    display: none;
+    &:checked + .label_wrapper {
+      width: 100%;
+      border-radius: 16px;
+      cursor: pointer;
+      transition: color 0.2s ease-out 0s;
+      color: #1a1a1a;
+      padding: 0px 15px;
+      position: relative;
+      color: white;
+      background: linear-gradient(91deg, #50aef1 0%, #506ef1 100%);
+    }
+  }
+}
+
+.label_wrapper {
+  width: 100%;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: color 0.2s ease-out 0s;
+  background-color: #f8f8f8;
+  color: #1a1a1a;
+  padding: 0px 15px;
+  position: relative;
+}
+
+.label_content {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  line-height: 20px;
+  overflow-wrap: break-word;
+}
+
+.icon_circle {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background-color: #f0f2f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.label_text {
+  text-align: left;
+  font-size: 17px;
+  line-height: 22px;
+  font-style: 700;
+  flex-grow: 1;
+}

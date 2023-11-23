@@ -1,0 +1,482 @@
+{
+  "variants": [
+    {
+      "name": "default",
+      "steps": [
+        {
+          "id": "UsedAnyVpnBefore",
+          "showProgressBar": true,
+          "header": {
+            "value": "Have you ever used any VPN before?"
+          },
+          "content": {
+            "type": "radio-group",
+            "options": [
+              {
+                "value": "yes",
+                "icon": "yes",
+                "redirectTo": "WhyDidntLikeOtherVpn"
+              },
+              {
+                "value": "no",
+                "icon": "no",
+                "redirectTo": "VpnLumos75perFaster"
+              }
+            ]
+          }
+        },
+        {
+          "id": "WhyDidntLikeOtherVpn",
+          "showProgressBar": true,
+          "nextButton": {
+            "value": "Continue",
+            "redirectTo": "VpnLumos75perFaster"
+          },
+          "prevStep": "UsedAnyVpnBefore",
+          "header": {
+            "value": "What didn't you like about other VPN services before?"
+          },
+          "content": {
+            "type": "checkbox-group",
+            "options": [
+              {
+                "value": "Wasn't working",
+                "icon": "wrench"
+              },
+              {
+                "value": "Too expensive",
+                "icon": "money-bag"
+              },
+              {
+                "value": "Low connection speed",
+                "icon": "snail"
+              },
+              {
+                "value": "Wasn’t safe",
+                "icon": "warning"
+              },
+              {
+                "value": "Other",
+                "icon": "other"
+              }
+            ]
+          }
+        },
+        {
+          "id": "VpnLumos75perFaster",
+          "header": {
+            "value": "With VPN Lumos you get a 75% faster online connection",
+            "type": "center"
+          },
+          "nextButton": {
+            "value": "Got it",
+            "redirectTo": "VideoNotAvailableNeedFix"
+          },
+          "content": {
+            "type": "facts-image",
+            "caption": "Also, VPN Lumos :",
+            "items": [
+              {
+                "text": "Hides your IP and does not storage your data",
+                "image": "hacker"
+              },
+              {
+                "text": "Helps watch videos that are not available in your country",
+                "image": "man-watching-phone"
+              },
+              {
+                "text": "Helps you access social networks and messengers",
+                "image": "girl-texting"
+              }
+            ]
+          }
+        },
+        {
+          "id": "VideoNotAvailableNeedFix",
+          "showProgressBar": true,
+          "prevStep": "VpnLumos75perFaster",
+          "header": {
+            "value": "Do you need to fix «Video is not available in your country» issue?"
+          },
+          "content": {
+            "type": "radio-group",
+            "options": [
+              {
+                "value": "yes",
+                "icon": "yes",
+                "redirectTo": "VideoNotAvailableWhatSites"
+              },
+              {
+                "value": "no",
+                "icon": "no",
+                "redirectTo": "MessengersNotAvailableNeedFix"
+              }
+            ]
+          }
+        },
+        {
+          "id": "VideoNotAvailableWhatSites",
+          "showProgressBar": true,
+          "nextButton": {
+            "value": "Continue",
+            "redirectTo": "MessengersNotAvailableNeedFix"
+          },
+          "prevStep": "VideoNotAvailableNeedFix",
+          "header": {
+            "value": "Where do you see this restriction most often?"
+          },
+          "content": {
+            "type": "checkbox-group",
+            "options": [
+              {
+                "value": "Netflix or other streaming",
+                "icon": "film-projector"
+              },
+              {
+                "value": "Adult sites",
+                "icon": "couple-with-heart"
+              },
+              {
+                "value": "Social Networks",
+                "icon": "mobile-phone"
+              },
+              {
+                "value": "Sport sites",
+                "icon": "basketball-player"
+              },
+              {
+                "value": "Other",
+                "icon": "other"
+              }
+            ]
+          }
+        },
+        {
+          "id": "MessengersNotAvailableNeedFix",
+          "showProgressBar": true,
+          "prevStep": "VideoNotAvailableWhatSites",
+          "header": {
+            "value": "Do you need to use Messengers which are not available in your country?"
+          },
+          "content": {
+            "type": "radio-group",
+            "options": [
+              {
+                "value": "yes",
+                "icon": "yes",
+                "redirectTo": "MessengersNotAvailableWhatApps"
+              },
+              {
+                "value": "no",
+                "icon": "no",
+                "redirectTo": "ChooseAdditionalBenefits"
+              }
+            ]
+          }
+        },
+        {
+          "id": "MessengersNotAvailableWhatApps",
+          "showProgressBar": true,
+          "nextButton": {
+            "value": "Continue",
+            "redirectTo": "ChooseAdditionalBenefits"
+          },
+          "prevStep": "MessengersNotAvailableNeedFix",
+          "header": {
+            "value": "Choose messengers that you have trouble accessing?"
+          },
+          "content": {
+            "type": "checkbox-group",
+            "options": [
+              {
+                "value": "WhatsApp",
+                "icon": "whatsapp"
+              },
+              {
+                "value": "Facebook messenger",
+                "icon": "facebook-messenger"
+              },
+              {
+                "value": "Telegram",
+                "icon": "telegram"
+              },
+              {
+                "value": "Viber",
+                "icon": "viber"
+              }
+            ]
+          }
+        },
+        {
+          "id": "ChooseAdditionalBenefits",
+          "showProgressBar": true,
+          "nextButton": {
+            "value": "Continue",
+            "redirectTo": "MapProgress"
+          },
+          "prevStep": "MessengersNotAvailableWhatApps",
+          "header": {
+            "value": "Choose additional benefits of VPN Lumos:"
+          },
+          "content": {
+            "type": "checkbox-group",
+            "options": [
+              {
+                "value": "Internet speed boost",
+                "icon": "rocket"
+              },
+              {
+                "value": "Secure Online browsing",
+                "icon": "locked"
+              },
+              {
+                "value": "Hide real location",
+                "icon": "world-map"
+              },
+              {
+                "value": "Hide browser history",
+                "icon": "ninja"
+              }
+            ]
+          }
+        },
+        {
+          "id": "MapProgress",
+          "header": {
+            "value": "VPN Lumos will help you explore internet without borders",
+            "type": "center"
+          },
+          "content": {
+            "type": "animated-map"
+          }
+        },
+        {
+          "id": "LetsDefineRiskSpyBench",
+          "nextButton": {
+            "value": "Let's begin!",
+            "redirectTo": "OftenUsePublicWifi"
+          },
+          "header": {
+            "value": "Let's define your risk profile for data leakage",
+            "type": "center"
+          },
+          "content": {
+            "type": "big-image",
+            "image": "man-with-paper"
+          }
+        },
+        {
+          "id": "OftenUsePublicWifi",
+          "showProgressBar": true,
+          "prevStep": "LetsDefineRiskSpyBench",
+          "header": {
+            "value": "Choose additional benefits of VPN Lumos:"
+          },
+          "content": {
+            "type": "radio-group",
+            "options": [
+              {
+                "value": "Almost never",
+                "icon": "man-gesturing-3",
+                "redirectTo": "SavePasswordsBrowser"
+              },
+              {
+                "value": "Rarely",
+                "icon": "man-tipping-hard",
+                "redirectTo": "SavePasswordsBrowser"
+              },
+              {
+                "value": "Every week",
+                "icon": "man-raising-hand",
+                "redirectTo": "SavePasswordsBrowser"
+              },
+              {
+                "value": "Often",
+                "icon": "man-dancing",
+                "redirectTo": "SavePasswordsBrowser"
+              },
+              {
+                "value": "Several times a day",
+                "icon": "man-gesturing-ok",
+                "redirectTo": "SavePasswordsBrowser"
+              }
+            ]
+          }
+        },
+        {
+          "id": "SavePasswordsBrowser",
+          "showProgressBar": true,
+          "prevStep": "OftenUsePublicWifi",
+          "header": {
+            "value": "Do you save passwords to your browser?"
+          },
+          "content": {
+            "type": "radio-group",
+            "options": [
+              {
+                "value": "yes",
+                "icon": "yes",
+                "redirectTo": "HowQuicklyUpdate"
+              },
+              {
+                "value": "no",
+                "icon": "no",
+                "redirectTo": "HowQuicklyUpdate"
+              }
+            ]
+          }
+        },
+        {
+          "id": "HowQuicklyUpdate",
+          "showProgressBar": true,
+          "prevStep": "SavePasswordsBrowser",
+          "header": {
+            "value": "How quickly do you update your devices and apps?"
+          },
+          "content": {
+            "type": "radio-group",
+            "options": [
+              {
+                "value": "I have auto-update enabled",
+                "icon": "smile-with-sunglasses",
+                "redirectTo": "StatementOpenLinksFromEmail"
+              },
+              {
+                "value": "Installing every version of the update",
+                "icon": "slightly-smiling-face",
+                "redirectTo": "StatementOpenLinksFromEmail"
+              },
+              {
+                "value": "Installing updates through multiple versions",
+                "icon": "thinking-face",
+                "redirectTo": "StatementOpenLinksFromEmail"
+              },
+              {
+                "value": "Almost never",
+                "icon": "grimacing-face",
+                "redirectTo": "StatementOpenLinksFromEmail"
+              }
+            ]
+          }
+        },
+        {
+          "id": "StatementOpenLinksFromEmail",
+          "showProgressBar": true,
+          "gradientFill": "true",
+          "prevStep": "HowQuicklyUpdate",
+          "header": {
+            "value": "Does the statement below characterize you?"
+          },
+          "content": {
+            "type": "agreement-scale",
+            "value": "«If I see links in the incoming email, I open them immediately»",
+            "redirectTo": ["StatementCheckLockSymbol", "StatementCheckLockSymbol", "StatementCheckLockSymbol", "StatementCheckLockSymbol", "StatementCheckLockSymbol"]
+          }
+        },
+        {
+          "id": "StatementCheckLockSymbol",
+          "showProgressBar": true,
+          "gradientFill": "true",
+          "prevStep": "StatementOpenLinksFromEmail",
+          "header": {
+            "value": "Does the statement below characterize you?"
+          },
+          "content": {
+            "type": "agreement-scale",
+            "value": "«Before entering personal information into a website, I look at the top of my browser to check if there is lock symbol»",
+            "redirectTo": ["ReviewProgress", "ReviewProgress", "ReviewProgress", "ReviewProgress", "ReviewProgress"]
+          }
+        },
+        {
+          "id": "ReviewProgress",
+          "header": {
+            "value": "VPN Lumos is an incredibly effective way to shield all your data",
+            "type": "center"
+          },
+          "content": {
+            "type": "feedback",
+            "firstFeedback": {
+              "title": "Love this app",
+              "author": "figrx",
+              "date": "Oct 13, 2023",
+              "value": "Easy to use, reliable & affordable"
+            },
+            "secondFeedback": {
+              "title": "Stunning",
+              "author": "Dinar-ka",
+              "date": "Oct 13, 2023",
+              "value": "Great service at a great price. Very happy with this very neat tool that helps keep me secured and protected. Love it!"
+            }
+          }
+        },
+        {
+          "id": "YourRiskProfile",
+          "header": {
+            "value": "Your risk profile",
+            "type": "center"
+          },
+          "nextButton": {
+            "value": "Continue",
+            "redirectTo": "AnalyzingDataLoader"
+          },
+          "content": {
+            "type": "risk",
+            "video": "chart-high-risk",
+            "subtitle": {
+              "colored": "high risk",
+              "regular": "data leakage"
+            },
+            "statInfo": {
+              "bold": "1,025,648 users like you ",
+              "regular": "have been able to mitigate the risk of data leakage by applying the recommendations and using our VPN"
+            },
+            "accordion": {
+              "caption": "To reduce your risk, follow the safety guidelines below:",
+              "items": [
+                {
+                  "title": "Use VPN Lumos",
+                  "value": "VPN encryption hides the contents of Internet traffic from unauthorized reading, allowing you to increase your online security."
+                },
+                {
+                  "title": "Protect your Wi-Fi connection",
+                  "value": "VPN is an incredibly effective way to shield all your data while connected to a public WiFi. The hacker will be able to see that you are connected, but won't be able to see any details of the traffic transmitted."
+                },
+                {
+                  "title": "Keep passwords securely",
+                  "value": "Storing your passwords in browsers is extremely insecure. It is better to use special programs to protect them."
+                },
+                {
+                  "title": "Get regular updates",
+                  "value": "Keeping your software and apps up-to-date is essential for maintaining the security."
+                },
+                {
+                  "title": "Secure Internet Connection",
+                  "value": "You should always check all the links you follow and whether the connection is secure on a particular site."
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "AnalyzingDataLoader",
+          "content": {
+            "type": "analyzer",
+            "header": "We optimize the settings according to your preferences...",
+            "stepsContent": [
+              "Analyzing received data",
+              "Searching for a perfect plan",
+              "We analyze possible content restrictions in your country...",
+              "Optimizing VPN settings for maximum security..."
+            ]
+          }
+        },
+        {
+          "id": "EnterEmailPersonalPlan",
+          "content": {
+            "type": "step20"
+          }
+        }
+      ]
+    }
+  ]
+}

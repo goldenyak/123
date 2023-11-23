@@ -29,7 +29,7 @@ function MainScreen() {
           <div className={styles.description}></div>
           <div className={styles.buttons_wrapper}>
             <button
-              onClick={() => router.push('/quiz?q=2')}
+              onClick={() => router.push('/quiz?q=UsedAnyVpnBefore')}
               className={styles.btn}
             >
               Yes
@@ -42,12 +42,7 @@ function MainScreen() {
             </button>
           </div>
         </div>
-        <Image
-          alt='MainImage'
-          src={main_image}
-          className={styles.main_image}
-          priority={true}
-        />
+        <Image alt='MainImage' src={main_image} className={styles.main_image} />
         <div className={styles.privacy}>
           By continuing you agree{'\n'}to our{' '}
           <span

@@ -1,7 +1,7 @@
 'use client';
 
 import styles from './InstructionPage.module.scss';
-import Instruction from '@/components/Instruction/Instruction';
+import Instruction from '../../components/Instruction/Instruction';
 
 export default function instruction() {
   return (

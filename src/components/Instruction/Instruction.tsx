@@ -4,7 +4,7 @@ import InstructionRow from './InstructionRow';
 import instructions from '../../assets/images/instructions.png';
 import clipboard from '../../assets/icons/icon_clipboard.svg';
 import Image from 'next/image';
-import { Button } from '../Button/Button';
+import { NextButton } from '@/components/NextButton/NextButton';
 
 interface InstructionProps {
   email: string;
@@ -14,9 +14,7 @@ interface InstructionProps {
 const Instruction = ({ email, password }: InstructionProps) => {
   return (
     <>
-      <StepHeader>
-        To access your Premium account in VPN Lumos, follow these simple steps:
-      </StepHeader>
+      <StepHeader value={'To access your Premium account in VPN Lumos, follow these simple steps:'} type={'center'}/>
       <div
         style={{
           display: 'flex',
@@ -125,7 +123,7 @@ const Instruction = ({ email, password }: InstructionProps) => {
           order={5}
           text='Once this is done, you have full access to VPN Lumos, which you can use on up to 6 devices.'
         />
-        <Button title='Download the app' onClick={() => {}} />
+        <NextButton value='Download the app' onClick={() => {}} />
       </div>
     </>
   );

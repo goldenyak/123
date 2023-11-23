@@ -1,0 +1,8 @@
+$mob-width: 601px;
+
+.step_content_wrapper {
+  margin-bottom: 100px;
+  @media screen and (max-width: $mob-width) {
+    height: 100%;
+  }
+}

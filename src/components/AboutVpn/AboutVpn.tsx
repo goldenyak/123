@@ -3,7 +3,7 @@ import { useRouter } from 'next/navigation';
 import styles from './AboutVpn.module.scss';
 import Image from 'next/image';
 import about_vpn from '../../assets/images/about_vpn.webp';
-import { Button } from '../Button/Button';
+import { NextButton } from '../NextButton/NextButton';
 
 function AboutVpn() {
   const router = useRouter();
@@ -36,9 +36,9 @@ function AboutVpn() {
             available in your country.
           </h3>
         </div>
-        <Button
-          title='Wow! That’s great'
-          onClick={() => router.push('/quiz?q=3')}
+        <NextButton
+          value='Wow! That’s great'
+          onClick={() => router.push('/quiz?q=UsedAnyVpnBefore')}
         />
       </div>
     </div>
