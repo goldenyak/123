@@ -26,24 +26,20 @@ export const useStore = create<State & Action>((set, get) => ({
     router.push(`?q=${stepId}`);
   },
   next: (router) => {
-    if (router) {
-      const currentStep = config.variants[0].steps.find(
-        (step) => step.id === get().currentStepId,
-      );
-      const nextStepId = currentStep?.nextButton?.value;
-      set({ currentStepId: nextStepId });
-      router.push(`?q=${currentStep?.nextButton?.redirectTo}`);
-    }
+    const currentStep = config.variants[0].steps.find(
+      (step) => step.id === get().currentStepId,
+    );
+    const nextStepId = currentStep?.nextButton?.value;
+    set({ currentStepId: nextStepId });
+    router.push(`?q=${currentStep?.nextButton?.redirectTo}`);
   },
   back: (router) => {
-    if (router) {
-      const currentStep = config.variants[0].steps.find(
-        (step) => step.id === get().currentStepId,
-      );
-      const nextStepId = currentStep?.nextButton?.value;
-      set({ currentStepId: nextStepId });
-      router.push(`?q=${currentStep?.prevStep}`);
-    }
+    const currentStep = config.variants[0].steps.find(
+      (step) => step.id === get().currentStepId,
+    );
+    const nextStepId = currentStep?.nextButton?.value;
+    set({ currentStepId: nextStepId });
+    router.push(`?q=${currentStep?.prevStep}`);
   },
   isFirstStep: () => {
     const currentStepIndex = config.variants[0].steps.findIndex(
