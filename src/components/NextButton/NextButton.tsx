@@ -1,6 +1,8 @@
-import { useRouter } from 'next/navigation';
+'use client';
+
 import { INextButton } from '../StepContent/types';
 import styles from './NextButton.module.scss';
+import { useNavigation } from '@/hooks/useNavigation';
 
 interface NextButtonProps extends INextButton {
   disabled?: boolean;
@@ -10,19 +12,24 @@ interface NextButtonProps extends INextButton {
 
 export const NextButton = ({
   value,
-  redirectTo,
   disabled = false,
   type = 'button',
   onClick,
 }: NextButtonProps) => {
-  const router = useRouter();
+  const navigation = useNavigation();
   return (
     <div className={styles.button_wrapper}>
       <button
         type={type}
         className={styles.button}
         onClick={
-          !onClick ? () => router.push(`/quiz?q=${redirectTo}`) : onClick
+          !onClick
+            ? () => {
+                navigation.next();
+              }
+            : () => {
+                onClick();
+              }
         }
         disabled={disabled}
       >

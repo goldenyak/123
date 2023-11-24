@@ -1,47 +1,35 @@
 'use client';
 import styles from './Progressbar.module.scss';
-import { useCallback, useEffect, useState } from 'react';
-import { useRouter, useSearchParams } from 'next/navigation';
-import icon_check from '../../assets/icons/icon_check.svg';
-import icon_step_back from '../../assets/icons/icon_step_back.svg';
+import { useEffect, useState } from 'react';
+import icon_check from '@/assets/icons/icon_check.svg';
+import icon_step_back from '@/assets/icons/icon_step_back.svg';
 import Image from 'next/image';
+import { useNavigation } from '@/hooks/useNavigation';
+import { useStore } from '@/store/useStore';
 
 const stepProgressMap: Record<string, number> = {
-  'UsedAnyVpnBefore': 15,
-  'WhyDidntLikeOtherVpn': 25,
-  'VideoNotAvailableNeedFix': 38,
-  'VideoNotAvailableWhatSites': 44,
-  'MessengersNotAvailableNeedFix': 51,
-  'MessengersNotAvailableWhatApps': 58,
-  'ChooseAdditionalBenefits': 65,
-  'OftenUsePublicWifi': 78,
-  'SavePasswordsBrowser': 84,
-  'HowQuicklyUpdate': 89,
-  'StatementOpenLinksFromEmail': 96,
-  'StatementCheckLockSymbol': 100,
+  UsedAnyVpnBefore: 15,
+  WhyDidntLikeOtherVpn: 25,
+  VideoNotAvailableNeedFix: 38,
+  VideoNotAvailableWhatSites: 44,
+  MessengersNotAvailableNeedFix: 51,
+  MessengersNotAvailableWhatApps: 58,
+  ChooseAdditionalBenefits: 65,
+  OftenUsePublicWifi: 78,
+  SavePasswordsBrowser: 84,
+  HowQuicklyUpdate: 89,
+  StatementOpenLinksFromEmail: 96,
+  StatementCheckLockSymbol: 100,
 };
 
 export const ProgressBar = () => {
   const [progress, setProgress] = useState(0);
-  const params = useSearchParams();
-  const stepNumber = params.get('q') || '';
-  const router = useRouter();
-
-  const isFirstStep = (step: string) => step === '2';
-
-  const isLastStep = () => stepNumber === '20';
+  const { currentStepId, isFirstStep, isLastStep } = useStore();
+  const { back } = useNavigation();
 
   useEffect(() => {
-    setProgress(stepProgressMap[stepNumber]);
-  }, [stepNumber]);
-
-  const goBack = useCallback((step: string) => {
-    if (isFirstStep(step)) {
-      router.push(`/`);
-    } else {
-      router.push(`/quiz?q=${parseInt(step) - 1}`);
-    }
-  }, []);
+    setProgress(stepProgressMap[currentStepId]);
+  }, [currentStepId]);
 
   return (
     <div
@@ -62,7 +50,7 @@ export const ProgressBar = () => {
           className={styles.btn_back}
           src={icon_step_back}
           alt=''
-          onClick={() => goBack(stepNumber)}
+          onClick={() => back()}
         />
         {!isLastStep() && (
           <div style={{ width: '100%', position: 'relative' }}>
