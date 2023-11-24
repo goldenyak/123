@@ -3,7 +3,7 @@
     {
       "name": "default",
       "mainScreen": {
-        "yesRedirectTo": "ReviewProgress",
+        "yesRedirectTo": "UsedAnyVpnBefore",
         "noRedirectTo": "VpnDefinition"
       },
       "steps": [
