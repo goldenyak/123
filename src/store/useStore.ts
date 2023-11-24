@@ -1,11 +1,11 @@
 import { create } from 'zustand';
 import config from '../../quiz-config/quiz-config.json';
-import { IConfig, IStepConfig } from '@/components/StepContent/types';
+import { IStepConfig } from '@/components/StepContent/types';
 import { AppRouterInstance } from 'next/dist/shared/lib/app-router-context.shared-runtime';
 
 type State = {
   currentStepId: string;
-  config: IConfig;
+  config: IStepConfig[];
 };
 
 type Action = {

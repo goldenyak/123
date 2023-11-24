@@ -13,12 +13,15 @@ import Analyzer from '../contentVariants/Analyzer/Analyzer';
 import Step20 from '../Steps/Step-20/Step20';
 import { ProgressBar } from '../ProgressBar/ProgressBar';
 import StepHeader from '../StepHeader/StepHeader';
+import TopImage from '../contentVariants/TopImage/TopImage';
 
 interface StepContentProps {
   config: IStepConfig;
 }
 
 const StepContent = ({ config }: StepContentProps) => {
+  console.log(config);
+
   const component = (() => {
     switch (config.content.type) {
       case 'radio-group':
@@ -44,6 +47,8 @@ const StepContent = ({ config }: StepContentProps) => {
         return <Risk {...config.content} />;
       case 'facts-image':
         return <FactImage {...config.content} />;
+      case 'top-image':
+        return <TopImage {...config.content} />;
       case 'step20':
         return <Step20 />;
       default:
@@ -51,7 +56,7 @@ const StepContent = ({ config }: StepContentProps) => {
     }
   })();
 
-  console.log(config);
+  // console.log(config);
 
   return (
     <>

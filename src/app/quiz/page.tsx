@@ -8,7 +8,9 @@ import { steps } from '../../../quiz-config/steps';
 
 export default function QuizPage() {
   const params = useSearchParams();
+
   const currentStepId = params.get('q') || steps[0];
+  console.log('-----', currentStepId);
   let stepConfig = config.variants[0]['steps'].find(
     (item) => currentStepId === item.id,
   ) as IStepConfig;

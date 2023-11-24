@@ -1,4 +1,11 @@
-export type IConfig = IStepConfig[];
+export interface IConfig {
+  name: string;
+  mainScreen: {
+    yesRedirectTo: string;
+    noRedirectTo: string;
+  };
+  steps: IStepConfig[];
+}
 
 export interface IStepConfig {
   id: string;
@@ -97,12 +104,19 @@ export interface IFactsImage {
   items: IFactImageItem[];
 }
 
+export interface ITopImage {
+  type: 'top-image';
+  header: string;
+  paragraphs: string[];
+}
+
 export interface IFactImageItem {
   text: string;
   image: string;
 }
 
 type IStepContent =
+  | ITopImage
   | IRadioGroup
   | ICheckboxGroup
   | IAgreementScale

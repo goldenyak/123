@@ -2,7 +2,27 @@
   "variants": [
     {
       "name": "default",
+      "mainScreen": {
+        "yesRedirectTo": "UsedAnyVpnBefore",
+        "noRedirectTo": "VpnDefinition"
+      },
       "steps": [
+        {
+          "id": "VpnDefinition",
+          "nextButton": {
+            "value": "Wow! That’s great",
+            "redirectTo": "UsedAnyVpnBefore"
+          },
+          "content": {
+            "type": "top-image",
+            "header": "Virtual Private Network (VPN)",
+            "paragraphs": [
+              "VPN a service that protects your internet connection and privacy online.",
+              "VPN changes your real IP and encrypts your internet traffic, thereby makes it difficult for others to track your online activities or identify your location.",
+              "That's why you get the opportunity to use services that are not available in your country."
+            ]
+          }
+        },
         {
           "id": "UsedAnyVpnBefore",
           "showProgressBar": true,
@@ -370,7 +390,13 @@
           "content": {
             "type": "agreement-scale",
             "value": "«If I see links in the incoming email, I open them immediately»",
-            "redirectTo": ["StatementCheckLockSymbol", "StatementCheckLockSymbol", "StatementCheckLockSymbol", "StatementCheckLockSymbol", "StatementCheckLockSymbol"]
+            "redirectTo": [
+              "StatementCheckLockSymbol",
+              "StatementCheckLockSymbol",
+              "StatementCheckLockSymbol",
+              "StatementCheckLockSymbol",
+              "StatementCheckLockSymbol"
+            ]
           }
         },
         {
@@ -384,7 +410,13 @@
           "content": {
             "type": "agreement-scale",
             "value": "«Before entering personal information into a website, I look at the top of my browser to check if there is lock symbol»",
-            "redirectTo": ["ReviewProgress", "ReviewProgress", "ReviewProgress", "ReviewProgress", "ReviewProgress"]
+            "redirectTo": [
+              "ReviewProgress",
+              "ReviewProgress",
+              "ReviewProgress",
+              "ReviewProgress",
+              "ReviewProgress"
+            ]
           }
         },
         {
