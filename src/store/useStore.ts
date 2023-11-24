@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import config from '../../quiz-config/quiz-config.json';
+import { config } from '@/utils/utils';
 import { IStepConfig } from '@/components/StepContent/types';
 import { AppRouterInstance } from 'next/dist/shared/lib/app-router-context.shared-runtime';
 
@@ -17,17 +17,19 @@ type Action = {
   isLastStep: () => boolean;
 };
 
+const initAnswers = c;
+
 export const useStore = create<State & Action>((set, get) => ({
-  currentStepId: config.variants[0].steps[0].id,
+  currentStepId: config.steps[0].id,
   setCurrentStepId: (newCurrentId) => {
     set({ currentStepId: newCurrentId });
   },
-  config: config.variants[0].steps as IStepConfig[],
+  config: config.steps as IStepConfig[],
   goTo: (router, stepId) => {
     router.push(`?q=${stepId}`);
   },
   next: (router) => {
-    const currentStep = config.variants[0].steps.find(
+    const currentStep = config.steps.find(
       (step) => step.id === get().currentStepId,
     );
     const nextStepId = currentStep?.nextButton?.value;
@@ -35,7 +37,7 @@ export const useStore = create<State & Action>((set, get) => ({
     router.push(`?q=${currentStep?.nextButton?.redirectTo}`);
   },
   back: (router) => {
-    const currentStep = config.variants[0].steps.find(
+    const currentStep = config.steps.find(
       (step) => step.id === get().currentStepId,
     );
     const nextStepId = currentStep?.nextButton?.value;
@@ -43,15 +45,15 @@ export const useStore = create<State & Action>((set, get) => ({
     nextStepId ? router.push(`?q=${currentStep?.prevStep}`) : router.push(`/`);
   },
   isFirstStep: () => {
-    const currentStepIndex = config.variants[0].steps.findIndex(
+    const currentStepIndex = config.steps.findIndex(
       (step) => step.id === get().currentStepId,
     );
     return currentStepIndex === 0;
   },
   isLastStep: () => {
-    const currentStepIndex = config.variants[0].steps.findIndex(
+    const currentStepIndex = config.steps.findIndex(
       (step) => step.id === get().currentStepId,
     );
-    return currentStepIndex === config.variants[0].steps.length - 1;
+    return currentStepIndex === config.steps.length - 1;
   },
 }));
