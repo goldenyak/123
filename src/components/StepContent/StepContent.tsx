@@ -14,6 +14,7 @@ import EnterEmail from '../contentVariants/EnterEmail/EnterEmail';
 import { ProgressBar } from '../ProgressBar/ProgressBar';
 import StepHeader from '../StepHeader/StepHeader';
 import TopImage from '../contentVariants/TopImage/TopImage';
+import ProgressIndicator from '../ProgressIndicator/ProgressIndicator';
 
 interface StepContentProps {
   config: IStepConfig;
@@ -54,8 +55,6 @@ const StepContent = ({ config }: StepContentProps) => {
     }
   })();
 
-  // console.log(config);
-
   return (
     <>
       {config?.showProgressBar && <ProgressBar />}
@@ -66,6 +65,9 @@ const StepContent = ({ config }: StepContentProps) => {
         {config.header && <StepHeader {...config.header} />}
         {component}
         {config.nextButton && <NextButton {...config.nextButton} />}
+        {config?.progressIndicator && (
+          <ProgressIndicator redirectTo={config.progressIndicator.redirectTo} />
+        )}
       </div>
     </>
   );

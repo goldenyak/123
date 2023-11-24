@@ -10,6 +10,7 @@ export interface IConfig {
 export interface IStepConfig {
   id: string;
   showProgressBar?: boolean;
+  progressIndicator?: IProgressIndicator;
   nextButton?: INextButton;
   prevStep?: string;
   gradientFill?: boolean;
@@ -20,6 +21,10 @@ export interface IStepConfig {
 export interface IStepHeader {
   value: string;
   type?: 'center';
+}
+
+export interface IProgressIndicator {
+  redirectTo: string;
 }
 
 export interface IRadioGroup {

@@ -14,6 +14,7 @@ type Action = {
   back: (router: AppRouterInstance) => void;
   goTo: (router: AppRouterInstance, stepId: string) => void;
   setCurrentStepId: (newCurrentId: string) => void;
+  isLocked(stepId: string): boolean;
   isFirstStep: boolean | undefined;
   isLastStep: boolean | undefined;
 };
@@ -52,6 +53,7 @@ export const useStore = create<State & Action>((set, get) => ({
     const nextStep = steps[stepId];
     set({ isFirstStep: nextStep.firstStep });
     set({ isLastStep: nextStep.lastStep });
+    set({ answers: { ...get().answers, [nextStep.id]: { locked: false } } });
     router.push(`?q=${stepId}`);
   },
   next: (router) => {
@@ -61,6 +63,7 @@ export const useStore = create<State & Action>((set, get) => ({
       set({ currentStepId: nextStep.id });
       set({ isFirstStep: nextStep.firstStep });
       set({ isLastStep: nextStep.lastStep });
+      set({ answers: { ...get().answers, [nextStep.id]: { locked: false } } });
       router.push(`?q=${nextStep.id}`);
     }
   },
@@ -68,13 +71,16 @@ export const useStore = create<State & Action>((set, get) => ({
     const currentStep = steps[get().currentStepId];
     const prevStepId = currentStep.prevStep;
     set({ currentStepId: prevStepId || config.steps[0].id });
+    prevStepId ? router.push(`?q=${prevStepId}`) : router.push(`/`);
     if (prevStepId) {
       const prevStep = steps[prevStepId];
       set({ isFirstStep: prevStep.firstStep });
       set({ isLastStep: prevStep.lastStep });
     }
-    prevStepId ? router.push(`?q=${prevStepId}`) : router.push(`/`);
   },
   isFirstStep: true,
   isLastStep: false,
+  isLocked: (stepId) => {
+    return get().answers[stepId]?.locked;
+  },
 }));

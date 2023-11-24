@@ -5,13 +5,8 @@ import world_map from '../../../assets/images/world_map.png';
 import icon_point_small from '../../../assets/icons/icon_point_small.svg';
 import icon_point_medium from '../../../assets/icons/icon_point_medium.svg';
 import icon_point_big from '../../../assets/icons/icon_point_big.svg';
-import ProgressIndicator from '../../ProgressIndicator/ProgressIndicator';
 
-interface AnimatedMapProps {
-  header?: string;
-}
-
-function AnimatedMap({ header }: AnimatedMapProps) {
+function AnimatedMap() {
   return (
     <div
       style={{
@@ -44,8 +39,6 @@ function AnimatedMap({ header }: AnimatedMapProps) {
           priority={true}
         />
       </div>
-
-      <ProgressIndicator path='/quiz?q=LetsDefineRiskSpyBench' />
     </div>
   );
 }

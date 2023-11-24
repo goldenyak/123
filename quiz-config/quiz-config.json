@@ -3,7 +3,7 @@
     {
       "name": "default",
       "mainScreen": {
-        "yesRedirectTo": "UsedAnyVpnBefore",
+        "yesRedirectTo": "ReviewProgress",
         "noRedirectTo": "VpnDefinition"
       },
       "steps": [
@@ -266,6 +266,9 @@
             "value": "VPN Lumos will help you explore internet without borders",
             "type": "center"
           },
+          "progressIndicator": {
+            "redirectTo": "LetsDefineRiskSpyBench"
+          },
           "content": {
             "type": "animated-map"
           }
@@ -424,6 +427,9 @@
           "header": {
             "value": "VPN Lumos is an incredibly effective way to shield all your data",
             "type": "center"
+          },
+          "progressIndicator": {
+            "redirectTo": "YourRiskProfile"
           },
           "content": {
             "type": "feedback",
