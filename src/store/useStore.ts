@@ -40,7 +40,7 @@ export const useStore = create<State & Action>((set, get) => ({
     );
     const nextStepId = currentStep?.nextButton?.value;
     set({ currentStepId: nextStepId });
-    router.push(`?q=${currentStep?.prevStep}`);
+    nextStepId ? router.push(`?q=${currentStep?.prevStep}`) : router.push(`/`);
   },
   isFirstStep: () => {
     const currentStepIndex = config.variants[0].steps.findIndex(
