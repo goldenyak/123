@@ -7,12 +7,14 @@ import { useNavigation } from '@/hooks/useNavigation';
 interface NextButtonProps extends INextButton {
   disabled?: boolean;
   type?: 'button' | 'submit' | 'reset';
+  onClick?: () => void;
 }
 
 export const NextButton = ({
   value,
   disabled = false,
   type = 'button',
+  onClick,
 }: NextButtonProps) => {
   const navigation = useNavigation();
   return (
@@ -20,9 +22,15 @@ export const NextButton = ({
       <button
         type={type}
         className={styles.button}
-        onClick={() => {
-          navigation.next();
-        }}
+        onClick={
+          !onClick
+            ? () => {
+                navigation.next();
+              }
+            : () => {
+                onClick();
+              }
+        }
         disabled={disabled}
       >
         {value}

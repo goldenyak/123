@@ -46,14 +46,12 @@ export const ProgressBar = () => {
       }}
     >
       <div className={styles.wrapper}>
-        {!isFirstStep() && (
-          <Image
-            className={styles.btn_back}
-            src={icon_step_back}
-            alt=''
-            onClick={() => back()}
-          />
-        )}
+        <Image
+          className={styles.btn_back}
+          src={icon_step_back}
+          alt=''
+          onClick={() => back()}
+        />
         {!isLastStep() && (
           <div style={{ width: '100%', position: 'relative' }}>
             <div

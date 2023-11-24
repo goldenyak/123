@@ -1,6 +1,7 @@
 import { create } from 'zustand';
 import config from '../../quiz-config/quiz-config.json';
 import { IConfig, IStepConfig } from '@/components/StepContent/types';
+import { AppRouterInstance } from 'next/dist/shared/lib/app-router-context.shared-runtime';
 
 type State = {
   currentStepId: string;
@@ -8,9 +9,9 @@ type State = {
 };
 
 type Action = {
-  next: (router: any) => void;
-  back: (router: any) => void;
-  goTo: (router: any, stepId: string) => void;
+  next: (router: AppRouterInstance) => void;
+  back: (router: AppRouterInstance) => void;
+  goTo: (router: AppRouterInstance, stepId: string) => void;
   setCurrentStepId: (newCurrentId: string) => void;
   isFirstStep: () => boolean;
   isLastStep: () => boolean;
