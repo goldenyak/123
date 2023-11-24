@@ -77,6 +77,7 @@ export interface IAnimatedMap {
 
 export interface IAnalyzer {
   type: 'analyzer';
+  redirectTo: string;
   header?: string;
   stepsContent: [string, string, string, string];
 }

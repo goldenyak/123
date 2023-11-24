@@ -20,8 +20,6 @@ interface StepContentProps {
 }
 
 const StepContent = ({ config }: StepContentProps) => {
-  console.log(config);
-
   const component = (() => {
     switch (config.content.type) {
       case 'radio-group':

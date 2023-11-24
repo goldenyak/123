@@ -1,15 +1,16 @@
 'use client';
-import { useRouter } from 'next/navigation';
+
 import styles from './Analyzer.module.scss';
 import Image from 'next/image';
 import loader from '../../../assets/icons/loader.png';
 import StepHeader from '../../StepHeader/StepHeader';
-import { IAnalyzer, IRisk } from '../../StepContent/types';
+import { IAnalyzer } from '../../StepContent/types';
+import { useNavigation } from '@/hooks/useNavigation';
 
 type AnalyzerProps = Omit<IAnalyzer, 'type'>;
 
-function Analyzer({ header, stepsContent }: AnalyzerProps) {
-  const router = useRouter();
+function Analyzer({ header, stepsContent, redirectTo }: AnalyzerProps) {
+  const { goTo } = useNavigation();
 
   return (
     <div className={styles.main_wrapper}>
@@ -73,9 +74,7 @@ function Analyzer({ header, stepsContent }: AnalyzerProps) {
           </div>
           <div
             className={styles.featureTextAnim}
-            onAnimationEnd={() =>
-              setTimeout(() => router.push('/quiz?q=EnterEmailPersonalPlan'), 500)
-            }
+            onAnimationEnd={() => setTimeout(() => goTo(redirectTo), 500)}
           >
             {stepsContent[3]}
           </div>

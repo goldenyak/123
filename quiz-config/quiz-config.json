@@ -493,6 +493,7 @@
           "id": "AnalyzingDataLoader",
           "content": {
             "type": "analyzer",
+            "redirectTo": "EnterEmailPersonalPlan",
             "header": "We optimize the settings according to your preferences...",
             "stepsContent": [
               "Analyzing received data",
