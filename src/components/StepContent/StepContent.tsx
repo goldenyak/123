@@ -10,7 +10,7 @@ import BigImage from '../contentVariants/BigImage/BigImage';
 import Feedback from '../contentVariants/Feedback/Feedback';
 import Risk from '../contentVariants/Risk/Risk';
 import Analyzer from '../contentVariants/Analyzer/Analyzer';
-import Step20 from '../Steps/Step-20/Step20';
+import EnterEmail from '../contentVariants/EnterEmail/EnterEmail';
 import { ProgressBar } from '../ProgressBar/ProgressBar';
 import StepHeader from '../StepHeader/StepHeader';
 import TopImage from '../contentVariants/TopImage/TopImage';
@@ -49,8 +49,8 @@ const StepContent = ({ config }: StepContentProps) => {
         return <FactImage {...config.content} />;
       case 'top-image':
         return <TopImage {...config.content} />;
-      case 'step20':
-        return <Step20 />;
+      case 'enter-email':
+        return <EnterEmail />;
       default:
         return null;
     }

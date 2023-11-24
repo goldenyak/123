@@ -104,15 +104,19 @@ export interface IFactsImage {
   items: IFactImageItem[];
 }
 
+export interface IFactImageItem {
+  text: string;
+  image: string;
+}
+
 export interface ITopImage {
   type: 'top-image';
   header: string;
   paragraphs: string[];
 }
 
-export interface IFactImageItem {
-  text: string;
-  image: string;
+export interface EnterEmail {
+  type: 'enter-email';
 }
 
 type IStepContent =
@@ -126,7 +130,7 @@ type IStepContent =
   | IAnalyzer
   | IRisk
   | IFactsImage
-  | Step20;
+  | EnterEmail;
 
 export interface INextButton {
   value: string;

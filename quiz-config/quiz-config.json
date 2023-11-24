@@ -504,8 +504,13 @@
         },
         {
           "id": "EnterEmailPersonalPlan",
+          "showProgressBar": true,
+          "header": {
+            "value": "Your Personal Plan for a free and secure internet is ready!"
+          },
+          "prevStep": "YourRiskProfile",
           "content": {
-            "type": "step20"
+            "type": "enter-email"
           }
         }
       ]
