@@ -1,12 +1,15 @@
 import { create } from 'zustand';
 import { config } from '@/utils/utils';
-import { IStepConfig } from '@/components/StepContent/types';
+import { ICheckboxGroup, IStepConfig } from '@/components/StepContent/types';
 import { AppRouterInstance } from 'next/dist/shared/lib/app-router-context.shared-runtime';
 
 type State = {
   currentStepId: string;
   config: IStepConfig[];
-  answers: Record<string, { locked: boolean }>;
+  answers: Record<
+    string,
+    { values: string[]; locked: boolean; disableNext?: boolean }
+  >;
 };
 
 type Action = {
@@ -17,16 +20,28 @@ type Action = {
   isLocked(stepId: string): boolean;
   isFirstStep: boolean | undefined;
   isLastStep: boolean | undefined;
+  isNextDisabled: () => boolean;
+  addAnswer: (value: string) => void;
 };
 
-const initAnswers: Record<string, { locked: boolean }> = {};
+const initAnswers: State['answers'] = {};
+
 const steps: Record<
   string,
-  IStepConfig & { firstStep?: boolean; lastStep?: boolean }
+  IStepConfig & {
+    firstStep?: boolean;
+    lastStep?: boolean;
+  }
 > = {};
 
 config.steps.map((step, index) => {
-  initAnswers[step.id] = { locked: true };
+  initAnswers[step.id] = { locked: true, values: [] };
+  if (
+    step.content.type === 'checkbox-group' ||
+    step.content.type === 'agreement-scale'
+  ) {
+    initAnswers[step.id] = { ...initAnswers[step.id], disableNext: true };
+  }
   steps[step.id] = step;
   if (index === 0) {
     steps[step.id] = { ...steps[step.id], firstStep: true };
@@ -35,11 +50,14 @@ config.steps.map((step, index) => {
     steps[step.id] = { ...steps[step.id], lastStep: true };
   }
 });
-console.log('---steps/n', steps);
-initAnswers[config.mainScreen.yesRedirectTo] = { locked: false };
-initAnswers[config.mainScreen.noRedirectTo] = { locked: false };
-
-// console.log('initAnswers', initAnswers);
+initAnswers[config.mainScreen.yesRedirectTo] = {
+  ...initAnswers[config.mainScreen.yesRedirectTo],
+  locked: false,
+};
+initAnswers[config.mainScreen.noRedirectTo] = {
+  ...initAnswers[config.mainScreen.noRedirectTo],
+  locked: false,
+};
 
 export const useStore = create<State & Action>((set, get) => ({
   currentStepId: config.steps[0].id,
@@ -53,7 +71,12 @@ export const useStore = create<State & Action>((set, get) => ({
     const nextStep = steps[stepId];
     set({ isFirstStep: nextStep.firstStep });
     set({ isLastStep: nextStep.lastStep });
-    set({ answers: { ...get().answers, [nextStep.id]: { locked: false } } });
+    set({
+      answers: {
+        ...get().answers,
+        [nextStep.id]: { ...get().answers[nextStep.id], locked: false },
+      },
+    });
     router.push(`?q=${stepId}`);
   },
   next: (router) => {
@@ -63,7 +86,12 @@ export const useStore = create<State & Action>((set, get) => ({
       set({ currentStepId: nextStep.id });
       set({ isFirstStep: nextStep.firstStep });
       set({ isLastStep: nextStep.lastStep });
-      set({ answers: { ...get().answers, [nextStep.id]: { locked: false } } });
+      set({
+        answers: {
+          ...get().answers,
+          [nextStep.id]: { ...get().answers[nextStep.id], locked: false },
+        },
+      });
       router.push(`?q=${nextStep.id}`);
     }
   },
@@ -82,5 +110,22 @@ export const useStore = create<State & Action>((set, get) => ({
   isLastStep: false,
   isLocked: (stepId) => {
     return get().answers[stepId]?.locked;
+  },
+  isNextDisabled: () => !!get().answers[get().currentStepId]?.disableNext,
+  addAnswer: (value) => {
+    get().answers[get().currentStepId].values.push(value);
+    if (!!get().answers[get().currentStepId]?.disableNext) {
+      if (get().answers[get().currentStepId].values.length > 0) {
+        set({
+          answers: {
+            ...get().answers,
+            [get().currentStepId]: {
+              ...get().answers[get().currentStepId],
+              disableNext: false,
+            },
+          },
+        });
+      }
+    }
   },
 }));

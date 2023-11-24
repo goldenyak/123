@@ -29,7 +29,6 @@ export interface IProgressIndicator {
 
 export interface IRadioGroup {
   type: 'radio-group';
-
   options: IRadioOption[];
 }
 

@@ -1,6 +1,7 @@
 import styles from './CheckBoxOption.module.scss';
 import Image, { StaticImageData } from 'next/image';
 import icon_check_blue from '../../../../assets/icons/icon_check_blue.svg';
+import { useStore } from '@/store/useStore';
 
 interface CheckBoxOptionProps {
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
@@ -9,8 +10,14 @@ interface CheckBoxOptionProps {
 }
 
 const CheckBoxOption = ({ onChange, icon, value }: CheckBoxOptionProps) => {
+  const { addAnswer } = useStore();
   return (
-    <label className={styles.label}>
+    <label
+      className={styles.label}
+      onClick={() => {
+        addAnswer(value);
+      }}
+    >
       <input
         onChange={onChange}
         type='checkbox'
