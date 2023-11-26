@@ -1,14 +1,13 @@
 'use client';
-import styles from './Step.module.scss';
+import styles from './EnterEmail.module.scss';
 import Image from 'next/image';
 import icon_security from '../../../assets/icons/icon_security.svg';
 import Link from 'next/link';
 import { NextButton } from '../../NextButton/NextButton';
 import { ChangeEvent, useState } from 'react';
-import StepHeader from '../../StepHeader/StepHeader';
 import { useRouter } from 'next/navigation';
 
-function Step20() {
+function EnterEmail() {
   const router = useRouter();
   const [email, setEmail] = useState('');
   const [error, setError] = useState('');
@@ -27,7 +26,7 @@ function Step20() {
 
     if (isValidEmail(email)) {
       console.log('The email is valid');
-      router.push(`/subscription-page`)
+      router.push(`/subscription-page`);
     } else {
       setError('Email is invalid');
     }
@@ -41,12 +40,9 @@ function Step20() {
           flexDirection: 'column',
           justifyContent: 'center',
           gap: '8px',
-          padding: '30px 15px 0 15px',
+          padding: '0 15px',
         }}
       >
-        <StepHeader
-          value={'Your Personal Plan for a free and secure internet is ready!'}
-        />
         <h2 className={styles.header_description}>
           Enter your email to gets started
         </h2>
@@ -109,4 +105,4 @@ function Step20() {
   );
 }
 
-export default Step20;
+export default EnterEmail;

@@ -1,7 +1,6 @@
 'use client';
 import styles from './Feedback.module.scss';
 import Image from 'next/image';
-import ProgressIndicator from '../../ProgressIndicator/ProgressIndicator';
 import review_stars from '../../../assets/images/review_stars.png';
 import superman_image from '../../../assets/images/superman.png';
 import { IFeedbackItem } from '../../StepContent/types';
@@ -85,7 +84,6 @@ function Feedback({ firstFeedback, secondFeedback }: FeedbackProps) {
       </div>
 
       <p className={styles.checking_answers}>Checking your answers...</p>
-      <ProgressIndicator path='/quiz?q=YourRiskProfile' />
     </div>
   );
 }

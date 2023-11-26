@@ -1,5 +1,6 @@
 'use client';
 
+import { useStore } from '@/store/useStore';
 import { INextButton } from '../StepContent/types';
 import styles from './NextButton.module.scss';
 import { useNavigation } from '@/hooks/useNavigation';
@@ -12,11 +13,14 @@ interface NextButtonProps extends INextButton {
 
 export const NextButton = ({
   value,
-  disabled = false,
   type = 'button',
   onClick,
 }: NextButtonProps) => {
-  const navigation = useNavigation();
+  const { next } = useNavigation();
+  const { isNextDisabled } = useStore();
+
+  console.log(isNextDisabled());
+
   return (
     <div className={styles.button_wrapper}>
       <button
@@ -25,13 +29,13 @@ export const NextButton = ({
         onClick={
           !onClick
             ? () => {
-                navigation.next();
+                next();
               }
             : () => {
                 onClick();
               }
         }
-        disabled={disabled}
+        disabled={isNextDisabled()}
       >
         {value}
       </button>

@@ -52,7 +52,7 @@ export const ProgressBar = () => {
           alt=''
           onClick={() => back()}
         />
-        {!isLastStep() && (
+        {!isLastStep && (
           <div style={{ width: '100%', position: 'relative' }}>
             <div
               style={{

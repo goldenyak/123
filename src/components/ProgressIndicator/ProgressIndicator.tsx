@@ -1,22 +1,19 @@
 'use client';
-import { useRouter } from 'next/navigation';
 import styles from './ProgressIndicator.module.scss';
 import { useEffect, useState } from 'react';
+import { IProgressIndicator } from '../StepContent/types';
+import { useNavigation } from '@/hooks/useNavigation';
 
-interface ProgressIndicatorProps {
-  path: string;
-}
-
-function ProgressIndicator({ path }: ProgressIndicatorProps) {
+function ProgressIndicator({ redirectTo }: IProgressIndicator) {
   const [filled, setFilled] = useState(0);
-  const router = useRouter();
+  const { goTo } = useNavigation();
 
   useEffect(() => {
     if (filled < 100) {
       const timeout = setTimeout(() => setFilled((prev) => (prev += 2)), 100);
       return () => clearTimeout(timeout);
     } else {
-      router.push(`${path}`);
+      goTo(redirectTo);
     }
   }, [filled]);
 

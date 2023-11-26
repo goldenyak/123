@@ -7,7 +7,7 @@ interface StepHeaderProps {
 }
 
 const StepHeader = ({ value, type = 'left' }: StepHeaderProps) => {
-  console.log(type);
+  // console.log(type);
   return (
     <header
       className={

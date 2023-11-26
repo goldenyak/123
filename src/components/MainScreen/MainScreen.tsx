@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation';
 import logo from '../../assets/icons/logo.svg';
 import main_image from '../../assets/images/main_image.png';
 import Image from 'next/image';
+import { config } from '@/utils/utils';
 
 function MainScreen() {
   const router = useRouter();
@@ -29,13 +30,17 @@ function MainScreen() {
           <div className={styles.description}></div>
           <div className={styles.buttons_wrapper}>
             <button
-              onClick={() => router.push('/quiz?q=UsedAnyVpnBefore')}
+              onClick={() =>
+                router.push(`/quiz?q=${config.mainScreen.yesRedirectTo}`)
+              }
               className={styles.btn}
             >
               Yes
             </button>
             <button
-              onClick={() => router.push('/about-vpn')}
+              onClick={() =>
+                router.push(`/quiz?q=${config.mainScreen.noRedirectTo}`)
+              }
               className={styles.btn}
             >
               Not really

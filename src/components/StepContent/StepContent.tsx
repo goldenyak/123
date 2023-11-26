@@ -10,9 +10,11 @@ import BigImage from '../contentVariants/BigImage/BigImage';
 import Feedback from '../contentVariants/Feedback/Feedback';
 import Risk from '../contentVariants/Risk/Risk';
 import Analyzer from '../contentVariants/Analyzer/Analyzer';
-import Step20 from '../Steps/Step-20/Step20';
+import EnterEmail from '../contentVariants/EnterEmail/EnterEmail';
 import { ProgressBar } from '../ProgressBar/ProgressBar';
 import StepHeader from '../StepHeader/StepHeader';
+import TopImage from '../contentVariants/TopImage/TopImage';
+import ProgressIndicator from '../ProgressIndicator/ProgressIndicator';
 
 interface StepContentProps {
   config: IStepConfig;
@@ -44,14 +46,14 @@ const StepContent = ({ config }: StepContentProps) => {
         return <Risk {...config.content} />;
       case 'facts-image':
         return <FactImage {...config.content} />;
-      case 'step20':
-        return <Step20 />;
+      case 'top-image':
+        return <TopImage {...config.content} />;
+      case 'enter-email':
+        return <EnterEmail />;
       default:
         return null;
     }
   })();
-
-  console.log(config);
 
   return (
     <>
@@ -63,6 +65,9 @@ const StepContent = ({ config }: StepContentProps) => {
         {config.header && <StepHeader {...config.header} />}
         {component}
         {config.nextButton && <NextButton {...config.nextButton} />}
+        {config?.progressIndicator && (
+          <ProgressIndicator redirectTo={config.progressIndicator.redirectTo} />
+        )}
       </div>
     </>
   );
