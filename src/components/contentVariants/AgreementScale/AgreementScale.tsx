@@ -10,7 +10,6 @@ interface AgreementScaleProps {
 }
 
 function AgreementScale({ value, redirectTo }: AgreementScaleProps) {
-  console.log('AgreementScale');
   return (
     <div className={styles.wrapper}>
       <div

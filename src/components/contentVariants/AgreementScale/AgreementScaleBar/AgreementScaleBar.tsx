@@ -8,7 +8,6 @@ interface AgreementScaleProps {
 }
 
 const AgreementScaleBar = ({ redirectTo }: AgreementScaleProps) => {
-  console.log('AgreementScaleBar');
   const { goTo } = useNavigation();
   const addAnswer = useStore((state) => state.addAnswer);
   return (
