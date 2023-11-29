@@ -2,29 +2,25 @@ import styles from './CheckBoxOption.module.scss';
 import Image, { StaticImageData } from 'next/image';
 import icon_check_blue from '../../../../assets/icons/icon_check_blue.svg';
 import { useStore } from '@/store/useStore';
+import React from 'react';
 
 interface CheckBoxOptionProps {
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   icon: StaticImageData;
   value: string;
 }
 
-const CheckBoxOption = ({ onChange, icon, value }: CheckBoxOptionProps) => {
-  const { addAnswer } = useStore();
+const CheckBoxOption = ({ icon, value }: CheckBoxOptionProps) => {
+  const addAnswer = useStore((state) => state.addAnswer);
   return (
-    <label
-      className={styles.label}
-      onClick={() => {
-        addAnswer(value);
-      }}
-    >
-      <input
-        onChange={onChange}
-        type='checkbox'
-        name='input_name'
-        value='input_value'
-      />
-      <div className={styles.label_wrapper}>
+    <label className={styles.label}>
+      <input type='checkbox' name='input_name' value='input_value' />
+      <div
+        className={styles.label_wrapper}
+        onClick={(e) => {
+          e.stopPropagation;
+          addAnswer(value);
+        }}
+      >
         <div className={styles.label_content}>
           <div className={styles.icon_circle}>
             <Image src={icon} alt='' />
@@ -39,4 +35,4 @@ const CheckBoxOption = ({ onChange, icon, value }: CheckBoxOptionProps) => {
   );
 };
 
-export default CheckBoxOption;
+export default React.memo(CheckBoxOption);

@@ -2,6 +2,7 @@ import { StaticImageData } from 'next/image';
 import styles from './RadioOption.module.scss';
 import Image from 'next/image';
 import { useNavigation } from '@/hooks/useNavigation';
+import { useStore } from '@/store/useStore';
 
 interface RadioOptionsProps {
   redirectTo: string;
@@ -11,10 +12,17 @@ interface RadioOptionsProps {
 
 const RadioOption = ({ redirectTo, icon, value }: RadioOptionsProps) => {
   const { goTo } = useNavigation();
+  const addAnswer = useStore((state) => state.addAnswer);
   return (
-    <label onClick={() => goTo(redirectTo)} className={styles.label}>
+    <label className={styles.label}>
       <input type='radio' value='input_value' />
-      <div className={styles.label_wrapper}>
+      <div
+        className={styles.label_wrapper}
+        onClick={() => {
+          goTo(redirectTo);
+          addAnswer(value);
+        }}
+      >
         <div className={styles.label_content}>
           <div className={styles.icon_circle}>
             <Image src={icon} alt='' />

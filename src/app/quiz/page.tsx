@@ -13,12 +13,10 @@ export default function QuizPage() {
   const router = useRouter();
 
   const currentStepId = params.get('q') || steps[0];
-
-  const { isLocked } = useStore();
+  const isLocked = useStore((state) => state.isLocked);
   if (isLocked(currentStepId)) {
     router.push('/');
   }
-
   let stepConfig = config.variants[0]['steps'].find(
     (item) => currentStepId === item.id,
   ) as IStepConfig;

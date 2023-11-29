@@ -10,6 +10,11 @@ $mob-width: 601px;
     position: absolute;
     bottom: 0;
   }
+  @media screen and (max-device-width: $mob-width) and (-webkit-device-pixel-ratio: 3) {
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+  }
 }
 
 .header_description {
@@ -22,11 +27,17 @@ $mob-width: 601px;
   @media screen and (max-width: $mob-width) {
     margin-top: 50px;
   }
+  @media screen and (max-device-width: $mob-width) and (-webkit-device-pixel-ratio: 3) {
+    margin-top: 50px;
+  }
 }
 
 .header_wrapper {
   padding: 0 15px;
   @media screen and (max-width: $mob-width) {
+    margin-top: 50px;
+  }
+  @media screen and (max-device-width: $mob-width) and (-webkit-device-pixel-ratio: 3) {
     margin-top: 50px;
   }
 }

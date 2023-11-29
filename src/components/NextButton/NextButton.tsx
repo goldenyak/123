@@ -17,9 +17,7 @@ export const NextButton = ({
   onClick,
 }: NextButtonProps) => {
   const { next } = useNavigation();
-  const { isNextDisabled } = useStore();
-
-  console.log(isNextDisabled());
+  const isNextDisabled = useStore((state) => state.isNextDisabled());
 
   return (
     <div className={styles.button_wrapper}>
@@ -35,7 +33,7 @@ export const NextButton = ({
                 onClick();
               }
         }
-        disabled={isNextDisabled()}
+        disabled={isNextDisabled}
       >
         {value}
       </button>

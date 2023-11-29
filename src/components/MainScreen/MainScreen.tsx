@@ -5,9 +5,11 @@ import logo from '../../assets/icons/logo.svg';
 import main_image from '../../assets/images/main_image.png';
 import Image from 'next/image';
 import { config } from '@/utils/utils';
+import { useStore } from '@/store/useStore';
 
 function MainScreen() {
   const router = useRouter();
+  const addAnswer = useStore((state) => state.addAnswer);
   return (
     <main className={styles.main}>
       <div className={styles.content_wrapper}>
@@ -30,17 +32,19 @@ function MainScreen() {
           <div className={styles.description}></div>
           <div className={styles.buttons_wrapper}>
             <button
-              onClick={() =>
-                router.push(`/quiz?q=${config.mainScreen.yesRedirectTo}`)
-              }
+              onClick={() => {
+                addAnswer('Yes');
+                router.push(`/quiz?q=${config.mainScreen.yesRedirectTo}`);
+              }}
               className={styles.btn}
             >
               Yes
             </button>
             <button
-              onClick={() =>
-                router.push(`/quiz?q=${config.mainScreen.noRedirectTo}`)
-              }
+              onClick={() => {
+                addAnswer('Not really');
+                router.push(`/quiz?q=${config.mainScreen.noRedirectTo}`);
+              }}
               className={styles.btn}
             >
               Not really

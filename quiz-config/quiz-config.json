@@ -114,7 +114,7 @@
         {
           "id": "VideoNotAvailableNeedFix",
           "showProgressBar": true,
-          "prevStep": "VpnLumos75perFaster",
+          "prevStep": "UsedAnyVpnBefore",
           "header": {
             "value": "Do you need to fix «Video is not available in your country» issue?"
           },
