@@ -89,6 +89,9 @@ export const useStore = create<State & Action>((set, get) => ({
     const currentStep = get().steps[get().currentStepId];
     const prevStepId = currentStep.prevStep;
     set({ currentStepId: prevStepId || config.steps[0].id });
+    set({
+      answers: { [get().currentStepId]: [] },
+    });
     prevStepId ? router.push(`?q=${prevStepId}`) : router.push(`/`);
   },
   isLastStep: () => !!get().steps[get().currentStepId].lastStep,
