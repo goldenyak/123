@@ -4,14 +4,22 @@ import { useEffect } from 'react';
 
 export const useNavigation = () => {
   const router = useRouter();
-  const state = useStore();
+
+  const setCurrentStepId = useStore((state) => state.setCurrentStepId);
+  const nextAction = useStore((state) => state.next);
+  const goToAction = useStore((state) => state.goTo);
+  const backAction = useStore((state) => state.back);
+
   const params = useSearchParams();
   const currentStepId = params.get('q');
+
   useEffect(() => {
-    state.setCurrentStepId(currentStepId || state.currentStepId);
+    setCurrentStepId(currentStepId || '');
   }, [currentStepId]);
-  const next = () => state.next(router);
-  const goTo = (stepId: string) => state.goTo(router, stepId);
-  const back = () => state.back(router);
+
+  const next = () => nextAction(router);
+  const goTo = (stepId: string) => goToAction(router, stepId);
+  const back = () => backAction(router);
+
   return { next, back, goTo };
 };

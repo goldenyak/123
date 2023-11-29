@@ -24,7 +24,8 @@ const stepProgressMap: Record<string, number> = {
 
 export const ProgressBar = () => {
   const [progress, setProgress] = useState(0);
-  const { currentStepId, isFirstStep, isLastStep } = useStore();
+  const currentStepId = useStore((state) => state.currentStepId);
+  const isLastStep = useStore((state) => state.isLastStep());
   const { back } = useNavigation();
 
   useEffect(() => {
