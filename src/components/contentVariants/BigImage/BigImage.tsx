@@ -16,6 +16,8 @@ function BigImage({ image }: BigImageProps) {
           alt='man_with_paper'
           className={styles.image}
           priority={true}
+          fill
+          style={{ objectFit: 'cover' }}
         />
       </div>
     </div>

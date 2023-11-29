@@ -15,9 +15,9 @@ export default function QuizPage() {
   const currentStepId = params.get('q') || steps[0];
 
   const { isLocked } = useStore();
-  if (isLocked(currentStepId)) {
-    router.push('/');
-  }
+  // if (isLocked(currentStepId)) {
+  //   router.push('/');
+  // }
 
   let stepConfig = config.variants[0]['steps'].find(
     (item) => currentStepId === item.id,
