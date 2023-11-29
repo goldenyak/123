@@ -90,9 +90,10 @@ export const useStore = create<State & Action>((set, get) => ({
     const prevStepId = currentStep.prevStep;
     set({ currentStepId: prevStepId || config.steps[0].id });
     set({
-      answers: { [get().currentStepId]: [] },
+      answers: { ...get().answers, [get().currentStepId]: [] },
     });
     prevStepId ? router.push(`?q=${prevStepId}`) : router.push(`/`);
+    console.log(get().answers);
   },
   isLastStep: () => !!get().steps[get().currentStepId].lastStep,
   isLocked: (stepId) => get().steps[stepId]?.locked,
@@ -140,5 +141,6 @@ export const useStore = create<State & Action>((set, get) => ({
         });
       }
     }
+    console.log(get().answers);
   },
 }));
