@@ -61,7 +61,6 @@ export const useStore = create<State & Action>((set, get) => ({
   setCurrentStepId: (currentStepId) => {
     set({ currentStepId });
   },
-  // config: config.steps as IStepConfig[],
   goTo: (router, stepId) => {
     const nextStep = get().steps[stepId];
     set({
