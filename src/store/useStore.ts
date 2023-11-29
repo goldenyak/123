@@ -112,6 +112,7 @@ export const useStore = create<State & Action>((set, get) => ({
         },
       });
     }
+
     if (get().steps[get().currentStepId].hasOwnProperty('disableNext')) {
       if (get().answers[get().currentStepId].length === 0) {
         set({
