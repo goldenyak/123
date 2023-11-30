@@ -35,12 +35,14 @@
               {
                 "value": "yes",
                 "icon": "yes",
-                "redirectTo": "WhyDidntLikeOtherVpn"
+                "redirectTo": "WhyDidntLikeOtherVpn",
+                "score": 1
               },
               {
                 "value": "no",
                 "icon": "no",
-                "redirectTo": "VpnLumos75perFaster"
+                "redirectTo": "VpnLumos75perFaster",
+                "score": 2
               }
             ]
           }
@@ -61,23 +63,28 @@
             "options": [
               {
                 "value": "Wasn't working",
-                "icon": "wrench"
+                "icon": "wrench",
+                "score": 1
               },
               {
                 "value": "Too expensive",
-                "icon": "money-bag"
+                "icon": "money-bag",
+                "score": 2
               },
               {
                 "value": "Low connection speed",
-                "icon": "snail"
+                "icon": "snail",
+                "score": 3
               },
               {
                 "value": "Wasn’t safe",
-                "icon": "warning"
+                "icon": "warning",
+                "score": 4
               },
               {
                 "value": "Other",
-                "icon": "other"
+                "icon": "other",
+                "score": 5
               }
             ]
           }
@@ -124,12 +131,14 @@
               {
                 "value": "yes",
                 "icon": "yes",
-                "redirectTo": "VideoNotAvailableWhatSites"
+                "redirectTo": "VideoNotAvailableWhatSites",
+                "score": 1
               },
               {
                 "value": "no",
                 "icon": "no",
-                "redirectTo": "MessengersNotAvailableNeedFix"
+                "redirectTo": "MessengersNotAvailableNeedFix",
+                "score": 2
               }
             ]
           }
@@ -150,23 +159,28 @@
             "options": [
               {
                 "value": "Netflix or other streaming",
-                "icon": "film-projector"
+                "icon": "film-projector",
+                "score": 1
               },
               {
                 "value": "Adult sites",
-                "icon": "couple-with-heart"
+                "icon": "couple-with-heart",
+                "score": 2
               },
               {
                 "value": "Social Networks",
-                "icon": "mobile-phone"
+                "icon": "mobile-phone",
+                "score": 3
               },
               {
                 "value": "Sport sites",
-                "icon": "basketball-player"
+                "icon": "basketball-player",
+                "score": 4
               },
               {
                 "value": "Other",
-                "icon": "other"
+                "icon": "other",
+                "score": 5
               }
             ]
           }
@@ -184,12 +198,14 @@
               {
                 "value": "yes",
                 "icon": "yes",
-                "redirectTo": "MessengersNotAvailableWhatApps"
+                "redirectTo": "MessengersNotAvailableWhatApps",
+                "score": 1
               },
               {
                 "value": "no",
                 "icon": "no",
-                "redirectTo": "ChooseAdditionalBenefits"
+                "redirectTo": "ChooseAdditionalBenefits",
+                "score": 2
               }
             ]
           }
@@ -301,27 +317,32 @@
               {
                 "value": "Almost never",
                 "icon": "man-gesturing-3",
-                "redirectTo": "SavePasswordsBrowser"
+                "redirectTo": "SavePasswordsBrowser",
+                "score": 5
               },
               {
                 "value": "Rarely",
                 "icon": "man-tipping-hard",
-                "redirectTo": "SavePasswordsBrowser"
+                "redirectTo": "SavePasswordsBrowser",
+                "score": 4
               },
               {
                 "value": "Every week",
                 "icon": "man-raising-hand",
-                "redirectTo": "SavePasswordsBrowser"
+                "redirectTo": "SavePasswordsBrowser",
+                "score": 3
               },
               {
                 "value": "Often",
                 "icon": "man-dancing",
-                "redirectTo": "SavePasswordsBrowser"
+                "redirectTo": "SavePasswordsBrowser",
+                "score": 2
               },
               {
                 "value": "Several times a day",
                 "icon": "man-gesturing-ok",
-                "redirectTo": "SavePasswordsBrowser"
+                "redirectTo": "SavePasswordsBrowser",
+                "score": 1
               }
             ]
           }
@@ -339,12 +360,14 @@
               {
                 "value": "yes",
                 "icon": "yes",
-                "redirectTo": "HowQuicklyUpdate"
+                "redirectTo": "HowQuicklyUpdate",
+                "score": 1
               },
               {
                 "value": "no",
                 "icon": "no",
-                "redirectTo": "HowQuicklyUpdate"
+                "redirectTo": "HowQuicklyUpdate",
+                "score": 55
               }
             ]
           }
@@ -362,22 +385,26 @@
               {
                 "value": "I have auto-update enabled",
                 "icon": "smile-with-sunglasses",
-                "redirectTo": "StatementOpenLinksFromEmail"
+                "redirectTo": "StatementOpenLinksFromEmail",
+                "score": 1
               },
               {
                 "value": "Installing every version of the update",
                 "icon": "slightly-smiling-face",
-                "redirectTo": "StatementOpenLinksFromEmail"
+                "redirectTo": "StatementOpenLinksFromEmail",
+                "score": 2
               },
               {
                 "value": "Installing updates through multiple versions",
                 "icon": "thinking-face",
-                "redirectTo": "StatementOpenLinksFromEmail"
+                "redirectTo": "StatementOpenLinksFromEmail",
+                "score": 3
               },
               {
                 "value": "Almost never",
                 "icon": "grimacing-face",
-                "redirectTo": "StatementOpenLinksFromEmail"
+                "redirectTo": "StatementOpenLinksFromEmail",
+                "score": 4
               }
             ]
           }

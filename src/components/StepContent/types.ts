@@ -36,6 +36,7 @@ export interface IRadioOption {
   value: string;
   icon: string;
   redirectTo: string;
+  score?: number;
 }
 
 export interface ICheckboxGroup {
@@ -47,6 +48,7 @@ export interface ICheckboxGroup {
 export interface ICheckboxOption {
   value: string;
   icon: string;
+  score?: number;
 }
 
 export interface IAgreementScale {
@@ -140,10 +142,4 @@ type IStepContent =
 export interface INextButton {
   value: string;
   redirectTo?: string;
-}
-
-//Workaround - remove
-
-interface Step20 {
-  type: 'step20';
 }
