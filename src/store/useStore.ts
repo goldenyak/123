@@ -47,9 +47,6 @@ config.steps.map((step, index) => {
     initSteps[step.id] = { ...initSteps[step.id], lastStep: true };
   }
 });
-
-// console.log('initSteps', initSteps);
-
 initSteps[config.mainScreen.yesRedirectTo] = {
   ...initSteps[config.mainScreen.yesRedirectTo],
   locked: false,
@@ -114,13 +111,10 @@ export const useStore = create<State & Action>()(
             [get().currentStepId]: { values: [], score: 0 },
           },
         });
-        // console.log('------');
-        // console.log(get().answers[get().currentStepId]);
         if (get().steps[get().currentStepId].hasOwnProperty('disableNext')) {
           set({
             isNextDisabled: true,
           });
-          // console.log('disableNext');
         }
       },
       addAnswer: (value, score) => {
@@ -129,7 +123,6 @@ export const useStore = create<State & Action>()(
         const currentAnswerStep = oldAnswers[currentStepId];
         const steps = get().steps;
         const currentStep = steps[currentStepId];
-        // console.log(steps);
         if (currentAnswerStep.values.includes(value)) {
           set({
             answers: {
@@ -190,11 +183,6 @@ export const useStore = create<State & Action>()(
             const score = currentStep.content.options.find(
               (item) => item.value === value,
             )?.score;
-            console.log(value);
-            console.log(
-              currentStep.content.options.find((item) => item.value === value),
-            );
-            console.log(score);
             set({
               answers: {
                 ...oldAnswers,
@@ -226,13 +214,11 @@ export const useStore = create<State & Action>()(
             });
           }
           if (get().answers[currentStepId].values.length > 0) {
-            // console.log('values.length > 0');
             set({
               isNextDisabled: false as const,
             });
           }
         }
-        // console.log(get().answers[get().currentStepId]);
       },
       getTotalScore: () =>
         Object.values(get().answers).reduce((acc, item) => acc + item.score, 0),
