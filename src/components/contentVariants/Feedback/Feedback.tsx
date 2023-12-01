@@ -33,7 +33,7 @@ function Feedback({ firstFeedback, secondFeedback }: FeedbackProps) {
       <div
         style={{
           position: 'relative',
-          height: '350px',
+          height: '250px',
         }}
       >
         <div
