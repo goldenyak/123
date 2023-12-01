@@ -11,6 +11,7 @@ type State = {
     IStepConfig & { locked: boolean; disableNext?: boolean; lastStep?: boolean }
   >;
   answers: Record<string, { values: string[]; score: number }>;
+  isNextDisabled: boolean;
 };
 
 type Action = {
@@ -19,10 +20,11 @@ type Action = {
   goTo: (router: AppRouterInstance, stepId: string) => void;
   setCurrentStepId: (newCurrentId: string) => void;
   isLocked(stepId: string): boolean;
-  isNextDisabled: () => boolean;
   addAnswer: (value: string) => void;
   isLastStep: () => boolean;
   getTotalScore: () => number;
+  resetAnswers: () => void;
+  getCurrentStepAnswers: () => { values: string[]; score: number };
 };
 
 const initSteps: State['steps'] = {};
@@ -34,7 +36,7 @@ const initAnswers: State['answers'] = config.steps.reduce(
   {} as State['answers'],
 );
 
-console.log(initAnswers, initAnswers);
+// console.log(initAnswers, initAnswers);
 
 config.steps.map((step, index) => {
   initSteps[step.id] = { ...step, locked: true };
@@ -61,6 +63,7 @@ initSteps[config.mainScreen.noRedirectTo] = {
 export const useStore = create<State & Action>()(
   persist(
     (set, get) => ({
+      isNextDisabled: false as const,
       currentStepId: config.steps[0].id,
       answers: initAnswers,
       steps: initSteps,
@@ -105,7 +108,22 @@ export const useStore = create<State & Action>()(
       },
       isLastStep: () => !!get().steps[get().currentStepId].lastStep,
       isLocked: (stepId) => get().steps[stepId]?.locked,
-      isNextDisabled: () => !!get().steps[get().currentStepId]?.disableNext,
+      resetAnswers: () => {
+        console.log('resetAnswers');
+        set({
+          answers: {
+            ...get().answers,
+            [get().currentStepId]: { values: [], score: 0 },
+          },
+        });
+        if (get().steps[get().currentStepId].hasOwnProperty('disableNext')) {
+          set({
+            isNextDisabled: true,
+          });
+          console.log('disableNext');
+        }
+      },
+      getCurrentStepAnswers: () => get().answers[get().currentStepId],
       addAnswer: (value) => {
         const oldAnswers = get().answers;
         const currentStepId = get().currentStepId;
@@ -114,6 +132,8 @@ export const useStore = create<State & Action>()(
 
         const steps = get().steps;
         const currentStep = steps[currentStepId];
+        console.log(get().answers[get().currentStepId]);
+        console.log(get().steps[get().currentStepId].disableNext);
         // console.log(currentAnswerStep);
         if (currentAnswerStep.values.includes(value)) {
           console.log('includes');
@@ -148,7 +168,6 @@ export const useStore = create<State & Action>()(
             });
           }
         } else {
-          console.log('!includes');
           set({
             answers: {
               ...oldAnswers,
@@ -176,33 +195,21 @@ export const useStore = create<State & Action>()(
             });
           }
         }
-
+        console.log(get().answers[currentStepId].values);
         if (currentStep.hasOwnProperty('disableNext')) {
-          // console.log(currentAnswerStep);
-          if (currentAnswerStep.values.length === 0) {
+          if (get().answers[currentStepId].values.length === 0) {
             set({
-              steps: {
-                ...steps,
-                [currentStepId]: {
-                  ...currentStep,
-                  disableNext: true,
-                },
-              },
+              isNextDisabled: true,
             });
           }
-          if (currentAnswerStep.values.length > 0) {
+          if (get().answers[currentStepId].values.length > 0) {
+            console.log('values.length > 0');
             set({
-              steps: {
-                ...steps,
-                [currentStepId]: {
-                  ...currentStep,
-                  disableNext: false,
-                },
-              },
+              isNextDisabled: false,
             });
           }
         }
-        // console.log(get().answers);
+        console.log(get().answers[get().currentStepId]);
       },
       getTotalScore: () => 0,
     }),

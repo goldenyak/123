@@ -15,6 +15,8 @@ export default function QuizPage() {
 
   const currentStepId = params.get('q') || steps[0];
   const isLocked = useStore((state) => state.isLocked);
+  const resetAnswers = useStore((state) => state.resetAnswers);
+  resetAnswers();
 
   useEffect(() => {
     if (isLocked(currentStepId)) {

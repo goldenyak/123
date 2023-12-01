@@ -35,14 +35,12 @@
               {
                 "value": "yes",
                 "icon": "yes",
-                "redirectTo": "WhyDidntLikeOtherVpn",
-                "score": 1
+                "redirectTo": "WhyDidntLikeOtherVpn"
               },
               {
                 "value": "no",
                 "icon": "no",
-                "redirectTo": "VpnLumos75perFaster",
-                "score": 2
+                "redirectTo": "VpnLumos75perFaster"
               }
             ]
           }
@@ -63,28 +61,23 @@
             "options": [
               {
                 "value": "Wasn't working",
-                "icon": "wrench",
-                "score": 1
+                "icon": "wrench"
               },
               {
                 "value": "Too expensive",
-                "icon": "money-bag",
-                "score": 2
+                "icon": "money-bag"
               },
               {
                 "value": "Low connection speed",
-                "icon": "snail",
-                "score": 3
+                "icon": "snail"
               },
               {
                 "value": "Wasn’t safe",
-                "icon": "warning",
-                "score": 4
+                "icon": "warning"
               },
               {
                 "value": "Other",
-                "icon": "other",
-                "score": 5
+                "icon": "other"
               }
             ]
           }
@@ -121,7 +114,7 @@
         {
           "id": "VideoNotAvailableNeedFix",
           "showProgressBar": true,
-          "prevStep": "UsedAnyVpnBefore",
+          "prevStep": "VpnLumos75perFaster",
           "header": {
             "value": "Do you need to fix «Video is not available in your country» issue?"
           },
@@ -131,14 +124,12 @@
               {
                 "value": "yes",
                 "icon": "yes",
-                "redirectTo": "VideoNotAvailableWhatSites",
-                "score": 1
+                "redirectTo": "VideoNotAvailableWhatSites"
               },
               {
                 "value": "no",
                 "icon": "no",
-                "redirectTo": "MessengersNotAvailableNeedFix",
-                "score": 2
+                "redirectTo": "MessengersNotAvailableNeedFix"
               }
             ]
           }
@@ -159,28 +150,23 @@
             "options": [
               {
                 "value": "Netflix or other streaming",
-                "icon": "film-projector",
-                "score": 1
+                "icon": "film-projector"
               },
               {
                 "value": "Adult sites",
-                "icon": "couple-with-heart",
-                "score": 2
+                "icon": "couple-with-heart"
               },
               {
                 "value": "Social Networks",
-                "icon": "mobile-phone",
-                "score": 3
+                "icon": "mobile-phone"
               },
               {
                 "value": "Sport sites",
-                "icon": "basketball-player",
-                "score": 4
+                "icon": "basketball-player"
               },
               {
                 "value": "Other",
-                "icon": "other",
-                "score": 5
+                "icon": "other"
               }
             ]
           }
@@ -198,14 +184,12 @@
               {
                 "value": "yes",
                 "icon": "yes",
-                "redirectTo": "MessengersNotAvailableWhatApps",
-                "score": 1
+                "redirectTo": "MessengersNotAvailableWhatApps"
               },
               {
                 "value": "no",
                 "icon": "no",
-                "redirectTo": "ChooseAdditionalBenefits",
-                "score": 2
+                "redirectTo": "ChooseAdditionalBenefits"
               }
             ]
           }
@@ -318,13 +302,13 @@
                 "value": "Almost never",
                 "icon": "man-gesturing-3",
                 "redirectTo": "SavePasswordsBrowser",
-                "score": 5
+                "score": 1
               },
               {
                 "value": "Rarely",
                 "icon": "man-tipping-hard",
                 "redirectTo": "SavePasswordsBrowser",
-                "score": 4
+                "score": 2
               },
               {
                 "value": "Every week",
@@ -336,13 +320,13 @@
                 "value": "Often",
                 "icon": "man-dancing",
                 "redirectTo": "SavePasswordsBrowser",
-                "score": 2
+                "score": 4
               },
               {
                 "value": "Several times a day",
                 "icon": "man-gesturing-ok",
                 "redirectTo": "SavePasswordsBrowser",
-                "score": 1
+                "score": 5
               }
             ]
           }
@@ -361,13 +345,13 @@
                 "value": "yes",
                 "icon": "yes",
                 "redirectTo": "HowQuicklyUpdate",
-                "score": 1
+                "score": 5
               },
               {
                 "value": "no",
                 "icon": "no",
                 "redirectTo": "HowQuicklyUpdate",
-                "score": 55
+                "score": 1
               }
             ]
           }
