@@ -7,7 +7,7 @@ $mob-width: 601px;
     height: calc(100vh - 250px);
   }
   @media screen and (max-device-width: $mob-width) and (-webkit-device-pixel-ratio: 3) {
-    height: 100vh;
+    height: calc(100vh - 300px);
   }
 }
 
