@@ -7,9 +7,10 @@ interface AgreementScaleProps {
   value: IAgreementScale['value'];
   redirectTo: IAgreementScale['redirectTo'];
   header?: string;
+  scores: IAgreementScale['scores'];
 }
 
-function AgreementScale({ value, redirectTo }: AgreementScaleProps) {
+function AgreementScale({ value, redirectTo, scores }: AgreementScaleProps) {
   return (
     <div className={styles.wrapper}>
       <div
@@ -22,7 +23,7 @@ function AgreementScale({ value, redirectTo }: AgreementScaleProps) {
         <h2 className={styles.header_description}>{value}</h2>
       </div>
 
-      <AgreementScaleBar redirectTo={redirectTo} />
+      <AgreementScaleBar redirectTo={redirectTo} scores={scores} />
     </div>
   );
 }

@@ -17,7 +17,7 @@ function BigImage({ image }: BigImageProps) {
           className={styles.image}
           priority={true}
           fill
-          style={{ objectFit: 'cover' }}
+          style={{ objectFit: 'contain' }}
         />
       </div>
     </div>

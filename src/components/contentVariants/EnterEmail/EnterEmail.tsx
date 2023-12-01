@@ -3,7 +3,7 @@ import styles from './EnterEmail.module.scss';
 import Image from 'next/image';
 import icon_security from '../../../assets/icons/icon_security.svg';
 import Link from 'next/link';
-import { NextButton } from '../../NextButton/NextButton';
+import NextButton from '../../NextButton/NextButton';
 import { ChangeEvent, useState } from 'react';
 import { useRouter } from 'next/navigation';
 

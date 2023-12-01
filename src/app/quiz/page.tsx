@@ -7,6 +7,7 @@ import { IStepConfig } from '@/components/StepContent/types';
 import { steps } from '../../../quiz-config/steps';
 import { useStore } from '@/store/useStore';
 import { useRouter } from 'next/navigation';
+import { useEffect } from 'react';
 
 export default function QuizPage() {
   const params = useSearchParams();
@@ -14,9 +15,18 @@ export default function QuizPage() {
 
   const currentStepId = params.get('q') || steps[0];
   const isLocked = useStore((state) => state.isLocked);
-  if (isLocked(currentStepId)) {
-    router.push('/');
-  }
+  const resetAnswers = useStore((state) => state.resetAnswers);
+
+  useEffect(() => {
+    if (isLocked(currentStepId)) {
+      router.push('/');
+    }
+  }, []);
+
+  useEffect(() => {
+    resetAnswers();
+  }, [currentStepId]);
+
   let stepConfig = config.variants[0]['steps'].find(
     (item) => currentStepId === item.id,
   ) as IStepConfig;

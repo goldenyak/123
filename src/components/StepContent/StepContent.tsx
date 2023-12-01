@@ -2,7 +2,6 @@ import { IStepConfig } from './types';
 import styles from './StepContent.module.scss';
 import RadioGroup from '../contentVariants/RadioGroup/RadioGroup';
 import CheckBoxGroup from '../contentVariants/CheckBoxGroup/CheckBoxGroup';
-import { NextButton } from '../NextButton/NextButton';
 import AgreementScale from '../contentVariants/AgreementScale/AgreementScale';
 import FactImage from '../contentVariants/FactImage/FactImage';
 import AnimatedMap from '../contentVariants/AnimatedMap/AnimatedMap';
@@ -15,10 +14,19 @@ import { ProgressBar } from '../ProgressBar/ProgressBar';
 import StepHeader from '../StepHeader/StepHeader';
 import TopImage from '../contentVariants/TopImage/TopImage';
 import ProgressIndicator from '../ProgressIndicator/ProgressIndicator';
+import dynamic from 'next/dynamic';
 
 interface StepContentProps {
   config: IStepConfig;
 }
+
+const DynamicNextButton = dynamic(
+  () => import('@/components/NextButton/NextButton'),
+  {
+    loading: () => <></>,
+    ssr: false,
+  },
+);
 
 const StepContent = ({ config }: StepContentProps) => {
   const component = (() => {
@@ -64,7 +72,7 @@ const StepContent = ({ config }: StepContentProps) => {
       >
         {config.header && <StepHeader {...config.header} />}
         {component}
-        {config.nextButton && <NextButton {...config.nextButton} />}
+        {config.nextButton && <DynamicNextButton {...config.nextButton} />}
         {config?.progressIndicator && (
           <ProgressIndicator redirectTo={config.progressIndicator.redirectTo} />
         )}

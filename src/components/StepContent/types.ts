@@ -36,6 +36,7 @@ export interface IRadioOption {
   value: string;
   icon: string;
   redirectTo: string;
+  score?: number;
 }
 
 export interface ICheckboxGroup {
@@ -47,12 +48,14 @@ export interface ICheckboxGroup {
 export interface ICheckboxOption {
   value: string;
   icon: string;
+  score?: number;
 }
 
 export interface IAgreementScale {
   type: 'agreement-scale';
   value: string;
   redirectTo: string[];
+  scores: [number, number, number, number, number];
 }
 
 export interface IBigImage {
@@ -88,7 +91,6 @@ export interface IAnalyzer {
 
 export interface IRisk {
   type: 'risk';
-  video: string;
   subtitle: {
     colored: string;
     regular: string;
@@ -140,10 +142,4 @@ type IStepContent =
 export interface INextButton {
   value: string;
   redirectTo?: string;
-}
-
-//Workaround - remove
-
-interface Step20 {
-  type: 'step20';
 }

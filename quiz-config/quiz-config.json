@@ -114,7 +114,7 @@
         {
           "id": "VideoNotAvailableNeedFix",
           "showProgressBar": true,
-          "prevStep": "UsedAnyVpnBefore",
+          "prevStep": "VpnLumos75perFaster",
           "header": {
             "value": "Do you need to fix «Video is not available in your country» issue?"
           },
@@ -293,7 +293,7 @@
           "showProgressBar": true,
           "prevStep": "LetsDefineRiskSpyBench",
           "header": {
-            "value": "Choose additional benefits of VPN Lumos:"
+            "value": "How often do you use Public Wi-Fi?:"
           },
           "content": {
             "type": "radio-group",
@@ -301,27 +301,32 @@
               {
                 "value": "Almost never",
                 "icon": "man-gesturing-3",
-                "redirectTo": "SavePasswordsBrowser"
+                "redirectTo": "SavePasswordsBrowser",
+                "score": 1
               },
               {
                 "value": "Rarely",
                 "icon": "man-tipping-hard",
-                "redirectTo": "SavePasswordsBrowser"
+                "redirectTo": "SavePasswordsBrowser",
+                "score": 2
               },
               {
                 "value": "Every week",
                 "icon": "man-raising-hand",
-                "redirectTo": "SavePasswordsBrowser"
+                "redirectTo": "SavePasswordsBrowser",
+                "score": 3
               },
               {
                 "value": "Often",
                 "icon": "man-dancing",
-                "redirectTo": "SavePasswordsBrowser"
+                "redirectTo": "SavePasswordsBrowser",
+                "score": 4
               },
               {
                 "value": "Several times a day",
                 "icon": "man-gesturing-ok",
-                "redirectTo": "SavePasswordsBrowser"
+                "redirectTo": "SavePasswordsBrowser",
+                "score": 5
               }
             ]
           }
@@ -339,12 +344,14 @@
               {
                 "value": "yes",
                 "icon": "yes",
-                "redirectTo": "HowQuicklyUpdate"
+                "redirectTo": "HowQuicklyUpdate",
+                "score": 5
               },
               {
                 "value": "no",
                 "icon": "no",
-                "redirectTo": "HowQuicklyUpdate"
+                "redirectTo": "HowQuicklyUpdate",
+                "score": 1
               }
             ]
           }
@@ -362,22 +369,26 @@
               {
                 "value": "I have auto-update enabled",
                 "icon": "smile-with-sunglasses",
-                "redirectTo": "StatementOpenLinksFromEmail"
+                "redirectTo": "StatementOpenLinksFromEmail",
+                "score": 1
               },
               {
                 "value": "Installing every version of the update",
                 "icon": "slightly-smiling-face",
-                "redirectTo": "StatementOpenLinksFromEmail"
+                "redirectTo": "StatementOpenLinksFromEmail",
+                "score": 2
               },
               {
                 "value": "Installing updates through multiple versions",
                 "icon": "thinking-face",
-                "redirectTo": "StatementOpenLinksFromEmail"
+                "redirectTo": "StatementOpenLinksFromEmail",
+                "score": 3
               },
               {
                 "value": "Almost never",
                 "icon": "grimacing-face",
-                "redirectTo": "StatementOpenLinksFromEmail"
+                "redirectTo": "StatementOpenLinksFromEmail",
+                "score": 4
               }
             ]
           }
@@ -399,7 +410,8 @@
               "StatementCheckLockSymbol",
               "StatementCheckLockSymbol",
               "StatementCheckLockSymbol"
-            ]
+            ],
+            "scores": [1, 2, 3, 4, 5]
           }
         },
         {
@@ -419,7 +431,8 @@
               "ReviewProgress",
               "ReviewProgress",
               "ReviewProgress"
-            ]
+            ],
+            "scores": [5, 4, 3, 2, 1]
           }
         },
         {
@@ -459,7 +472,6 @@
           },
           "content": {
             "type": "risk",
-            "video": "chart-high-risk",
             "subtitle": {
               "colored": "high risk",
               "regular": "data leakage"

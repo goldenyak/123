@@ -11,17 +11,14 @@ interface NextButtonProps extends INextButton {
   onClick?: () => void;
 }
 
-export const NextButton = ({
-  value,
-  type = 'button',
-  onClick,
-}: NextButtonProps) => {
+const NextButton = ({ value, type = 'button', onClick }: NextButtonProps) => {
   const { next } = useNavigation();
-  const isNextDisabled = useStore((state) => state.isNextDisabled());
+  const isNextDisabled = useStore((state) => state.isNextDisabled);
 
   return (
     <div className={styles.button_wrapper}>
       <button
+        disabled={isNextDisabled}
         type={type}
         className={styles.button}
         onClick={
@@ -33,10 +30,11 @@ export const NextButton = ({
                 onClick();
               }
         }
-        disabled={isNextDisabled}
       >
         {value}
       </button>
     </div>
   );
 };
+
+export default NextButton;
