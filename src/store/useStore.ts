@@ -20,11 +20,10 @@ type Action = {
   goTo: (router: AppRouterInstance, stepId: string) => void;
   setCurrentStepId: (newCurrentId: string) => void;
   isLocked(stepId: string): boolean;
-  addAnswer: (value: string) => void;
+  addAnswer: (value: string, score?: number) => void;
   isLastStep: () => boolean;
   getTotalScore: () => number;
   resetAnswers: () => void;
-  getCurrentStepAnswers: () => { values: string[]; score: number };
 };
 
 const initSteps: State['steps'] = {};
@@ -35,8 +34,6 @@ const initAnswers: State['answers'] = config.steps.reduce(
   },
   {} as State['answers'],
 );
-
-// console.log(initAnswers, initAnswers);
 
 config.steps.map((step, index) => {
   initSteps[step.id] = { ...step, locked: true };
@@ -51,6 +48,8 @@ config.steps.map((step, index) => {
   }
 });
 
+// console.log('initSteps', initSteps);
+
 initSteps[config.mainScreen.yesRedirectTo] = {
   ...initSteps[config.mainScreen.yesRedirectTo],
   locked: false,
@@ -63,7 +62,7 @@ initSteps[config.mainScreen.noRedirectTo] = {
 export const useStore = create<State & Action>()(
   persist(
     (set, get) => ({
-      isNextDisabled: false as const,
+      isNextDisabled: Boolean(false),
       currentStepId: config.steps[0].id,
       answers: initAnswers,
       steps: initSteps,
@@ -109,35 +108,29 @@ export const useStore = create<State & Action>()(
       isLastStep: () => !!get().steps[get().currentStepId].lastStep,
       isLocked: (stepId) => get().steps[stepId]?.locked,
       resetAnswers: () => {
-        console.log('resetAnswers');
         set({
           answers: {
             ...get().answers,
             [get().currentStepId]: { values: [], score: 0 },
           },
         });
+        // console.log('------');
+        // console.log(get().answers[get().currentStepId]);
         if (get().steps[get().currentStepId].hasOwnProperty('disableNext')) {
           set({
             isNextDisabled: true,
           });
-          console.log('disableNext');
+          // console.log('disableNext');
         }
       },
-      getCurrentStepAnswers: () => get().answers[get().currentStepId],
-      addAnswer: (value) => {
+      addAnswer: (value, score) => {
         const oldAnswers = get().answers;
         const currentStepId = get().currentStepId;
-        // console.log('oldAnswers', oldAnswers);
         const currentAnswerStep = oldAnswers[currentStepId];
-
         const steps = get().steps;
         const currentStep = steps[currentStepId];
-        console.log(get().answers[get().currentStepId]);
-        console.log(get().steps[get().currentStepId].disableNext);
-        // console.log(currentAnswerStep);
+        // console.log(steps);
         if (currentAnswerStep.values.includes(value)) {
-          console.log('includes');
-
           set({
             answers: {
               ...oldAnswers,
@@ -167,6 +160,19 @@ export const useStore = create<State & Action>()(
               },
             });
           }
+          if (currentStep.content.type === 'agreement-scale') {
+            if (!!score) {
+              set({
+                answers: {
+                  ...oldAnswers,
+                  [currentStepId]: {
+                    ...get().answers[currentStepId],
+                    score: currentAnswerStep.score - (score || 0),
+                  },
+                },
+              });
+            }
+          }
         } else {
           set({
             answers: {
@@ -184,6 +190,11 @@ export const useStore = create<State & Action>()(
             const score = currentStep.content.options.find(
               (item) => item.value === value,
             )?.score;
+            console.log(value);
+            console.log(
+              currentStep.content.options.find((item) => item.value === value),
+            );
+            console.log(score);
             set({
               answers: {
                 ...oldAnswers,
@@ -194,8 +205,20 @@ export const useStore = create<State & Action>()(
               },
             });
           }
+          if (currentStep.content.type === 'agreement-scale') {
+            if (!!score) {
+              set({
+                answers: {
+                  ...oldAnswers,
+                  [currentStepId]: {
+                    ...get().answers[currentStepId],
+                    score: currentAnswerStep.score + (score || 0),
+                  },
+                },
+              });
+            }
+          }
         }
-        console.log(get().answers[currentStepId].values);
         if (currentStep.hasOwnProperty('disableNext')) {
           if (get().answers[currentStepId].values.length === 0) {
             set({
@@ -203,15 +226,16 @@ export const useStore = create<State & Action>()(
             });
           }
           if (get().answers[currentStepId].values.length > 0) {
-            console.log('values.length > 0');
+            // console.log('values.length > 0');
             set({
-              isNextDisabled: false,
+              isNextDisabled: false as const,
             });
           }
         }
-        console.log(get().answers[get().currentStepId]);
+        // console.log(get().answers[get().currentStepId]);
       },
-      getTotalScore: () => 0,
+      getTotalScore: () =>
+        Object.values(get().answers).reduce((acc, item) => acc + item.score, 0),
     }),
     {
       name: 'quiz-storage',

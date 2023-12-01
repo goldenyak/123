@@ -55,6 +55,7 @@ export interface IAgreementScale {
   type: 'agreement-scale';
   value: string;
   redirectTo: string[];
+  scores: [number, number, number, number, number];
 }
 
 export interface IBigImage {
@@ -90,7 +91,6 @@ export interface IAnalyzer {
 
 export interface IRisk {
   type: 'risk';
-  video: string;
   subtitle: {
     colored: string;
     regular: string;

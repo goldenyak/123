@@ -293,7 +293,7 @@
           "showProgressBar": true,
           "prevStep": "LetsDefineRiskSpyBench",
           "header": {
-            "value": "Choose additional benefits of VPN Lumos:"
+            "value": "How often do you use Public Wi-Fi?:"
           },
           "content": {
             "type": "radio-group",
@@ -410,7 +410,8 @@
               "StatementCheckLockSymbol",
               "StatementCheckLockSymbol",
               "StatementCheckLockSymbol"
-            ]
+            ],
+            "scores": [1, 2, 3, 4, 5]
           }
         },
         {
@@ -430,7 +431,8 @@
               "ReviewProgress",
               "ReviewProgress",
               "ReviewProgress"
-            ]
+            ],
+            "scores": [5, 4, 3, 2, 1]
           }
         },
         {
@@ -470,7 +472,6 @@
           },
           "content": {
             "type": "risk",
-            "video": "chart-high-risk",
             "subtitle": {
               "colored": "high risk",
               "regular": "data leakage"

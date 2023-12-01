@@ -16,13 +16,16 @@ export default function QuizPage() {
   const currentStepId = params.get('q') || steps[0];
   const isLocked = useStore((state) => state.isLocked);
   const resetAnswers = useStore((state) => state.resetAnswers);
-  resetAnswers();
 
   useEffect(() => {
     if (isLocked(currentStepId)) {
       router.push('/');
     }
   }, []);
+
+  useEffect(() => {
+    resetAnswers();
+  }, [currentStepId]);
 
   let stepConfig = config.variants[0]['steps'].find(
     (item) => currentStepId === item.id,

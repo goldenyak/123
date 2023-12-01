@@ -1,14 +1,19 @@
 'use client';
-import { useRouter } from 'next/navigation';
 import { Accordion } from './Accordion/Accordion';
-import StepHeader from '../../StepHeader/StepHeader';
 import { IRisk } from '../../StepContent/types';
+import { useStore } from '@/store/useStore';
 
 type RiskProps = Omit<IRisk, 'type'>;
 
-function Risk({ video, subtitle, statInfo, accordion }: RiskProps) {
-  const router = useRouter();
-
+function Risk({ subtitle, statInfo, accordion }: RiskProps) {
+  const totalScore = useStore((state) => state.getTotalScore());
+  let riskLevel = 'medium';
+  if (totalScore > 11) {
+    riskLevel = 'high';
+  }
+  if (totalScore < 6) {
+    riskLevel = 'low';
+  }
   return (
     <div
       style={{
@@ -56,7 +61,7 @@ function Risk({ video, subtitle, statInfo, accordion }: RiskProps) {
 
         <video
           id='vid'
-          src={`../videos/${video}.mp4`}
+          src={`../videos/chart-${riskLevel}-risk.mp4`}
           autoPlay
           loop
           muted

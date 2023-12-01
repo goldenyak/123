@@ -16,6 +16,9 @@ import TopImage from '../contentVariants/TopImage/TopImage';
 import ProgressIndicator from '../ProgressIndicator/ProgressIndicator';
 import dynamic from 'next/dynamic';
 
+import { stat } from 'fs';
+import { useStore } from '@/store/useStore';
+
 interface StepContentProps {
   config: IStepConfig;
 }
@@ -23,12 +26,14 @@ interface StepContentProps {
 const DynamicNextButton = dynamic(
   () => import('@/components/NextButton/NextButton'),
   {
-    loading: () => <p>Loading...</p>,
+    loading: () => <></>,
     ssr: false,
   },
 );
 
 const StepContent = ({ config }: StepContentProps) => {
+  const answers = useStore((state) => state.answers);
+  console.log(answers);
   const component = (() => {
     switch (config.content.type) {
       case 'radio-group':

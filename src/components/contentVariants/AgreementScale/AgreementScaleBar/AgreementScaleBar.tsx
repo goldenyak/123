@@ -5,9 +5,10 @@ import { useStore } from '@/store/useStore';
 
 interface AgreementScaleProps {
   redirectTo: IAgreementScale['redirectTo'];
+  scores: IAgreementScale['scores'];
 }
 
-const AgreementScaleBar = ({ redirectTo }: AgreementScaleProps) => {
+const AgreementScaleBar = ({ redirectTo, scores }: AgreementScaleProps) => {
   const { goTo } = useNavigation();
   const addAnswer = useStore((state) => state.addAnswer);
   return (
@@ -17,7 +18,7 @@ const AgreementScaleBar = ({ redirectTo }: AgreementScaleProps) => {
           <label className={styles.label} key={index + redirectTo[index]}>
             <input
               onChange={() => {
-                addAnswer(index + 1 + '');
+                addAnswer(index + 1 + '', scores[index]);
                 goTo(redirectTo[index]);
               }}
               className={styles.input}
