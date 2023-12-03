@@ -139,7 +139,7 @@ const SubscriptionPage = () => {
         style={{
           display: 'flex',
           flexDirection: 'column',
-          gap: '16px',
+          gap: '8px',
           marginBottom: '16px',
         }}
       >
@@ -173,7 +173,7 @@ const SubscriptionPage = () => {
           color: '#BAC0C7',
           fontSize: '12px',
           fontWeight: '400',
-          marginBottom: '32px',
+          marginBottom: '24px',
         }}
       >
         To avoid any disruption, you agree that the subscription you selected
@@ -185,7 +185,7 @@ const SubscriptionPage = () => {
       <div
         style={{
           color: '#1A1A1A',
-          fontSize: '26px',
+          fontSize: '22px',
           fontWeight: '700',
           marginBottom: '14px',
         }}
@@ -196,7 +196,7 @@ const SubscriptionPage = () => {
         style={{
           display: 'flex',
           flexDirection: 'column',
-          gap: '16px',
+          gap: '8px',
           marginBottom: '24px',
         }}
       >
