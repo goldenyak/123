@@ -104,8 +104,11 @@ const SubscriptionPage = () => {
         style={{
           display: 'flex',
           flexDirection: 'column',
-          gap: '10px',
+          gap: '20px',
+          padding: '16px',
           marginBottom: '32px',
+          borderRadius: '16px',
+          background: '#F7F8FE',
         }}
       >
         <PaymentRow value={'Enhanced security'} icon={icon_payment_user} />
