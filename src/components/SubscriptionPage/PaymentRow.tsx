@@ -11,13 +11,18 @@ const PaymentRow = ({ icon, value }: PaymentRowProps) => {
       style={{
         display: 'flex',
         gap: '12px',
+        alignItems: 'center',
       }}
     >
       <div
         style={{
-          width: '16px',
+          width: '32px',
+          height: '32px',
           display: 'flex',
           justifyContent: 'center',
+          alignItems: 'center',
+          background: '#FFF',
+          borderRadius: '50%',
         }}
       >
         <Image src={icon} alt='' />

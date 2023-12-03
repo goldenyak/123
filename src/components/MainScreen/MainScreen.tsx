@@ -19,39 +19,52 @@ function MainScreen() {
         </div>
         <div
           style={{
-            color: '#FFF',
-            textAlign: 'center',
-            fontSize: ' 24px',
-            fontWeight: '700',
-            padding: '0 10px',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
           }}
         >
-          Do you know what is VPN?
-        </div>
-        <div className={styles.text_wrapper}>
-          <div className={styles.description}></div>
-          <div className={styles.buttons_wrapper}>
-            <button
-              onClick={() => {
-                addAnswer('Yes');
-                router.push(`/quiz?q=${config.mainScreen.yesRedirectTo}`);
-              }}
-              className={styles.btn}
-            >
-              Yes
-            </button>
-            <button
-              onClick={() => {
-                addAnswer('Not really');
-                router.push(`/quiz?q=${config.mainScreen.noRedirectTo}`);
-              }}
-              className={styles.btn}
-            >
-              Not really
-            </button>
+          <div
+            style={{
+              color: '#FFF',
+              textAlign: 'center',
+              fontSize: ' 24px',
+              fontWeight: '700',
+              padding: '0 10px',
+            }}
+          >
+            Do you know what is VPN?
           </div>
+          <div className={styles.text_wrapper}>
+            <div className={styles.description}></div>
+            <div className={styles.buttons_wrapper}>
+              <button
+                onClick={() => {
+                  addAnswer('Yes');
+                  router.push(`/quiz?q=${config.mainScreen.yesRedirectTo}`);
+                }}
+                className={styles.btn}
+              >
+                Yes
+              </button>
+              <button
+                onClick={() => {
+                  addAnswer('Not really');
+                  router.push(`/quiz?q=${config.mainScreen.noRedirectTo}`);
+                }}
+                className={styles.btn}
+              >
+                Not really
+              </button>
+            </div>
+          </div>
+          <Image
+            alt='MainImage'
+            src={main_image}
+            className={styles.main_image}
+          />
         </div>
-        <Image alt='MainImage' src={main_image} className={styles.main_image} />
         <div className={styles.privacy}>
           By continuing you agree{'\n'}to our{' '}
           <span

@@ -17,11 +17,11 @@ export default function QuizPage() {
   const isLocked = useStore((state) => state.isLocked);
   const resetAnswers = useStore((state) => state.resetAnswers);
 
-  useEffect(() => {
-    if (isLocked(currentStepId)) {
-      router.push('/');
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (isLocked(currentStepId)) {
+  //     router.push('/');
+  //   }
+  // }, []);
 
   useEffect(() => {
     resetAnswers();
