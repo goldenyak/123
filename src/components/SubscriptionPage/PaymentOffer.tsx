@@ -11,34 +11,51 @@ const PaymentOffer = ({ timeLeft }: PaymentOfferProps) => {
         background: '#FFFDF3',
         padding: '15px',
         marginTop: '-16px',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
       }}
     >
       <div
         style={{
           color: '#1A1A1A',
-          fontSize: '14px',
-          lineHeight: '1.3',
+          fontSize: '16px',
+          fontWeight: '700',
+          textTransform: 'uppercase',
           marginBottom: '10px',
         }}
       >
-        Reserved price for your personal plan expires in 10 minutes.
+        Personalized plan reserved
       </div>
       <div
         style={{
-          fontSize: '14px',
+          textAlign: 'center',
+          marginBottom: '16px',
+        }}
+      >
+        Your personalized plan has been saved for the next 3 minutes!
+      </div>
+      <div
+        style={{
+          color: '#1A1A1A',
+          fontSize: '16px',
           fontWeight: '700',
-          marginBottom: '13px',
+          textTransform: 'uppercase',
+          marginBottom: '10px',
         }}
       >
-        Time remaining {timeLeft}
+        Time remaining
       </div>
       <div
         style={{
-          color: '#A3A29C',
-          fontSize: '12px',
+          color: '#1A1A1A',
+          fontSize: '20px',
+          fontWeight: '700',
+          textTransform: 'uppercase',
         }}
       >
-        Scroll down to get started!
+        {timeLeft}
       </div>
     </div>
   );
