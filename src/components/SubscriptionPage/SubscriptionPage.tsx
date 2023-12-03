@@ -71,7 +71,22 @@ const SubscriptionPage = () => {
   return (
     <div>
       <PaymentTimerBar timeLeft={formatTime()} show={showBar && timeLeft > 0} />
-      <StepHeader value={'You Personal Plan for a free and secure internet'} type={'center'}/>
+
+      <header
+        style={{
+          marginBottom: '24px',
+          fontWeight: '700',
+          fontSize: '26px',
+          lineHeight: '32px',
+          letterSpacing: '0.41px',
+          padding: '0 15px 0 15px',
+          textAlign: 'center',
+          marginTop: '-10px',
+        }}
+      >
+        You Personal Plan for a free and secure internet
+      </header>
+
       <PaymentOffer timeLeft={formatTime()} />
       <div
         style={{
@@ -79,10 +94,10 @@ const SubscriptionPage = () => {
           fontWeight: '700',
           lineHeight: '1.3',
           margin: '16px 0 12px 0',
+          textAlign: 'center',
         }}
       >
-        Based on your answers, personal needs, and risk level, your plan
-        includes:
+        What’s included
       </div>
 
       <div
