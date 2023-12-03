@@ -18,10 +18,16 @@ $mob-height: 560px;
   max-height: 650px;
   gap: 5%;
   @media screen and (max-width: $mob-width) {
-    max-height: 100%;
+    height: 100vh;
+    max-height: unset;
+    justify-content: space-between;
+    gap: 0;
   }
   @media screen and (max-device-width: $mob-width) and (-webkit-device-pixel-ratio: 3) {
-    max-height: 100%;
+    height: 100vh;
+    max-height: unset;
+    justify-content: space-between;
+    gap: 0;
   }
 }
 
@@ -31,6 +37,7 @@ $mob-height: 560px;
   align-items: center;
   gap: 5px;
   margin-bottom: 35px;
+  margin-top: 10px;
   @media screen and (max-height: $mob-width) {
     margin-bottom: 5px;
   }
@@ -112,6 +119,7 @@ $mob-height: 560px;
   line-height: 1.5;
   letter-spacing: -0.078px;
   white-space: pre-line;
+  margin-bottom: 10px;
   @media screen and (max-height: $mob-width) {
     font-size: 10px;
   }
